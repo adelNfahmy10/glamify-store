@@ -1,43 +1,42 @@
-$mainColor : #128695;
-$second-color:#1286957a;
+$mainColor : #598AF0;
+$second-color:#B245C2;
 
 footer{
-  background: linear-gradient(to top, #000000 0% 2%, $second-color, #000000), url('../../assets/image/about-image/about-bg.jpg');
   background-size: cover;
   background-position: center center;
   p{
-    color: #ccc;
+    color: #797979;
+    font-size: 14px;
   }
   .logo{
     img{
-      width: 80px;
+      width:200px;
     }
     h5{
-      color: #fff;
       font-weight: 600;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       letter-spacing: 5px;
     }
     span{
-      color: #ccc;
+      color: #797979;
       letter-spacing: 5px;
     }
   }
   li{
     font-size: 14px;
-    color: #ccc;
+    color: #797979;
   }
   .footer-icons{
     transition: all .3s;
     .icon{
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 35px;
-      height: 35px;
+      width: 40px;
+      height: 40px;
       font-size: 20px;
       background-color: $mainColor;
-      color: #fff;
       border-radius: 50%;
       &:hover{
         a{
@@ -53,9 +52,9 @@ footer{
   }
   .footer-contact{
     i{
-      color: #fff;
       font-size: 20px;
       transition: all .3s;
+      color: #797979;
     }
     a{
       font-size: 18px;
@@ -69,7 +68,6 @@ footer{
   }
   .copy-right{
     background-color: $mainColor;
-    color: #fff;
   }
   .fa-location-dot{
     color: $mainColor;

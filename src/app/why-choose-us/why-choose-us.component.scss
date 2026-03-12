@@ -1,9 +1,6 @@
-$mainColor : #128695;
-$second-color:#1286957a;
+$mainColor : #598AF0;
+$second-color:#B245C2;
 .why-us{
-  background: linear-gradient(to top, #000000 0% 2%, $second-color, #000000), url('/assets/image/about-image/about-bg.jpg');
-  background-size: cover;
-  background-position: center center;
   .title{
     span{
       height: fit-content;
@@ -11,14 +8,16 @@ $second-color:#1286957a;
   }
   .why-box{
     backdrop-filter: blur(10px);
-    img{
-      width:40px;
+    background: linear-gradient(to left, rgba(89, 137, 240, 0.034) 0% 60%, rgba(89, 137, 240, 0.386));
+    img {
+      width: 60px;
+      filter: invert(100%)  drop-shadow(0 0 10px rgba(0, 0, 0, 0.838));
     }
     h5{
       font-size: 22px;
     }
     p{
-      color: #ccc;
+      color: #797979;
     }
   }
 }

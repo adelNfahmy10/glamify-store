@@ -1,44 +1,39 @@
-$mainColor : #128695;
-$second-color:#1286957a;
+$mainColor : #598AF0;
+$second-color:#B245C2;
 .feature{
-  background: linear-gradient(to top, #000000 0% 2%, $second-color, #000000), url('../../assets/image/about-image/about-bg.jpg');
-  background-size: cover;
-  background-position: center center;
-  .title{
-    h5{
-      font-size: 16px;
-    }
-    h6{
-      font-size: 30px;
-      text-transform: capitalize;
+  swiper-container {
+    swiper-slide {
+      width: 400px;
+      height: 350px;
+      background-color: white;
     }
   }
-  swiper-container {
-    width: 100%;
-    swiper-slide {
-      backdrop-filter: blur(20px);
-      width: 350px;
-      height: 470px;
+
+  @media (max-width: 567px) {
+    swiper-container {
+      swiper-slide {
+        width: 100%;
+        height: 400px;
+      }
     }
   }
 
   .feature-box{
     position: relative;
-    color: #fff !important;
+    background: linear-gradient(to top, rgba(89, 137, 240, 0.034) 0% 60%, rgba(89, 137, 240, 0.386));
     .feature-image{
       img{
-        width: 200px;
-        height: 200px;
+        width: 250px;
         object-fit: cover;
       }
     }
-    .feature-title{
+    .feature-content{
       h6{
         font-size: 22px;
       }
-    }
-    .feature-footer{
-      border-top-left-radius: 10px;
+      p{
+        color: #797979;
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "title":"AHTech",
+    "title":"Ticketat",
     "home": "Home",
     "about": "About",
     "whyUs": "Why Choose Us",
@@ -10,78 +10,152 @@
     "getStart": "Get Start"
   },
   "hero": {
-    "title": "Smart software solutions to take your business into the future",
-    "subtitle": "Comprehensive web solutions, management systems, and advanced POS, along with smart mobile applications to simplify and grow your business efficiently.",
+    "title": "Discover Events. Book Instantly.",
+    "subtitle": "Explore the hottest events around you and secure your spot with Ticketat in seconds.",
     "startNow": "Start Now",
     "learnMore": "Learn More"
   },
   "about": {
     "title": "About Us",
-    "heading": "Innovative Designs. Smart Strategies. Real Impact.",
-    "text": "At 'AHTech', we provide comprehensive digital solutions that help businesses grow in the digital world, from custom website and app design, eye-catching social media content, to effective SEO strategies — every project we execute with passion and precision.",
-    "text2": "We’re more than just a service provider — we’re your partner in digital success.",
-    "contactUs" : "Contact Us",
-    "companyTitle": "AHTech"
+    "heading": "Discover Events. Book Instantly. Enjoy Fully.",
+    "text": "At 'Ticketat' we bring the best events to your fingertips — from concerts and festivals to parties and exclusive experiences. Explore, book, and enjoy unforgettable moments with ease and confidence.",
+    "text2": "More than just tickets — we’re your gateway to memorable experiences.",
+    "contactUs": "Book Now",
+    "companyTitle": "Ticketat"
+
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "A simple process to create, manage, and run your events smoothly.",
+    "steps": {
+      "createTitle": "Create Your Event",
+      "createDesc": "Set up your event in minutes by adding details like date, location, and ticket options.",
+
+      "shareTitle": "Share the Booking Link",
+      "shareDesc": "Send your event booking link to guests through social media, email, or messaging apps.",
+
+      "bookTitle": "Guests Book Their Tickets",
+      "bookDesc": "Guests can easily book their tickets online through a fast and secure booking system.",
+
+      "qrTitle": "Manage Entry with QR Code",
+      "qrDesc": "Use our QR code system to scan tickets and allow fast and secure entry to your event."
+    }
+  },
+  "eventTypes": {
+    "title": "Event Types",
+    "subtitle": "Choose the type of event you want to organize.",
+    "conferences" : "Conferences",
+    "privateParties" : "Private Parties",
+    "corporateEvents" : "Corporate Events",
+    "workshops" : "Workshops",
+    "exhibitions" : "Exhibitions"
+  },
+  "faq": {
+    "title": "Need Help?",
+    "subtitle": "Follow these steps to create and manage your event easily.",
+    "q1": {
+      "question": "How do I create an event?",
+      "answer": "After logging in, click 'Create Event' and fill in the event details like date, location, and tickets."
+    },
+    "q2": {
+      "question": "How can I share the event with guests?",
+      "answer": "Once the event is created, share the booking link via email, social media, or messaging apps."
+    },
+    "q3": {
+      "question": "How do I track bookings?",
+      "answer": "You can monitor all bookings in real-time through your dashboard for each event."
+    },
+    "q4": {
+      "question": "How do guests enter the event?",
+      "answer": "Guests use a QR code generated for their tickets, which is scanned at the event entrance for fast and secure entry."
+    }
+  },
+  "pricing": {
+    "title": "Event Pricing",
+    "subtitle": "Pay once and only a small fee per booking.",
+    "p1": {
+      "name": "Service Fee",
+      "price": "$50 per event",
+      "features": {
+        "f1" : "Create your event",
+        "f2" : "Manage bookings",
+        "f3" : "Access dashboard"
+      }
+    },
+    "p2": {
+      "name": "Transaction Fee",
+      "price": "5% per booking",
+      "features": {
+        "f1" : "Only paid when a guest books",
+        "f2" : "No hidden fees",
+        "f3" : "Automatic calculation"
+      }
+    },
+    "currency":"EGP"
+  },
+  "contact":{
+    "title": "Start Booking Your Event Today!",
+    "subtitle": "Get your event online quickly and easily. Our platform helps you manage everything with ease.",
+    "buttons": {
+      "startBooking": "Start Booking Now",
+      "contactUs": "Contact Us",
+      "requestDemo": "Request Demo"
+    }
   },
   "whyUs": {
-    "why":"Why",
-    "chooseUs":"Choose Us.",
-    "title": "Why Choose Us.",
+    "why": "Why",
+    "chooseUs": "Choose Us.",
+    "title": "Why Choose Ticketat",
     "items": {
-      "tailoredTitle": "Tailored Digital Solutions",
-      "tailoredDesc": "Everything we build is customized to fit your business needs — no templates, just strategy.",
-      "creativeTitle": "Creative Design Expertise",
-      "creativeDesc": "From branding to social media visuals, our designs are made to impress and convert.",
-      "performanceTitle": "Performance-First Development",
-      "performanceDesc": "We develop websites and apps that load fast, work smoothly, and scale with your business.",
-      "ecosystemTitle": "Complete Marketing Ecosystem",
-      "ecosystemDesc": "SEO, social media, content — we connect it all under one plan to maximize impact."
+      "tailoredTitle": "Tailored Booking Solutions",
+      "tailoredDesc": "We offer a complete booking system for all types of events — private parties, conferences, or corporate gatherings — designed to meet your exact needs.",
+
+      "creativeTitle": "User-Friendly & Engaging Interface",
+      "creativeDesc": "Our platform features a smooth and intuitive design, making the booking experience fast, easy, and enjoyable for your clients.",
+
+      "EfficientManagementTitle": "Reliable & Efficient Management",
+      "EfficientManagementDesc": "From tracking reservations to handling payments and reminders, we deliver high performance and reliability to ensure your events run seamlessly.",
+
+      "FullSupportTitle": "Full Support & Exceptional Service",
+      "FullSupportDesc": "Our team is here to support you at every step, from event setup to execution, with marketing solutions and additional services to maximize your event’s success.",
+
+      "EventTeamTitle": "Dedicated Event Team",
+      "EventTeamDesc": "Our experienced team is ready to organize and manage any event — from setup to execution — ensuring every detail is perfect and your event is a success."
+
     }
   },
   "features": {
     "title": "Features",
-    "subtitle": "Smart, scalable, and creative digital solutions, all in one place.",
+    "subtitle": "Streamline Your Events with Smart Booking, Management, and Real-Time Insights.",
     "items": {
-      "supportTitle": "Technical Support & Maintenance",
-      "supportDesc": "We provide continuous technical support and proactive maintenance to ensure your digital platforms run smoothly and efficiently.",
+      "supportTitle": "Event Booking System",
+      "supportDesc": "Easily book private parties, conferences, and corporate events through our fast and reliable platform.",
 
-      "socialTitle": "Social Media Excellence",
-      "socialDesc": "We manage your social presence with creative content, consistent branding, and active engagement to grow your audience.",
+      "socialTitle": "Professional Event Planning",
+      "socialDesc": "Our expert team is ready to organize and manage any event, ensuring every detail is perfect and stress-free.",
 
-      "motionTitle": "Motion Graphics & Video",
-      "motionDesc": "We craft engaging motion graphics and videos that capture attention and bring your brand’s story to life.",
+      "motionTitle": "Company Dashboard",
+      "motionDesc": "Each corporate client gets a dedicated dashboard to track bookings, manage data, and monitor their events in real-time.",
 
-      "designTitle": "Creative Graphic Design",
-      "designDesc": "We design eye-catching visuals and graphics that align with your brand identity and leave a lasting impression.",
+      "designTitle": "Real-Time Updates & Analytics",
+      "designDesc": "Get instant updates on bookings and access detailed reports and analytics to make informed decisions for your events.",
 
-      "webTitle": "Modern Website Development",
-      "webDesc": "We build fast, responsive, and user-friendly websites tailored to your business goals and customer needs.",
-
-      "ecommerceTitle": "E-Commerce Solutions",
-      "ecommerceDesc": "We develop scalable and secure e-commerce platforms that provide seamless shopping experiences for your customers.",
-
-      "adsTitle": "Digital Advertising Campaigns",
-      "adsDesc": "We create data-driven ad campaigns across multiple platforms to maximize your reach and return on investment.",
-
-      "seoTitle": "SEO Optimization",
-      "seoDesc": "We optimize your website for search engines to improve visibility, attract organic traffic, and increase conversions.",
-
-      "brandingTitle": "Branding & Identity Design",
-      "brandingDesc": "We craft unique branding strategies and designs that define your identity and set you apart from competitors."
+      "webTitle": "QR Code Entry System",
+      "webDesc": "Guests can enter events seamlessly using QR codes generated through our dedicated app, ensuring fast and secure access."
     },
     "explore": "Explore Services"
   },
   "ourWork": {
     "title": "Our Work",
-    "project": "AHTech"
+    "project": "Ticketat"
   },
   "partners": {
     "title": "Our Partners"
   },
   "footer":{
     "info":{
-      "name": "AHTech",
-      "description": "We bring your brand to life with creative social media designs, custom websites, mobile apps, and SEO that drives results."
+      "name": "Ticketat",
+      "description": "Ticketat makes it simple to create, manage, and share your events online. From private parties to corporate conferences, our platform helps you handle bookings, track attendees, and promote your events effortlessly."
     },
     "services": {
       "title": "Services",
@@ -109,8 +183,12 @@
       }
     },
     "contact": {
+      "title":"Contact Us",
       "address": "Cairo, Egypt",
-      "footer": "AHTech Team © 2025"
+      "footer": "Ticketat Team © 2025"
+    },
+    "CopyRight":{
+      "text": "2025 Ticketat - Powered By © AHTech Team"
     }
   }
 }

@@ -1,25 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-$mainColor : #128695;
-$second-color:#1286957a;
+$mainColor : #598AF0;
+$second-color:#B245C2;
 .home{
-  background: linear-gradient(to bottom, $second-color, #000000), url('/assets/image/home-image/home-bg.gif');
+  background: url('/assets/image/home-image/home-bg.svg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  color: #fff;
   .home-content{
-    width: 75%;
+    position: relative;
+    z-index: 10;
     h1{
       text-transform: capitalize;
     }
     p{
-      color: #ccc;
+      color: #7e7e7e;
+    }
+  }
+
+  .event-wow-img{
+    width: 200px;
+    position: absolute;
+    position: 8;
+    &.event-1{
+      right: 30px;
+      bottom: 30px;
+    }
+    &.event-2{
+      top: 80px;
+      left: 30px;
     }
   }
 }
 @media (max-width:567px) {
   .home-content{
     width: 100% !important;
+  }
+  .event-wow-img{
+    width: 150px !important;
+    &.event-2{
+      width: 200px !important;
+    }
   }
 }

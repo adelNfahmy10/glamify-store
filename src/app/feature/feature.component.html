@@ -1,37 +1,38 @@
 <section class="feature py-5" id="feature">
   <div class="container">
-    <div class="title text-white wow fadeInDown">
+    <div class="title wow fadeInDown mb-4">
       <h5>{{'features.title' | translate }}</h5>
-      <h6>{{'features.subtitle' | translate}}</h6>
+      <h2 class="fw-bold">{{'features.subtitle' | translate}}</h2>
     </div>
     @if(isBrowser){
-      <swiper-container dir="rtl" class="mySwiper w-100" pagination="false" effect="coverflow" grab-cursor="true"
-      slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-      coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" loop="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+      <swiper-container
+        dir="rtl"
+        class="mySwiper w-100 h-100 wow fadeInUp"
+        pagination="false"
+        effect="coverflow"
+        grab-cursor="true"
+        slides-per-view="auto"
+        coverflow-effect-rotate="50"
+        coverflow-effect-stretch="0"
+        coverflow-effect-depth="100"
+        coverflow-effect-modifier="1"
+        coverflow-effect-slide-shadows="true"
+        loop="true"
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+      >
       @for (feature of features; track $index) {
         <swiper-slide class="shadow rounded-3 overflow-hidden">
-          <div class="feature-box h-100 p-3 rounded-3 text-center">
+          <div class="feature-box d-flex flex-column justify-content-center align-items-center h-100 p-3 rounded-3 text-center">
             <!-- Feature Image -->
             <div class="feature-image">
-              <img loading="lazy" [src]="feature?.image" [alt]="feature?.title | translate">
+              <img loading="lazy" [src]="'assets/image/logos/app-icon.png'" [alt]="feature?.title | translate">
             </div>
 
-            <!-- Feature Title -->
-            <div class="feature-title my-3">
-              <h6 class="fw-bold mb-0">{{ feature?.title | translate}}</h6>
-            </div>
-
-            <!-- Feature Description -->
-            <div class="feature-description">
-              <p class="mb-0">{{ feature?.description | translate}}</p>
-            </div>
-
-            <!-- Feature Footer -->
-            <div class="feature-footer main-bg position-absolute bottom-0 end-0 cr px-4 py-2 text-white d-flex justify-content-center align-items-center gap-2">
-              <svg width="15" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.48436 1.00001L16.9697 9.48528M16.9697 9.48528L8.48436 17.9706M16.9697 9.48528L-0.000882264 9.48528" stroke="#FBB819" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>{{'features.explore' | translate}}</span>
+            <!-- Feature Content -->
+            <div class="feature-content mt-4">
+              <h6 class="fw-bold">{{ feature?.title | translate}}</h6>
+              <p>{{ feature?.description | translate}}</p>
             </div>
           </div>
         </swiper-slide>

@@ -24,15 +24,21 @@ export class WhyChooseUsComponent {
     },
     {
       icon:'assets/image/why-chooes-us-image/performance-first-icon.png',
-      alt:'whyUs.items.performanceTitle',
-      title: "whyUs.items.performanceTitle",
-      desc: "whyUs.items.performanceDesc"
+      alt:'whyUs.items.EfficientManagementTitle',
+      title: "whyUs.items.EfficientManagementTitle",
+      desc: "whyUs.items.EfficientManagementDesc"
     },
     {
       icon:'assets/image/why-chooes-us-image/complete-marketing-icon.png',
-      alt:'whyUs.items.ecosystemTitle',
-      title: "whyUs.items.ecosystemTitle",
-      desc: "whyUs.items.ecosystemDesc"
+      alt:'whyUs.items.FullSupportTitle',
+      title: "whyUs.items.FullSupportTitle",
+      desc: "whyUs.items.FullSupportDesc"
+    },
+    {
+      icon:'assets/image/why-chooes-us-image/team-event-icon.png',
+      alt:'whyUs.items.EventTeamTitle',
+      title: "whyUs.items.EventTeamTitle",
+      desc: "whyUs.items.EventTeamDesc"
     }
   ];
 }

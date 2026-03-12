@@ -15,8 +15,8 @@ export class FooterComponent {
     { id: 'about', name: 'footer.Links.list.about' },
     { id: 'why-us', name: 'footer.Links.list.whyUs' },
     { id: 'feature', name: 'footer.Links.list.features' },
-    { id: 'our-work', name: 'footer.Links.list.ourWork' },
-    { id: 'partners', name: 'footer.Links.list.partners' },
+      // { id: 'our-work', name: 'footer.Links.list.ourWork' },
+      // { id: 'partners', name: 'footer.Links.list.partners' },
   ];
 
   scrollToSection(sectionId: string) {

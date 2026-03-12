@@ -1,13 +1,15 @@
 <section id="about" class="about py-5">
   <div class="container">
-    <div class="row g-3 shadow-lg rounded-5">
-      <div class="col-lg-6 wow fadeInLeft">
-        <div class="about-img text-center overflow-hidden">
-          <img loading="lazy" src="assets/image/about-image/about-us.png" class="rounded-5" [alt]="'about.companyTitle' | translate">
+    <div class="row g-4 rounded-5">
+
+      <div class="col-lg-6 wow fadeInDown">
+        <div class="about-img">
+          <img loading="lazy" src="assets/image/about-image/about-image-5.png" [alt]="'about.companyTitle' | translate">
         </div>
       </div>
+
       <div class="col-lg-6">
-        <div class="about-info text-white d-flex justify-content-center flex-column h-100 gap-3">
+        <div class="about-info d-flex justify-content-center flex-column h-100 gap-3">
           <div class="about-title rounded-5 px-3 py-1 d-flex aling-items-center gap-1 wow fadeInLeft">
             <span class="line main-bg rounded-5"></span>
             <h3 class="m-0">{{'about.title' | translate}}</h3>
@@ -18,14 +20,14 @@
             <p class="wow fadeInUp mb-1">{{'about.text2' | translate}}</p>
           </div>
           <div class="d-flex align-items-center flex-wrap gap-2">
-            <button class="btn main-btn wow fadeInLeft">
+            <button class="btn main-btn wow fadeInUp">
               <a class="text-white"
-                href="https://wa.me/+201110038252?text=مرحبًا%20AHTech!%20أريد%20الاستفسار%20عن%20خدماتكم"
+                href="https://www.ticketateg.com/"
                 target="_blank">
                 {{ 'about.contactUs' | translate }}
               </a>
             </button>
-            <button class="btn second-btn wow fadeInLeft" (click)="scrollToSection('why-us')">
+            <button class="btn second-btn wow fadeInDown" (click)="scrollToSection('why-us')">
               {{'hero.learnMore' | translate}}
             </button>
           </div>
@@ -33,4 +35,6 @@
       </div>
     </div>
   </div>
+
+  <img src="assets/image/bullet-bg.png" class="w-100 bullet-bg" alt="ticketat">
 </section>
