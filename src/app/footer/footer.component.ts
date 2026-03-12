@@ -11,10 +11,15 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class FooterComponent {
   activeLink: string = 'home';
   sections = [
-    { id: 'home', name: 'footer.Links.list.home' },
-    { id: 'about', name: 'footer.Links.list.about' },
-    { id: 'why-us', name: 'footer.Links.list.whyUs' },
-    { id: 'feature', name: 'footer.Links.list.features' },
+    { id: 'home', name: 'navbar.home' },
+    { id: 'about', name: 'navbar.about' },
+    { id: 'why-us', name: 'navbar.whyUs' },
+    { id: 'feature', name: 'navbar.features' },
+    { id: 'how-it-work', name: 'navbar.how-it-work' },
+    { id: 'event-types', name: 'navbar.event-types' },
+    { id: 'pricing', name: 'navbar.pricing' },
+    { id: 'faq', name: 'navbar.faq' },
+    { id: 'contact-us', name: 'navbar.contact-us' },
       // { id: 'our-work', name: 'footer.Links.list.ourWork' },
       // { id: 'partners', name: 'footer.Links.list.partners' },
   ];

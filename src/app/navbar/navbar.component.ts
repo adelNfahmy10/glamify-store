@@ -50,8 +50,11 @@ export class NavbarComponent implements OnInit{
     { id: 'about', name: 'navbar.about' },
     { id: 'why-us', name: 'navbar.whyUs' },
     { id: 'feature', name: 'navbar.features' },
-    { id: 'our-work', name: 'navbar.ourWork' },
-    { id: 'partners', name: 'navbar.partners' },
+    { id: 'how-it-work', name: 'navbar.how-it-work' },
+    { id: 'event-types', name: 'navbar.event-types' },
+    { id: 'pricing', name: 'navbar.pricing' },
+    { id: 'faq', name: 'navbar.faq' },
+    { id: 'contact-us', name: 'navbar.contact-us' },
   ];
   activeLink: string = 'home';
 
