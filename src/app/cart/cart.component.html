@@ -1,146 +1,146 @@
 <div class="cart" id="cart">
   <div class="container">
     <h1 class="cart-title text-center my-4">Shopping Cart 🛒</h1>
-
     <div class="row g-4">
+      @if(cart().length){
+        <!-- Cart Items -->
+        <div class="col-lg-8">
+          <div class="products-box border border-1 p-3 rounded-4">
+            @for (item of cart(); track $index) {
+              <div class="cart-items">
 
-      <!-- Cart Items -->
-      <div class="col-lg-8">
-        <div class="products-box border border-1 p-3 rounded-4">
-          <div class="cart-items">
+                <!-- Item -->
+                <div class="cart-item d-flex flex-wrap align-items-center justify-content-between gap-4">
 
-            <!-- Item -->
-            <div class="cart-item d-flex align-items-center justify-content-between">
+                  <!-- Left -->
+                  <div class="d-flex flex-wrap align-items-center gap-3">
+                    <img [src]="item.image" alt="product" />
 
-              <!-- Left -->
-              <div class="d-flex align-items-center gap-3">
-                <img src="assets/image/logos/glamify-logo.png" alt="product" />
+                    <div class="item-details">
+                      <h3 class="mb-1">{{item.name}}</h3>
+                      <h6 class="text-muted mb-2">{{item.category}}</h6>
+                      <p class="price mb-2">{{item.price}} EGP</p>
 
-                <div class="item-details">
-                  <h3 class="mb-1">Product Name</h3>
-                  <h6 class="text-muted mb-2">Category Name</h6>
-                  <p class="price mb-2">499 EGP</p>
-
-                  <div class="quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
+                      <div class="quantity">
+                        <button (click)="decrease(item.id)">-</button>
+                        <span>{{ quantities[item.id] }}</span>
+                        <button (click)="increase(item.id)">+</button>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              <!-- Right -->
-              <div class="text-end">
-                <h6 class="mb-1">Total</h6>
-                <h5 class="total">499 EGP</h5>
+                  <!-- Right -->
+                  <div class="text-end">
+                    <h6 class="mb-1">Total</h6>
+                    <h5 class="total">{{ productTotal(item.id, item.price) }} EGP</h5>
 
-                <button class="remove-btn mt-2">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="cart-items">
-
-            <!-- Item -->
-            <div class="cart-item d-flex align-items-center justify-content-between">
-
-              <!-- Left -->
-              <div class="d-flex align-items-center gap-3">
-                <img src="assets/image/logos/glamify-logo.png" alt="product" />
-
-                <div class="item-details">
-                  <h3 class="mb-1">Product Name</h3>
-                  <h6 class="text-muted mb-2">Category Name</h6>
-                  <p class="price mb-2">499 EGP</p>
-
-                  <div class="quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
+                    <button class="remove-btn mt-2" (click)="remove(item.id)">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
                   </div>
+
                 </div>
+
               </div>
-
-              <!-- Right -->
-              <div class="text-end">
-                <h6 class="mb-1">Total</h6>
-                <h5 class="total">499 EGP</h5>
-
-                <button class="remove-btn mt-2">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="cart-items">
-
-            <!-- Item -->
-            <div class="cart-item d-flex align-items-center justify-content-between">
-
-              <!-- Left -->
-              <div class="d-flex align-items-center gap-3">
-                <img src="assets/image/logos/glamify-logo.png" alt="product" />
-
-                <div class="item-details">
-                  <h3 class="mb-1">Product Name</h3>
-                  <h6 class="text-muted mb-2">Category Name</h6>
-                  <p class="price mb-2">499 EGP</p>
-
-                  <div class="quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right -->
-              <div class="text-end">
-                <h6 class="mb-1">Total</h6>
-                <h5 class="total">499 EGP</h5>
-
-                <button class="remove-btn mt-2">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-
-            </div>
-
+            }
           </div>
         </div>
-      </div>
 
-      <!-- Summary -->
-      <div class="col-lg-4">
-        <div class="cart-summary border border-1">
-          <h2 class="mb-4">Order Summary</h2>
+        <!-- Summary -->
+        <div class="col-lg-4">
+          <div class="cart-summary border border-1">
+            <h2 class="mb-4">Order Summary</h2>
 
-          <div class="summary-row">
-            <span>Subtotal</span>
-            <span>499 EGP</span>
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span>{{ totalPrice }} EGP</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span class="text-success">{{ShippingValue}} EGP</span>
+            </div>
+
+            <div class="summary-total">
+              <span>Total</span>
+              <span>{{ totalPrice + ShippingValue }} EGP</span>
+            </div>
+
+            <button class="checkout-btn mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="checkOrder()">Checkout</button>
           </div>
-
-          <div class="summary-row">
-            <span>Shipping</span>
-            <span class="text-success">Free</span>
-          </div>
-
-          <div class="summary-total">
-            <span>Total</span>
-            <span>499 EGP</span>
-          </div>
-
-          <button class="checkout-btn mt-3">Checkout</button>
         </div>
-      </div>
+      } @else {
+        <div class="text-center border py-4">
+          <h2 >Cart Is Empty</h2>
+          <button class="btn main-btn" routerLink="/home">
+            Shop Now
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</div>
 
+
+<!-- Modal -->
+<div #orderModal class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h4 class="text-center fw-bold mb-4">Checkout</h4>
+        <div class="order-final">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Quantity</th>
+                  <th>Price (EGP)</th>
+                  <th>Total (EGP)</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (item of summaryOrder; track $index) {
+                  <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.total }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+
+          <h6 class="text-center">
+            Shipping : {{ShippingValue}} EGP
+          </h6>
+          <h4 class="main-color text-center">
+            Total : {{totalWithShipping}} EGP
+          </h4>
+        </div>
+
+        <form class="d-flex flex-column gap-2" [formGroup]="dataForm">
+          <div>
+            <label class="mb-1" for="Name">Full Name</label>
+            <input formControlName="name" type="text" class="form-control" placeholder="Full Name...">
+          </div>
+
+           <div>
+            <label class="mb-1" for="Phone">Phone Nubmer</label>
+            <input formControlName="phone" type="tel" class="form-control" placeholder="Phone...">
+          </div>
+
+           <div>
+            <label class="mb-1" for="Address">Address</label>
+            <textarea formControlName="address" name="Address" id="Address" class="form-control" placeholder="Full Address..."></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn main-btn" (click)="submitOrder()">Order Now</button>
+      </div>
     </div>
   </div>
 </div>

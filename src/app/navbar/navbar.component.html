@@ -63,7 +63,8 @@
             {{lang.toUpperCase() == 'AR' ? 'العربية' : 'EN'}}
           </button>
 
-          <button class="btn btn-lang w-fit rounded-5" routerLink="/cart">
+          <button class="btn btn-cart w-fit rounded-5 position-relative" routerLink="/cart">
+            <span class="cart-count">{{ cartCount().length }}</span>
             <i class="fa-solid fa-cart-shopping"></i>
           </button>
         </div>

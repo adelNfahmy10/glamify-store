@@ -9,6 +9,7 @@ export interface Product {
   price: number;
   discount?: number;
   details: string;
+  stock?:number;
 }
 
 @Injectable({
@@ -25,7 +26,8 @@ export class DataService {
       category: 'Skincare',
       price: 800,
       discount: 50,
-      details: `24-hour hydration, strengthens skin barrier, suitable for all skin types, fragrance-free and alcohol-free. Lightweight serum with 89% Vichy mineral water and hyaluronic acid.`
+      details: `24-hour hydration, strengthens skin barrier, suitable for all skin types, fragrance-free and alcohol-free. Lightweight serum with 89% Vichy mineral water and hyaluronic acid.`,
+      stock: 5,
     },
     {
       id: 2,
@@ -35,7 +37,8 @@ export class DataService {
       category: 'Skincare',
       price: 450,
       discount: 30,
-      details: `Moisturizes and revitalizes tired eyes, dermatologically and ophthalmologically tested. Lightweight and non-irritating.`
+      details: `Moisturizes and revitalizes tired eyes, dermatologically and ophthalmologically tested. Lightweight and non-irritating.`,
+      stock: 5,
     },
     {
       id: 3,
@@ -45,7 +48,8 @@ export class DataService {
       category: 'Skincare',
       price: 950,
       discount: 100,
-      details: `Brightens and evens skin tone in 10 days. 10% pure vitamin C, hyaluronic acid, pine polyphenols. Lightweight, non-greasy, and fragrance-free.`
+      details: `Brightens and evens skin tone in 10 days. 10% pure vitamin C, hyaluronic acid, pine polyphenols. Lightweight, non-greasy, and fragrance-free.`,
+      stock: 5,
     },
     {
       id: 4,
@@ -55,7 +59,8 @@ export class DataService {
       category: 'Skincare',
       price: 1050,
       discount: 150,
-      details: `Reduces dark spots and wrinkles. Contains 15% Niacinamide, glycolic acid, and vitamin C. Fragrance-free, suitable for sensitive skin.`
+      details: `Reduces dark spots and wrinkles. Contains 15% Niacinamide, glycolic acid, and vitamin C. Fragrance-free, suitable for sensitive skin.`,
+      stock: 5,
     },
     {
       id: 5,
@@ -65,7 +70,8 @@ export class DataService {
       category: 'Skincare',
       price: 780,
       discount: 0,
-      details: `Apply every morning after your daily skincare routine. Provides high SPF 50 protection against UV rays and pollution. Targets signs of aging and dryness. Suitable for all skin types.`
+      details: `Apply every morning after your daily skincare routine. Provides high SPF 50 protection against UV rays and pollution. Targets signs of aging and dryness. Suitable for all skin types.`,
+      stock: 5,
     },
     {
       id: 6,
@@ -75,7 +81,8 @@ export class DataService {
       category: 'Skincare',
       price: 650,
       discount: 0,
-      details: `Apply frequently in generous amounts. Suitable for combination to oily skin. Water-resistant and hypoallergenic.`
+      details: `Apply frequently in generous amounts. Suitable for combination to oily skin. Water-resistant and hypoallergenic.`,
+      stock: 5,
     },
     {
       id: 7,
@@ -85,7 +92,8 @@ export class DataService {
       category: 'Skincare',
       price: 500,
       discount: 0,
-      details: `Apply morning and evening on clean skin. Reduces acne and impurities. Keeps skin hydrated for 24h. Suitable for oily and sensitive skin.`
+      details: `Apply morning and evening on clean skin. Reduces acne and impurities. Keeps skin hydrated for 24h. Suitable for oily and sensitive skin.`,
+      stock: 5,
     },
     {
       id: 8,
@@ -95,7 +103,8 @@ export class DataService {
       category: 'Skincare',
       price: 700,
       discount: 0,
-      details: `High SPF 50 sunscreen. Protects against UV rays and pollution. Lightweight, non-greasy, and suitable for all skin types.`
+      details: `High SPF 50 sunscreen. Protects against UV rays and pollution. Lightweight, non-greasy, and suitable for all skin types.`,
+      stock: 5,
     },
     {
       id: 9,
@@ -105,7 +114,8 @@ export class DataService {
       category: 'Skincare',
       price: 280,
       discount: 0,
-      details: `Apply daily on clean, dry underarms. Removes odor and prevents first signs of hair growth. Provides immediate cosmetic effect for underarms. Suitable for sensitive skin. Dermatologically tested.`
+      details: `Apply daily on clean, dry underarms. Removes odor and prevents first signs of hair growth. Provides immediate cosmetic effect for underarms. Suitable for sensitive skin. Dermatologically tested.`,
+      stock: 5,
     },
     {
       id: 10,
@@ -115,7 +125,8 @@ export class DataService {
       category: 'Skincare',
       price: 950,
       discount: 0,
-      details: `Apply a thin layer on clean, dry skin. Reduces appearance of wrinkles by 24% after 8 weeks. Protects collagen fibers and targets visible signs of aging. Evens skin tone, reduces discoloration. Hypoallergenic and suitable for sensitive skin.`
+      details: `Apply a thin layer on clean, dry skin. Reduces appearance of wrinkles by 24% after 8 weeks. Protects collagen fibers and targets visible signs of aging. Evens skin tone, reduces discoloration. Hypoallergenic and suitable for sensitive skin.`,
+      stock: 5,
     },
     {
       id: 11,
@@ -125,7 +136,8 @@ export class DataService {
       category: 'Skincare',
       price: 600,
       discount: 0,
-      details: `Apply morning and evening with gentle taps around the eye area, starting from dark circles, eyelids, under brow, and surrounding wrinkles. Provides 360° effectiveness for younger-looking eyes: smooths wrinkles, lifts eyelids, reduces dark circles and puffiness. Enriched with Rhamnose, Escine, and Caffeine to reduce fine lines and revitalize the under-eye area. Hypoallergenic and suitable for all skin types.`
+      details: `Apply morning and evening with gentle taps around the eye area, starting from dark circles, eyelids, under brow, and surrounding wrinkles. Provides 360° effectiveness for younger-looking eyes: smooths wrinkles, lifts eyelids, reduces dark circles and puffiness. Enriched with Rhamnose, Escine, and Caffeine to reduce fine lines and revitalize the under-eye area. Hypoallergenic and suitable for all skin types.`,
+      stock: 5,
     },
     {
       id: 12,
@@ -135,7 +147,8 @@ export class DataService {
       category: 'Skincare',
       price: 300,
       discount: 0,
-      details: `Gentle facial cleanser suitable for all skin types. Aloe-scented gel that detoxifies and cleanses the skin. Contains safe ingredients including glycerin. Tube packaging. Hypoallergenic and dermatologically tested. Provides SPF 50 protection.`
+      details: `Gentle facial cleanser suitable for all skin types. Aloe-scented gel that detoxifies and cleanses the skin. Contains safe ingredients including glycerin. Tube packaging. Hypoallergenic and dermatologically tested. Provides SPF 50 protection.`,
+      stock: 5,
     },
     {
       id: 13,
@@ -145,7 +158,8 @@ export class DataService {
       category: 'Skincare',
       price: 400,
       discount: 0,
-      details: `For oily and acne-prone skin. Use twice daily on wet skin, lather and rinse thoroughly. Removes 91% of impurities after first wash. Reduces excess sebum by 94%. Minimizes blemishes in 4 weeks. Hypoallergenic, dermatologically tested. Contains salicylic acid and zinc gluconate.`
+      details: `For oily and acne-prone skin. Use twice daily on wet skin, lather and rinse thoroughly. Removes 91% of impurities after first wash. Reduces excess sebum by 94%. Minimizes blemishes in 4 weeks. Hypoallergenic, dermatologically tested. Contains salicylic acid and zinc gluconate.`,
+      stock: 5,
     },
 
     // ================= Perfumes =================

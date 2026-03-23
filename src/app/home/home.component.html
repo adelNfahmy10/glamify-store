@@ -75,7 +75,7 @@
                 <span class="category">{{item.category}}</span>
                 <p class="price">{{item.price}} EGP</p>
 
-                <button class="add-btn" (click)="addToCart($event, item)">
+                <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
                 </button>
               </div>
@@ -114,7 +114,7 @@
                 <span class="category">{{item.category}}</span>
                 <p class="price">{{item.price}} EGP</p>
 
-                <button class="add-btn" (click)="addToCart($event, item)">
+                <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
                 </button>
               </div>
@@ -140,9 +140,9 @@
           }"
         >
         @for (item of scenCare; track $index) {
-          <swiper-slide (click)="goToProductDetails()">
+          <swiper-slide>
             <div class="product-card">
-              <div class="image-wrapper">
+              <div class="image-wrapper cr" (click)="goToProductDetails()">
                 <img [src]="item.image" [alt]="item.name"/>
               </div>
 
@@ -155,7 +155,7 @@
 
                 <p class="price">{{item.price}} EGP</p>
 
-                <button class="add-btn" (click)="addToCart($event, item)">
+                <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
                 </button>
               </div>
@@ -183,11 +183,10 @@
           }"
         >
         @for (item of makeUp; track $index) {
-          <swiper-slide (click)="goToProductDetails()">
+          <swiper-slide>
             <div class="product-card">
-              <div class="image-wrapper">
+              <div class="image-wrappercr" (click)="goToProductDetails()">
                 <img [src]="item.image" [alt]="item.name"/>
-                <!-- <span class="category">{{item.category}}</span> -->
               </div>
 
               <div class="content">
@@ -195,7 +194,7 @@
                 <span class="category">{{item.category}}</span>
                 <p class="price">{{item.price}} EGP</p>
 
-                <button class="add-btn" (click)="addToCart($event, item)">
+                <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
                 </button>
               </div>
@@ -223,9 +222,9 @@
           }"
         >
         @for (item of accessories; track $index) {
-         <swiper-slide (click)="goToProductDetails()">
+         <swiper-slide>
             <div class="product-card">
-              <div class="image-wrapper">
+              <div class="image-wrapper cr" (click)="goToProductDetails()">
                 <img [src]="item.image" [alt]="item.name"/>
                 <!-- <span class="category">{{item.category}}</span> -->
               </div>
@@ -235,7 +234,7 @@
                 <span class="category">{{item.category}}</span>
                 <p class="price">{{item.price}} EGP</p>
 
-                <button class="add-btn" (click)="addToCart($event, item)">
+                <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
                 </button>
               </div>
@@ -263,9 +262,9 @@
           }"
         >
         @for (item of watches; track $index) {
-          <swiper-slide (click)="goToProductDetails()">
+          <swiper-slide>
             <div class="product-card">
-              <div class="image-wrapper">
+              <div class="image-wrapper cr" (click)="goToProductDetails()">
                 <img [src]="item.image" [alt]="item.name"/>
                 <!-- <span class="category">{{item.category}}</span> -->
               </div>
@@ -275,7 +274,7 @@
                 <span class="category">{{item.category}}</span>
                 <p class="price">{{item.price}} EGP</p>
 
-                <button class="add-btn" (click)="addToCart($event, item)">
+                <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
                 </button>
               </div>

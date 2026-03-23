@@ -2,6 +2,7 @@ import { isPlatformBrowser, NgClass, NgStyle } from '@angular/common';
 import { Component, HostListener, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { RouterLink } from "@angular/router";
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +14,9 @@ import { RouterLink } from "@angular/router";
 export class NavbarComponent implements OnInit{
   private readonly _PLATFORM_ID = inject(PLATFORM_ID)
   private readonly _TranslateService = inject(TranslateService)
+  private readonly _CartService = inject(CartService)
 
+  cartCount = this._CartService.cartSignal;
   navbarWidth:string = '100%'
   navbarTop:string = '0'
   background:string = 'transparent'
@@ -104,4 +107,5 @@ export class NavbarComponent implements OnInit{
     htmlTag.setAttribute('dir', this.lang === 'ar' ? 'rtl' : 'ltr');
     htmlTag.setAttribute('lang', this.lang);
   }
+
 }

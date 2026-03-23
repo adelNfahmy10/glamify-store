@@ -8,7 +8,6 @@ $second-color: #c97b77;
   background: #000;
   color: #fff;
   overflow: hidden;
-  z-index: 9999;
   height: 40px;
   display: flex;
   align-items: center;
@@ -121,19 +120,38 @@ $second-color: #c97b77;
   }
 }
 
-.btn-lang {
+.btn-lang, .btn-cart {
   border: 1px solid $mainColor;
   padding: 4px 8px;
   border-radius: 6px;
   background: transparent;
   cursor: pointer;
   color: $mainColor;
+}
 
+.btn-lang{
   &:hover {
     background: $mainColor;
     color: #fff;
   }
 }
+
+.btn-cart {
+  .cart-count{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: $second-color;
+    width: 20px;
+    height: 20px;
+    line-height: 15px;
+    border-radius: 50%;
+  }
+}
+
 
 // ==================== Responsive ====================
 @media (max-width: 768px) {

@@ -1,12 +1,14 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, PLATFORM_ID } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { DataService, Product } from '../../services/data/data.service';
+import { CartService } from '../../services/cart/cart.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
@@ -14,6 +16,7 @@ import { DataService, Product } from '../../services/data/data.service';
 export class HomeComponent {
   private readonly _Router = inject(Router)
   private readonly _DataService = inject(DataService)
+  private readonly _CartService = inject(CartService)
   private readonly _PLATFORM_ID = inject(PLATFORM_ID)
 
   isBrowser = false;
@@ -29,12 +32,8 @@ export class HomeComponent {
     this._Router.navigate(['/product-details']);
   }
 
-  // 2️⃣ للضغط على Add to Cart
-  addToCart(event: Event, product: any) {
-    event.stopPropagation(); // مهم جدًا! عشان click الكارت ما يتنفذش
-    console.log('Adding to cart:', product);
-    // هنا تحط أي منطق لإضافة المنتج للكارت
-    // مثلا service أو store
+  addToCart(product: any) {
+    this._CartService.addToCart(product);
   }
 
   ngOnInit(): void {
