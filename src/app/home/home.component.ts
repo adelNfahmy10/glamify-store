@@ -1,6 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, PLATFORM_ID } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { DataService, Product } from '../../services/data/data.service';
 
 @Component({
   selector: 'app-home',
@@ -12,9 +13,16 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class HomeComponent {
   private readonly _Router = inject(Router)
+  private readonly _DataService = inject(DataService)
   private readonly _PLATFORM_ID = inject(PLATFORM_ID)
 
   isBrowser = false;
+  allProducts: Product[] = [];
+  scenCare: Product[] = [];
+  makeUp: Product[] = [];
+  perfume: Product[] = [];
+  watches: Product[] = [];
+  accessories: Product[] = [];
 
   // 1️⃣ للضغط على الكارت نفسه
   goToProductDetails() {
@@ -31,6 +39,12 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.isBrowser = isPlatformBrowser(this._PLATFORM_ID);
+    this.allProducts = this._DataService.getAllProducts();
+    this.scenCare = this._DataService.getProductSkincare();
+    this.perfume = this._DataService.getProductPerfume();
+    this.makeUp = this._DataService.getProductMakeup();
+    this.accessories = this._DataService.getProductAccessories();
+    this.watches = this._DataService.getProductWatches();
   }
 
   slides = [

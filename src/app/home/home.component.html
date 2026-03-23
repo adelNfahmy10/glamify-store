@@ -48,7 +48,7 @@
 
   @if(isBrowser){
     <div class="container">
-      <div class="special-offer py-3">
+      <!-- <div class="special-offer py-3">
         <h2 >Special Offer</h2>
         <swiper-container
           dir="rtl"
@@ -57,13 +57,17 @@
           navigation="true"
           loop="true"
           slides-per-view="auto"
+          [breakpoints]="{
+            '0': { slidesPerView: 2, spaceBetween: 10 },
+            '768': { slidesPerView: 3, spaceBetween: 10 },
+            '1024': { slidesPerView: 4, spaceBetween: 15 }
+          }"
         >
         @for (item of slides; track $index) {
           <swiper-slide  (click)="goToProductDetails()">
             <div class="product-card">
               <div class="image-wrapper">
                 <img [src]="item.image" [alt]="item.name"/>
-                <!-- <span class="category">{{item.category}}</span> -->
               </div>
 
               <div class="content">
@@ -77,6 +81,8 @@
               </div>
             </div>
           </swiper-slide>
+        } @empty {
+          <h5> Not Found Products</h5>
         }
         </swiper-container>
       </div>
@@ -90,13 +96,17 @@
           navigation="true"
           slides-per-view="auto"
           loop="true"
+          [breakpoints]="{
+            '0': { slidesPerView: 2, spaceBetween: 10 },
+            '768': { slidesPerView: 3, spaceBetween: 10 },
+            '1024': { slidesPerView: 4, spaceBetween: 15 }
+          }"
         >
         @for (item of slides; track $index) {
           <swiper-slide (click)="goToProductDetails()">
             <div class="product-card">
               <div class="image-wrapper">
                 <img [src]="item.image" [alt]="item.name"/>
-                <!-- <span class="category">{{item.category}}</span> -->
               </div>
 
               <div class="content">
@@ -110,6 +120,49 @@
               </div>
             </div>
           </swiper-slide>
+        }
+        </swiper-container>
+      </div> -->
+
+      <div class="skinCare py-3">
+        <h2>Skin Care</h2>
+        <swiper-container
+          dir="rtl"
+          class="mySwiper wow fadeInUp"
+          pagination="false"
+          navigation="true"
+          loop="true"
+          slides-per-view="auto"
+          [breakpoints]="{
+            '0': { slidesPerView: 2, spaceBetween: 10 },
+            '768': { slidesPerView: 3, spaceBetween: 10 },
+            '1024': { slidesPerView: 4, spaceBetween: 15 }
+          }"
+        >
+        @for (item of scenCare; track $index) {
+          <swiper-slide (click)="goToProductDetails()">
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img [src]="item.image" [alt]="item.name"/>
+              </div>
+
+              <div class="content">
+                <span class="brand">{{item.brand}}</span>
+
+
+                <h3 class="name m-0">{{item.name}}</h3>
+                <span class="category">{{item.category}}</span>
+
+                <p class="price">{{item.price}} EGP</p>
+
+                <button class="add-btn" (click)="addToCart($event, item)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </swiper-slide>
+        } @empty {
+          <h5> Not Found Products</h5>
         }
         </swiper-container>
       </div>
@@ -123,8 +176,13 @@
           navigation="true"
           slides-per-view="auto"
           loop="true"
+          [breakpoints]="{
+            '0': { slidesPerView: 2, spaceBetween: 10 },
+            '768': { slidesPerView: 3, spaceBetween: 10 },
+            '1024': { slidesPerView: 4, spaceBetween: 15 }
+          }"
         >
-        @for (item of slides; track $index) {
+        @for (item of makeUp; track $index) {
           <swiper-slide (click)="goToProductDetails()">
             <div class="product-card">
               <div class="image-wrapper">
@@ -143,6 +201,8 @@
               </div>
             </div>
           </swiper-slide>
+        } @empty {
+          <h5> Not Found Products</h5>
         }
         </swiper-container>
       </div>
@@ -156,8 +216,13 @@
           navigation="true"
           slides-per-view="auto"
           loop="true"
+          [breakpoints]="{
+            '0': { slidesPerView: 2, spaceBetween: 10 },
+            '768': { slidesPerView: 3, spaceBetween: 10 },
+            '1024': { slidesPerView: 4, spaceBetween: 15 }
+          }"
         >
-        @for (item of slides; track $index) {
+        @for (item of accessories; track $index) {
          <swiper-slide (click)="goToProductDetails()">
             <div class="product-card">
               <div class="image-wrapper">
@@ -176,6 +241,8 @@
               </div>
             </div>
           </swiper-slide>
+        } @empty {
+          <h5> Not Found Products</h5>
         }
         </swiper-container>
       </div>
@@ -189,8 +256,13 @@
           navigation="true"
           slides-per-view="auto"
           loop="true"
+          [breakpoints]="{
+            '0': { slidesPerView: 2, spaceBetween: 10 },
+            '768': { slidesPerView: 3, spaceBetween: 10 },
+            '1024': { slidesPerView: 4, spaceBetween: 15 }
+          }"
         >
-        @for (item of slides; track $index) {
+        @for (item of watches; track $index) {
           <swiper-slide (click)="goToProductDetails()">
             <div class="product-card">
               <div class="image-wrapper">
@@ -209,6 +281,8 @@
               </div>
             </div>
           </swiper-slide>
+        } @empty {
+          <h5> Not Found Products</h5>
         }
         </swiper-container>
       </div>
@@ -222,6 +296,11 @@
           navigation="true"
           slides-per-view="auto"
           loop="true"
+          [breakpoints]="{
+            '0': { slidesPerView: 2, spaceBetween: 10 },
+            '768': { slidesPerView: 3, spaceBetween: 10 },
+            '1024': { slidesPerView: 4, spaceBetween: 15 }
+          }"
         >
         @for (item of slides; track $index) {
           <swiper-slide class="mx-3">
@@ -230,6 +309,8 @@
               <span class="category">{{item.category}}</span>
             </div>
           </swiper-slide>
+        } @empty {
+          <h5> Not Found Products</h5>
         }
         </swiper-container>
       </div>

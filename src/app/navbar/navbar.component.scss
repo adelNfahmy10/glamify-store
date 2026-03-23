@@ -1,6 +1,9 @@
-$mainColor : #E69F73;
-$second-color:#c97b77;
+$mainColor: #E69F73;
+$second-color: #c97b77;
+
+// ==================== Ads Bar ====================
 .ads-bar {
+  direction: ltr;
   width: 100%;
   background: #000;
   color: #fff;
@@ -9,63 +12,205 @@ $second-color:#c97b77;
   height: 40px;
   display: flex;
   align-items: center;
+  position: relative;
+
   .ads-track {
     display: flex;
-    width: max-content;
-    animation: scrollAds 15s linear infinite;
-  }
-
-  .ads-track span {
-    padding-right: 100px;
-    font-weight: bold;
     white-space: nowrap;
-  }
-}
+    animation: scrollAds 20s linear infinite;
 
-.head-home{
-  a{
-    font-weight: 600;
-  }
-}
-.navbar-items{
-  .logo{
-    width: 80px;
-  }
-  .search-box{
-    input{
-      &:focus{
-        box-shadow: noe;
-      }
+    // تكرار النصوص بدون فراغ
+    span {
+      display: inline-block;
+      padding-right: 50px; // المسافة بين الرسائل
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    // نسخ إضافية للنصوص عشان الحركة تكون سلسة
+    span:nth-child(n) {
+      content: attr(data-text);
     }
   }
 }
-
-
-.btn-lang{
-  border: 1px solid $mainColor;
-}
-
-
-
 
 @keyframes scrollAds {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-50%); // -50% لو عندك نسخ مكررة للنصوص
+  }
+}
+// ==================== Head Home ====================
+.head-home {
+  background-color: #f8f9fa;
+  padding: 8px 0;
+
+  a {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    i {
+      font-size: 16px;
+    }
+
+    span {
+      margin-left: 4px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
   }
 }
 
-@media (max-width:567px) {
-  .list-Item{
-    .nav-link{
-      &::before{
-        content: none !important;
-      }
-      &.active, &:hover{
-        background-color: $mainColor;
+// ==================== Navbar ====================
+.navbar-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .logo {
+    width: 80px;
+  }
+
+  .search-box {
+    flex: 1;
+    i{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+
+      border-right: 1px solid $mainColor;
+      border-left: 1px solid $second-color;
+    }
+
+    input {
+      width: 100%;
+      padding: 6px 12px;
+      border-radius: 0;
+      outline: none;
+
+      &:focus {
+        box-shadow: none;
+        border-color: $mainColor;
       }
     }
+  }
+}
+
+.btn-lang {
+  border: 1px solid $mainColor;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  color: $mainColor;
+
+  &:hover {
+    background: $mainColor;
+    color: #fff;
+  }
+}
+
+// ==================== Responsive ====================
+@media (max-width: 768px) {
+  .ads-bar {
+    height: 35px;
+
+    .ads-track span {
+      font-size: 12px;
+      padding-right: 30px;
+    }
+  }
+
+  .head-home li a {
+    font-size: 13px;
+
+    i {
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 13px;
+    }
+  }
+
+  .navbar-items {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    .search-box {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .ads-bar {
+    height: 30px;
+
+    .ads-track span {
+      font-size: 11px;
+      padding-right: 20px;
+    }
+  }
+
+  .search-box {
+    i{
+      padding: 0 10px !important;
+    }
+  }
+
+  .head-home ul {
+    justify-content: center !important;
+  }
+
+  .head-home li a {
+    font-size: 12px;
+
+    i {
+      font-size: 12px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .navbar-items .logo {
+    width: 60px;
+  }
+
+  .btn-lang {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+
+  ul {
+    gap: 4px;
   }
 }

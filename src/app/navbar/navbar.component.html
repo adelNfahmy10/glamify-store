@@ -1,74 +1,83 @@
-<div class="ads-bar p-2">
-  <div class="ads-track">
-    <span>🔥 Special offers for all our customers 🔥</span>
-    <span>🔥 Special offers for all our customers 🔥</span>
-    <span>🔥 Special offers for all our customers 🔥</span>
-    <span>🔥 Special offers for all our customers 🔥</span>
-    <span>🔥 Special offers for all our customers 🔥</span>
-    <span>🔥 Special offers for all our customers 🔥</span>
-    <span>🔥 Special offers for all our customers 🔥</span>
-    <span>🔥 Special offers for all our customers 🔥</span>
+<section class="navbar-section overflow-hidden p-0" id="navbar-section">
+  <div class="ads-bar p-2">
+    <div class="ads-track">
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+      <span>🔥 Special offers for all our customers 🔥</span>
+    </div>
   </div>
-</div>
 
-<div class="head-home bg-light p-2">
-  <div class="container">
-    <ul class="list-unstyled m-0 d-flex justify-content-between align-items-center">
-      <li>
-        <a class="d-flex justify-content-center align-items-center gap-1" href="">
-          <i class="fa-solid fa-phone"></i>
-          <span dir="ltr">+201012971190</span>
-        </a>
-      </li>
+  <div class="head-home bg-light p-2">
+    <div class="container">
+      <ul class="list-unstyled m-0 d-flex flex-wrap justify-content-between align-items-center">
+        <li>
+          <a class="d-flex justify-content-center align-items-center gap-1" href="">
+            <i class="fa-solid fa-phone"></i>
+            <span dir="ltr">+201012971190</span>
+          </a>
+        </li>
 
-      <li>
-        <a class="d-flex justify-content-center align-items-center gap-1" href="">
-          <i class="fa-brands fa-whatsapp"></i>
-          <span dir="ltr">+201012971190</span>
-        </a>
-      </li>
+        <li>
+          <a class="d-flex justify-content-center align-items-center gap-1" href="">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span dir="ltr">+201012971190</span>
+          </a>
+        </li>
 
-      <li>
-        <a class="d-flex justify-content-center align-items-center gap-1" href="">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Giza, Egypt</span>
-        </a>
-      </li>
-    </ul>
+        <li>
+          <a class="d-flex justify-content-center align-items-center gap-1" href="">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Giza, Egypt</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<div class="navbar-items my-2">
-  <div class="container-fluid">
-    <div class="d-flex justify-content-between justify-content-center gap-2">
-      <div class="logo-store">
-        <img loading="lazy" src="assets/image/logos/glamify-logo.png" class="logo cr" [alt]="'navbar.title' | translate" routerLink="/">
-      </div>
+  <div class="navbar-items my-2">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between justify-content-center gap-2">
+        <div class="logo-store">
+          <img loading="lazy" src="assets/image/logos/glamify-logo.png" class="logo cr" [alt]="'navbar.title' | translate" routerLink="/">
+        </div>
 
-      <div class="search-box w-100 d-flex justify-content-center align-items-center px-3 position-relative border border-1 rounded-4">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" class="form-control rounded-4 border-0 py-0" placeholder="Search...">
-      </div>
+        <div class="search-box w-100 d-flex justify-content-center align-items-center position-relative rounded-4 border">
+          <i class="fa-solid fa-magnifying-glass rounded-4"></i>
+          <input type="search" class="form-control search border-0 h-100" placeholder="Search...">
+        </div>
 
-      <div class="option-btn d-flex justify-content-center align-items-center gap-2">
-        <button class="w-fit btn btn-lang rounded-5 p-2 px-3" (click)="switchLang()">
-          {{lang.toUpperCase() == 'AR' ? 'العربية' : 'EN'}}
-        </button>
+        <div class="option-btn d-flex justify-content-center align-items-center gap-2">
+          <button class="w-fit btn btn-lang rounded-5" (click)="switchLang()">
+            {{lang.toUpperCase() == 'AR' ? 'العربية' : 'EN'}}
+          </button>
 
-        <button class="btn btn-lang w-fit rounded-5 p-2 px-3" routerLink="/cart">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
+          <button class="btn btn-lang w-fit rounded-5" routerLink="/cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
-</div>
-
-<div class="categories">
-  <ul class="list-unstyled d-flex justify-content-center align-items-center gap-4 bg-light m-0 p-3">
-    <li class="cr">Watch</li>
-    <li class="cr">Makeup</li>
-    <li class="cr">Perfume</li>
-    <li class="cr">Accessories</li>
-  </ul>
-</div>
+  <div class="categories">
+    <ul class="list-unstyled d-flex flex-wrap justify-content-center align-items-center gap-4 bg-light m-0 p-3">
+      <li class="cr">Watch</li>
+      <li class="cr">Makeup</li>
+      <li class="cr">Perfume</li>
+      <li class="cr">Accessories</li>
+      <li class="cr">Skin Care</li>
+    </ul>
+  </div>
+</section>
