@@ -1,45 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-$mainColor : #598AF0;
-$second-color:#B245C2;
+$mainColor : #E69F73;
+$second-color:#c97b77;
+$bg-dark: #0f0f0f;
+$card-dark: #1a1a1a;
+$text-muted: #aaa;
+
+
 .home{
-  background: url('/assets/image/home-image/home-bg.svg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  .home-content{
-    position: relative;
-    z-index: 10;
-    h1{
-      text-transform: capitalize;
-    }
-    p{
-      color: #7e7e7e;
+  swiper-container {
+    width: 100%;
+    swiper-slide {
+      margin: 0 10px;
+      padding: 35px 0;
+      width: 300px;
     }
   }
 
-  .event-wow-img{
-    width: 200px;
-    position: absolute;
-    position: 8;
-    &.event-1{
-      right: 30px;
-      bottom: 30px;
+  .product-card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(42, 42, 42, 0.05);
+
+    &:hover {
+      transform: translateY(-10px) scale(1.01);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     }
-    &.event-2{
-      top: 80px;
-      left: 30px;
+
+    .image-wrapper {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+      }
+    }
+
+    &:hover .image-wrapper img {
+      transform: scale(1.08);
+    }
+
+    .active {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      padding: 6px 12px;
+      font-size: 11px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .category {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      font-size: 11px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      padding: 18px;
+    }
+
+    .name {
+      font-size: 17px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .old-price{
+      font-size: 14px;
+      text-decoration: line-through;
+      font-weight: bold;
+    }
+    .price {
+      font-size: 18px;
+      color: $mainColor;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .add-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: linear-gradient(135deg, $mainColor, $second-color);
+      color: #000;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(230, 159, 115, 0.4);
+      }
+
+      &:active {
+        transform: scale(0.97);
+      }
     }
   }
-}
-@media (max-width:567px) {
-  .home-content{
-    width: 100% !important;
-  }
-  .event-wow-img{
-    width: 150px !important;
-    &.event-2{
-      width: 200px !important;
+
+  .mySwiper {
+    position: relative;
+
+    // الأسهم
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5); // خلفية شبه شفافة
+      border-radius: 50%; // دائرة
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 50%; // توسيط عمودي
+      transform: translateY(-50%);
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    // تحريك الأسهم يمين وشمال
+    .swiper-button-next {
+      right: 10px;
+    }
+    .swiper-button-prev {
+      left: 10px;
+    }
+
+    // حجم ولون السهم نفسه
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 20px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    // تأثير hover
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: translateY(-50%) scale(1.1);
     }
   }
 }

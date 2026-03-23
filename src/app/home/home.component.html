@@ -1,25 +1,246 @@
 <section class="home overflow-hidden" id="home">
-  <div class="container d-flex justify-content-center align-items-center h-100">
-    <div class="home-content text-center">
-      <h1 class="animate__animated animate__fadeInDown animate__slow">{{'hero.title' | translate}}</h1>
-      <p class="mt-3 animate__animated animate__fadeInUp animate__slow">{{'hero.subtitle' | translate}}</p>
-      <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
-        <button class="btn main-btn animate__animated animate__fadeInRight animate__slow">
-          <a class="text-white"
-            href="https://www.ticketateg.com/"
-            target="_blank">
-            {{ 'hero.startNow' | translate }}
-          </a>
-        </button>
-        <button class="btn second-btn animate__animated animate__fadeInLeft animate__slow">
-          <a (click)="scrollToSection('about')">
-            {{ 'hero.learnMore' | translate }}
-          </a>
-        </button>
+  <!-- <div class="banners">
+    <div class="row g-0">
+      <div class="col-2">
+        <div class="product-banner h-50">
+          <img loading="lazy" class="w-100 h-100" src="assets/image/home-image/image-1.png" alt="Glamify Store">
+        </div>
+
+        <div class="product-banner h-50">
+          <img loading="lazy" class="w-100 h-100" src="assets/image/home-image/image-2.png" alt="Glamify Store">
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="banners">
+          <swiper-container
+            dir="rtl"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+            class="mySwiper"
+          >
+            <swiper-slide>
+              <div class="feature-image">
+                <img loading="lazy" src="assets/image/home-image/banner-2.png" alt="Glamify Store">
+              </div>
+            </swiper-slide>
+
+            <swiper-slide>
+              <div class="feature-image">
+                <img loading="lazy" src="assets/image/home-image/banner-1.png" alt="Glamify Store">
+              </div>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="product-banner h-50">
+          <img loading="lazy" class="w-100 h-100" src="assets/image/home-image/image-3.png" alt="Glamify Store">
+        </div>
+
+        <div class="product-banner h-50">
+          <img loading="lazy" class="w-100 h-100" src="assets/image/home-image/image-4.png" alt="Glamify Store">
+        </div>
       </div>
     </div>
+  </div> -->
 
-    <img class="event-wow-img event-1 wow animate__animated animate__jackInTheBox animate__slow" src="assets/image/home-image/event-1.png" alt="events">
-    <img class="event-wow-img event-2 wow animate__animated animate__rotateIn animate__slow" src="assets/image/home-image/event-2.png" alt="events">
-  </div>
+  @if(isBrowser){
+    <div class="container">
+      <div class="special-offer py-3">
+        <h2 >Special Offer</h2>
+        <swiper-container
+          dir="rtl"
+          class="mySwiper wow fadeInUp"
+          pagination="false"
+          navigation="true"
+          loop="true"
+          slides-per-view="auto"
+        >
+        @for (item of slides; track $index) {
+          <swiper-slide  (click)="goToProductDetails()">
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img [src]="item.image" [alt]="item.name"/>
+                <!-- <span class="category">{{item.category}}</span> -->
+              </div>
+
+              <div class="content">
+                <h3 class="name">{{item.name}}</h3>
+                <span class="category">{{item.category}}</span>
+                <p class="price">{{item.price}} EGP</p>
+
+                <button class="add-btn" (click)="addToCart($event, item)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </swiper-slide>
+        }
+        </swiper-container>
+      </div>
+
+      <div class="offer-499 py-3">
+        <h2>Offers starting from | 499 EGP and below</h2>
+        <swiper-container
+          dir="rtl"
+          class="mySwiper wow fadeInUp"
+          pagination="false"
+          navigation="true"
+          slides-per-view="auto"
+          loop="true"
+        >
+        @for (item of slides; track $index) {
+          <swiper-slide (click)="goToProductDetails()">
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img [src]="item.image" [alt]="item.name"/>
+                <!-- <span class="category">{{item.category}}</span> -->
+              </div>
+
+              <div class="content">
+                <h3 class="name">{{item.name}}</h3>
+                <span class="category">{{item.category}}</span>
+                <p class="price">{{item.price}} EGP</p>
+
+                <button class="add-btn" (click)="addToCart($event, item)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </swiper-slide>
+        }
+        </swiper-container>
+      </div>
+
+      <div class="makeups py-3">
+        <h2>Makeups</h2>
+        <swiper-container
+          dir="rtl"
+          class="mySwiper wow fadeInUp"
+          pagination="false"
+          navigation="true"
+          slides-per-view="auto"
+          loop="true"
+        >
+        @for (item of slides; track $index) {
+          <swiper-slide (click)="goToProductDetails()">
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img [src]="item.image" [alt]="item.name"/>
+                <!-- <span class="category">{{item.category}}</span> -->
+              </div>
+
+              <div class="content">
+                <h3 class="name">{{item.name}}</h3>
+                <span class="category">{{item.category}}</span>
+                <p class="price">{{item.price}} EGP</p>
+
+                <button class="add-btn" (click)="addToCart($event, item)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </swiper-slide>
+        }
+        </swiper-container>
+      </div>
+
+      <div class="accessories py-3">
+        <h2>Accessories</h2>
+        <swiper-container
+          dir="rtl"
+          class="mySwiper wow fadeInUp"
+          pagination="false"
+          navigation="true"
+          slides-per-view="auto"
+          loop="true"
+        >
+        @for (item of slides; track $index) {
+         <swiper-slide (click)="goToProductDetails()">
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img [src]="item.image" [alt]="item.name"/>
+                <!-- <span class="category">{{item.category}}</span> -->
+              </div>
+
+              <div class="content">
+                <h3 class="name">{{item.name}}</h3>
+                <span class="category">{{item.category}}</span>
+                <p class="price">{{item.price}} EGP</p>
+
+                <button class="add-btn" (click)="addToCart($event, item)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </swiper-slide>
+        }
+        </swiper-container>
+      </div>
+
+      <div class="watch py-3">
+        <h2>Watches</h2>
+        <swiper-container
+          dir="rtl"
+          class="mySwiper wow fadeInUp"
+          pagination="false"
+          navigation="true"
+          slides-per-view="auto"
+          loop="true"
+        >
+        @for (item of slides; track $index) {
+          <swiper-slide (click)="goToProductDetails()">
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img [src]="item.image" [alt]="item.name"/>
+                <!-- <span class="category">{{item.category}}</span> -->
+              </div>
+
+              <div class="content">
+                <h3 class="name">{{item.name}}</h3>
+                <span class="category">{{item.category}}</span>
+                <p class="price">{{item.price}} EGP</p>
+
+                <button class="add-btn" (click)="addToCart($event, item)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </swiper-slide>
+        }
+        </swiper-container>
+      </div>
+
+      <div class="saving-delivery py-3">
+        <h2>Saving Corner | Free Delivery</h2>
+        <swiper-container
+          dir="rtl"
+          class="mySwiper wow fadeInUp"
+          pagination="false"
+          navigation="true"
+          slides-per-view="auto"
+          loop="true"
+        >
+        @for (item of slides; track $index) {
+          <swiper-slide class="mx-3">
+            <div class="d-flex flex-column justify-content-center align-items-center cr">
+              <img class="rounded-circle w-75 mx-auto" [src]="item.image" [alt]="item.name" />
+              <span class="category">{{item.category}}</span>
+            </div>
+          </swiper-slide>
+        }
+        </swiper-container>
+      </div>
+    </div>
+  }
+
+
+
+
 </section>
+
+
+
+

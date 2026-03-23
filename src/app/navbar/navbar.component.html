@@ -1,45 +1,74 @@
-<nav
-  [ngStyle]="{
-    'top': navbarTop,
-    background: background
-  }"
-  class="navbar navbar-expand-lg px-0 px-md-5 animate__animated animate__fadeInDown fixed-top w-100 z-3"
-  >
-  <a class="navbar-brand cr" (click)="scrollToSection('home')">
-    <img loading="lazy" src="assets/image/logos/app-icon.png" class="logo" [alt]="'navbar.title' | translate">
-  </a>
-  <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon d-flex justify-content-center align-items-center">
-      <i class="fa-brands fa-nfc-symbol text-dark fs-1 "></i>
-    </span>
-  </button>
-  <div class="collapse navbar-collapse list-Item" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto p-0 gap-4">
-      @for ( section of sections; track $index) {
-        <li class="nav-item">
-          <a class="nav-link rounded-2 px-3 px-sm-0"
-            href="javascript:void(0)"
-            (click)="scrollToSection(section.id)"
-            [ngClass]="{'active': activeLink === section.id}">
-            {{ section.name | translate }}
-          </a>
-        </li>
-      }
-    </ul>
+<div class="ads-bar p-2">
+  <div class="ads-track">
+    <span>🔥 Special offers for all our customers 🔥</span>
+    <span>🔥 Special offers for all our customers 🔥</span>
+    <span>🔥 Special offers for all our customers 🔥</span>
+    <span>🔥 Special offers for all our customers 🔥</span>
+    <span>🔥 Special offers for all our customers 🔥</span>
+    <span>🔥 Special offers for all our customers 🔥</span>
+    <span>🔥 Special offers for all our customers 🔥</span>
+    <span>🔥 Special offers for all our customers 🔥</span>
+  </div>
+</div>
 
-    <ul class="navbar-nav d-flex justify-content-center gap-3 mt-2 mt-sm-0">
-      <li class="nav-item">
-        <button class="btn btn-lang py-0 px-3 rounded-pill" (click)="switchLang()">{{lang.toUpperCase() == 'AR' ? 'العربية' : 'EN'}}</button>
+<div class="head-home bg-light p-2">
+  <div class="container">
+    <ul class="list-unstyled m-0 d-flex justify-content-between align-items-center">
+      <li>
+        <a class="d-flex justify-content-center align-items-center gap-1" href="">
+          <i class="fa-solid fa-phone"></i>
+          <span dir="ltr">+201012971190</span>
+        </a>
       </li>
-      <li class="nav-item d-flex align-items-center">
-        <button class="second-btn rounded-5">
-          <a
-            href="https://www.ticketateg.com/"
-            target="_blank">
-            {{ 'navbar.getStart' | translate }}
-          </a>
-        </button>
+
+      <li>
+        <a class="d-flex justify-content-center align-items-center gap-1" href="">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span dir="ltr">+201012971190</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="d-flex justify-content-center align-items-center gap-1" href="">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Giza, Egypt</span>
+        </a>
       </li>
     </ul>
   </div>
-</nav>
+</div>
+
+<div class="navbar-items my-2">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between justify-content-center gap-2">
+      <div class="logo-store">
+        <img loading="lazy" src="assets/image/logos/glamify-logo.png" class="logo cr" [alt]="'navbar.title' | translate" routerLink="/">
+      </div>
+
+      <div class="search-box w-100 d-flex justify-content-center align-items-center px-3 position-relative border border-1 rounded-4">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" class="form-control rounded-4 border-0 py-0" placeholder="Search...">
+      </div>
+
+      <div class="option-btn d-flex justify-content-center align-items-center gap-2">
+        <button class="w-fit btn btn-lang rounded-5 p-2 px-3" (click)="switchLang()">
+          {{lang.toUpperCase() == 'AR' ? 'العربية' : 'EN'}}
+        </button>
+
+        <button class="btn btn-lang w-fit rounded-5 p-2 px-3" routerLink="/cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="categories">
+  <ul class="list-unstyled d-flex justify-content-center align-items-center gap-4 bg-light m-0 p-3">
+    <li class="cr">Watch</li>
+    <li class="cr">Makeup</li>
+    <li class="cr">Perfume</li>
+    <li class="cr">Accessories</li>
+  </ul>
+</div>

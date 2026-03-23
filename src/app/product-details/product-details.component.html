@@ -1,0 +1,184 @@
+<div class="product-details py-5">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Product Images -->
+      <div class="col-md-6">
+        <swiper-container
+          dir="rtl"
+          style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+          thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+          </swiper-slide>
+        </swiper-container>
+
+        <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+          watch-slides-progress="true">
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+          </swiper-slide>
+        </swiper-container>
+      </div>
+      <!-- Product Info -->
+      <div class="col-md-6">
+
+        <h2 class="fw-bold">{{ product.title }}</h2>
+
+        <!-- Rating -->
+        <div class="mb-2 text-warning">
+          ★★★★☆ <span class="text-muted">(4.2)</span>
+        </div>
+
+        <!-- Price -->
+        <div class="mb-3">
+          <span class="text-decoration-line-through text-muted me-2">$30</span>
+          <span class="fs-4 text-danger fw-bold">$20</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-muted">
+          {{ product.description }}
+        </p>
+
+        <!-- Quantity -->
+        <div class="d-flex align-items-center mb-4">
+          <button class="btn btn-outline-secondary" (click)="decrease()">-</button>
+          <span class="mx-3">{{ quantity }}</span>
+          <button class="btn btn-outline-secondary" (click)="increase()">+</button>
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex gap-3">
+          <button class="btn add-btn px-4">Add to Cart</button>
+          <button class="btn buy-btn px-4">Buy Now</button>
+        </div>
+
+        <!-- Extra Info -->
+        <div class="mt-4 text-muted">
+          <p>🚚 Free Delivery</p>
+          <p>💳 Cash on Delivery Available</p>
+        </div>
+
+      </div>
+
+      <!-- Tabs Section -->
+      <div class="col-12">
+        <div class="tabs-option">
+          <ul class="nav nav-tabs p-0 text-center justify-content-center">
+            <li class="nav-item flex-grow-1">
+              <button class="nav-link w-100 active" data-bs-toggle="tab" data-bs-target="#desc">Description</button>
+            </li>
+            <li class="nav-item flex-grow-1">
+              <button class="nav-link w-100" data-bs-toggle="tab" data-bs-target="#reviews">Reviews</button>
+            </li>
+          </ul>
+
+          <div class="tab-content p-4 border border-top-0">
+
+            <div class="tab-pane fade show active" id="desc">
+              {{ product.description }}
+            </div>
+
+            <div class="tab-pane fade" id="reviews">
+              <p>No reviews yet.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Related Products Section -->
+      <div class="col-12">
+        <div class="related-product">
+          <h2 class="m-0">Related Products</h2>
+
+          <swiper-container
+            dir="rtl"
+            class="mySwiper wow fadeInUp"
+            pagination="false"
+            slides-per-view="auto"
+            loop="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="false"
+          >
+          @for (item of slides; track $index) {
+            <swiper-slide>
+              <div class="product-card">
+                <div class="image-wrapper">
+                  <img [src]="item.image" [alt]="item.name" />
+                  <!-- <span class="category">{{item.category}}</span> -->
+                </div>
+
+                <div class="content">
+                  <h3 class="name">{{item.name}}</h3>
+                  <span class="category">{{item.category}}</span>
+                  <p class="price">{{item.price}} EGP</p>
+
+                  <button class="add-btn">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </swiper-slide>
+          }
+          </swiper-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
