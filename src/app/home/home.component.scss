@@ -89,6 +89,12 @@ $text-muted: #aaa;
       color: #fff;
     }
 
+    .rate-stars{
+      i{
+        font-size: 12px;
+      }
+    }
+
     .old-price{
       font-size: 14px;
       text-decoration: line-through;

@@ -1,6 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, PLATFORM_ID } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { DataService, Product } from '../../services/data/data.service';
 import { CartService } from '../../services/cart/cart.service';
 import { ToastrService } from 'ngx-toastr';
@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
@@ -44,6 +44,18 @@ export class HomeComponent {
     this.makeUp = this._DataService.getProductMakeup();
     this.accessories = this._DataService.getProductAccessories();
     this.watches = this._DataService.getProductWatches();
+  }
+
+  getStars(rate?: any) {
+    const full = Math.floor(rate);
+    const half = rate % 1 >= 0.5;
+    const empty = 5 - full - (half ? 1 : 0);
+
+    return {
+      fullStars: Array(full),
+      halfStar: half,
+      emptyStars: Array(empty)
+    };
   }
 
   slides = [

@@ -8,7 +8,9 @@ export interface Product {
   category: string;  // Added category
   price: number;
   discount?: number;
-  details: string;
+  details: any;
+  feature?: any;
+  rate?: number;
   stock?:number;
 }
 
@@ -20,18 +22,40 @@ export class DataService {
   // ================= Skincare =================
     {
       id: 1,
-      image: '../../assets/image/skincare-image/Mineral-89.png',
+      image: 'assets/image/skincare-image/Mineral-89.png',
       name: 'Vichy Mineral 89 Moisturizer',
       brand: 'Vichy',
       category: 'Skincare',
       price: 800,
       discount: 50,
-      details: `24-hour hydration, strengthens skin barrier, suitable for all skin types, fragrance-free and alcohol-free. Lightweight serum with 89% Vichy mineral water and hyaluronic acid.`,
+      details: [
+        "Provides 24-hour hydration from the first use and +21% plumping after 4 weeks.",
+        "Strengthens the skin barrier against daily aggressors.",
+        "Suitable for all skin types, including sensitive skin.",
+        "Hydrates, plumps, and evens skin tone.",
+        "Makes the skin more resistant to visible signs of aging caused by UV exposure, pollution, and stress.",
+        "Lightweight, transparent, and fast-absorbing serum.",
+        "Fragrance-free, alcohol-free, and hypoallergenic.",
+        "Contains 89% Vichy mineral water and hyaluronic acid.",
+        "Formulated with 11 simple ingredients for long-lasting moisture.",
+        "Supports and strengthens the natural skin barrier while defending against daily environmental aggressors.",
+        "Leaves skin moisturized, radiant, and refreshed for up to 24 hours."
+      ],
+      feature: [
+       "Product Weight: 202 g",
+        "Size / Volume: 50 ml",
+        "Gender: Unisex",
+        "Target Skin Type: All skin types",
+        "Skin Concerns: Dryness",
+        "Formulation: Cream",
+        "Model Name: Mineral 89"
+      ],
       stock: 5,
+      rate:4,
     },
     {
       id: 2,
-      image: '../../assets/image/skincare-image/Serum-Mineral-89.png',
+      image: 'assets/image/skincare-image/Serum-Mineral-89.png',
       name: 'Vichy Mineral 89 Eye Moisturizer',
       brand: 'Vichy',
       category: 'Skincare',
@@ -39,10 +63,11 @@ export class DataService {
       discount: 30,
       details: `Moisturizes and revitalizes tired eyes, dermatologically and ophthalmologically tested. Lightweight and non-irritating.`,
       stock: 5,
+      rate:4.6,
     },
     {
       id: 3,
-      image: '../../assets/image/skincare-image/Serum-Lefit-Active.png',
+      image: 'assets/image/skincare-image/Serum-Lefit-Active.png',
       name: 'Vichy Liftactiv Vitamin C 16% Serum',
       brand: 'Vichy',
       category: 'Skincare',
@@ -50,10 +75,11 @@ export class DataService {
       discount: 100,
       details: `Brightens and evens skin tone in 10 days. 10% pure vitamin C, hyaluronic acid, pine polyphenols. Lightweight, non-greasy, and fragrance-free.`,
       stock: 5,
+      rate:4.3,
     },
     {
       id: 4,
-      image: '../../assets/image/skincare-image/Lefit-Active-Seshylist.png',
+      image: 'assets/image/skincare-image/Lefit-Active-Seshylist.png',
       name: 'Vichy Liftactiv Specialist B3 Dark Spot Serum 30ml',
       brand: 'Vichy',
       category: 'Skincare',
@@ -61,6 +87,7 @@ export class DataService {
       discount: 150,
       details: `Reduces dark spots and wrinkles. Contains 15% Niacinamide, glycolic acid, and vitamin C. Fragrance-free, suitable for sensitive skin.`,
       stock: 5,
+      rate: 5,
     },
     {
       id: 5,
@@ -72,6 +99,7 @@ export class DataService {
       discount: 0,
       details: `Apply every morning after your daily skincare routine. Provides high SPF 50 protection against UV rays and pollution. Targets signs of aging and dryness. Suitable for all skin types.`,
       stock: 5,
+      rate: 4.7,
     },
     {
       id: 6,
@@ -83,6 +111,7 @@ export class DataService {
       discount: 0,
       details: `Apply frequently in generous amounts. Suitable for combination to oily skin. Water-resistant and hypoallergenic.`,
       stock: 5,
+      rate: 3.7,
     },
     {
       id: 7,
@@ -94,6 +123,7 @@ export class DataService {
       discount: 0,
       details: `Apply morning and evening on clean skin. Reduces acne and impurities. Keeps skin hydrated for 24h. Suitable for oily and sensitive skin.`,
       stock: 5,
+      rate: 3.2,
     },
     {
       id: 8,
@@ -105,6 +135,7 @@ export class DataService {
       discount: 0,
       details: `High SPF 50 sunscreen. Protects against UV rays and pollution. Lightweight, non-greasy, and suitable for all skin types.`,
       stock: 5,
+      rate: 3.7,
     },
     {
       id: 9,
@@ -116,6 +147,7 @@ export class DataService {
       discount: 0,
       details: `Apply daily on clean, dry underarms. Removes odor and prevents first signs of hair growth. Provides immediate cosmetic effect for underarms. Suitable for sensitive skin. Dermatologically tested.`,
       stock: 5,
+      rate: 4.9,
     },
     {
       id: 10,
@@ -127,6 +159,7 @@ export class DataService {
       discount: 0,
       details: `Apply a thin layer on clean, dry skin. Reduces appearance of wrinkles by 24% after 8 weeks. Protects collagen fibers and targets visible signs of aging. Evens skin tone, reduces discoloration. Hypoallergenic and suitable for sensitive skin.`,
       stock: 5,
+      rate: 3.2,
     },
     {
       id: 11,
@@ -138,6 +171,7 @@ export class DataService {
       discount: 0,
       details: `Apply morning and evening with gentle taps around the eye area, starting from dark circles, eyelids, under brow, and surrounding wrinkles. Provides 360° effectiveness for younger-looking eyes: smooths wrinkles, lifts eyelids, reduces dark circles and puffiness. Enriched with Rhamnose, Escine, and Caffeine to reduce fine lines and revitalize the under-eye area. Hypoallergenic and suitable for all skin types.`,
       stock: 5,
+      rate: 3.9,
     },
     {
       id: 12,
@@ -149,6 +183,7 @@ export class DataService {
       discount: 0,
       details: `Gentle facial cleanser suitable for all skin types. Aloe-scented gel that detoxifies and cleanses the skin. Contains safe ingredients including glycerin. Tube packaging. Hypoallergenic and dermatologically tested. Provides SPF 50 protection.`,
       stock: 5,
+      rate: 4.3,
     },
     {
       id: 13,
@@ -160,6 +195,7 @@ export class DataService {
       discount: 0,
       details: `For oily and acne-prone skin. Use twice daily on wet skin, lather and rinse thoroughly. Removes 91% of impurities after first wash. Reduces excess sebum by 94%. Minimizes blemishes in 4 weeks. Hypoallergenic, dermatologically tested. Contains salicylic acid and zinc gluconate.`,
       stock: 5,
+      rate: 2.7,
     },
 
     // ================= Perfumes =================
@@ -206,6 +242,7 @@ export class DataService {
   // ================== Functions ==================
   getAllProducts(): Product[] { return this.products; }
   getProductsByCategory(category: string): Product[] { return this.products.filter(p => p.category === category); }
+  getProductsByBrand(brand: string): Product[] { return this.products.filter(p => p.brand === brand); }
 
   getProductSkincare(): Product[] { return this.getProductsByCategory('Skincare'); }
   getProductPerfume(): Product[] { return this.getProductsByCategory('Perfumes'); }

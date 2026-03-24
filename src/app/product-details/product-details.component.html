@@ -2,114 +2,116 @@
   <div class="container">
     <div class="row g-5">
       <!-- Product Images -->
-      <div class="col-md-6">
-        <swiper-container
-          dir="rtl"
-          style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
-          thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-          </swiper-slide>
-        </swiper-container>
+       @if(isBrowser){
+        <div class="col-md-6 main-slider">
+          <swiper-container
+            dir="rtl"
+            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+            thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image"/>
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+          </swiper-container>
 
-        <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
-          watch-slides-progress="true">
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-          </swiper-slide>
-        </swiper-container>
-      </div>
+          <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+            watch-slides-progress="true">
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+            <swiper-slide>
+              <img [src]="product.image" />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+       }
+
       <!-- Product Info -->
       <div class="col-md-6">
 
-        <h2 class="fw-bold">{{ product.title }}</h2>
+        <h2 class="fw-bold">{{ product?.name }}</h2>
+        <span class="brand">{{product.brand}}</span>
+        <p>{{product?.category}}</p>
 
         <!-- Rating -->
-        <div class="mb-2 text-warning">
-          ★★★★☆ <span class="text-muted">(4.2)</span>
+        <div class="mb-2 text-warning d-flex align-items-center gap-1">
+
+          <!-- Rate Number -->
+          <span class="text-muted">{{ product?.rate }}</span>
+
+          <!-- Empty Stars -->
+          @for (i of emptyStars; track $index) {
+            <i class="fa-regular fa-star text-secondary"></i>
+          }
+
+          <!-- Half Star -->
+          @if(halfStar){
+            <i class="fa-solid fa-star-half-stroke"></i>
+          }
+
+          <!-- Full Stars -->
+          @for (i of fullStars; track $index) {
+            <i class="fa-solid fa-star"></i>
+          }
+
         </div>
 
         <!-- Price -->
         <div class="mb-3">
-          <span class="text-decoration-line-through text-muted me-2">$30</span>
-          <span class="fs-4 text-danger fw-bold">$20</span>
+          <!-- <span class="text-decoration-line-through text-muted me-2">$30</span> -->
+          <span class="fs-4 main-color fw-bold">{{product?.price}} EGP</span>
         </div>
 
         <!-- Description -->
-        <p class="text-muted">
-          {{ product.description }}
-        </p>
+        <!-- <p class="text-muted">
+          {{ product?.details }}
+        </p> -->
 
         <!-- Quantity -->
-        <div class="d-flex align-items-center mb-4">
+        <!-- <div class="d-flex align-items-center mb-4">
           <button class="btn btn-outline-secondary" (click)="decrease()">-</button>
           <span class="mx-3">{{ quantity }}</span>
           <button class="btn btn-outline-secondary" (click)="increase()">+</button>
-        </div>
+        </div> -->
 
         <!-- Buttons -->
         <div class="d-flex gap-3">
-          <button class="btn add-btn px-4">Add to Cart</button>
-          <button class="btn buy-btn px-4">Buy Now</button>
+          <button class="btn add-btn px-4" (click)="addToCart()">Add to Cart</button>
+          <!-- <button class="btn buy-btn px-4">Buy Now</button> -->
         </div>
 
         <!-- Extra Info -->
         <div class="mt-4 text-muted">
-          <p>🚚 Free Delivery</p>
+          <!-- <p>🚚 Free Delivery</p> -->
           <p>💳 Cash on Delivery Available</p>
         </div>
 
@@ -123,18 +125,32 @@
               <button class="nav-link w-100 active" data-bs-toggle="tab" data-bs-target="#desc">Description</button>
             </li>
             <li class="nav-item flex-grow-1">
-              <button class="nav-link w-100" data-bs-toggle="tab" data-bs-target="#reviews">Reviews</button>
+              <button class="nav-link w-100" data-bs-toggle="tab" data-bs-target="#specifications">Specifications</button>
             </li>
           </ul>
 
           <div class="tab-content p-4 border border-top-0">
 
             <div class="tab-pane fade show active" id="desc">
-              {{ product.description }}
+              <h4>Product Features :</h4>
+              <ul class="list-unstyled">
+                @for (item of product?.details; track $index) {
+                  <li>- {{item}}</li>
+                } @empty {
+                  <p>No Feature yet.</p>
+                }
+              </ul>
             </div>
 
-            <div class="tab-pane fade" id="reviews">
-              <p>No reviews yet.</p>
+            <div class="tab-pane fade" id="specifications">
+              <h4>Product Specifications :</h4>
+              <ul class="list-unstyled">
+                @for (item of product?.feature; track $index) {
+                  <li>- {{item}}</li>
+                } @empty {
+                  <p>No Specifications yet.</p>
+                }
+              </ul>
             </div>
 
           </div>
@@ -142,43 +158,146 @@
         </div>
       </div>
 
-      <!-- Related Products Section -->
-      <div class="col-12">
-        <div class="related-product">
-          <h2 class="m-0">Related Products</h2>
+      @if(isBrowser){
+        <!-- Related Products Section -->
+        <div class="col-12">
+          <div class="related-product">
+            <h2 class="m-0">Related Category Products</h2>
 
-          <swiper-container
-            dir="rtl"
-            class="mySwiper wow fadeInUp"
-            pagination="false"
-            slides-per-view="auto"
-            loop="true"
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-          >
-          @for (item of slides; track $index) {
-            <swiper-slide>
-              <div class="product-card">
-                <div class="image-wrapper">
-                  <img [src]="item.image" [alt]="item.name" />
-                  <!-- <span class="category">{{item.category}}</span> -->
+            <swiper-container
+              dir="rtl"
+              class="mySwiper wow fadeInUp"
+              pagination="false"
+              navigation="true"
+              loop="true"
+              slides-per-view="auto"
+              [breakpoints]="{
+                '0': { slidesPerView: 2, spaceBetween: 10 },
+                '768': { slidesPerView: 3, spaceBetween: 10 },
+                '1024': { slidesPerView: 4, spaceBetween: 15 }
+              }"
+            >
+            @for (item of relateProductsCategory; track $index) {
+              <swiper-slide>
+                <div class="product-card">
+                  <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
+                    <img [src]="item?.image" [alt]="item?.name"/>
+                  </div>
+
+                  <div class="content">
+                    <span class="brand">{{item?.brand}}</span>
+
+
+                    <h3 class="name m-0">{{item?.name}}</h3>
+                    <span class="category">{{item?.category}}</span>
+
+                    @if(item?.rate){
+                      <div class="rate-stars mb-2 text-warning d-flex align-items-center gap-1">
+                        <!-- Rate -->
+                        <span class="text-muted">{{ item?.rate }}</span>
+
+                        <!-- Full Stars -->
+                        @for (i of getStars(item?.rate).fullStars; track $index) {
+                          <i class="fa-solid fa-star"></i>
+                        }
+
+                        <!-- Half Star -->
+                        @if (getStars(item?.rate).halfStar) {
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                        }
+
+                        <!-- Empty Stars -->
+                        @for (i of getStars(item?.rate).emptyStars; track $index) {
+                          <i class="fa-regular fa-star text-secondary"></i>
+                        }
+                      </div>
+                    }
+
+                    <p class="price">{{item?.price}} EGP</p>
+
+                    <button class="add-btn" (click)="addRelatedToCart(item)">
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
-
-                <div class="content">
-                  <h3 class="name">{{item.name}}</h3>
-                  <span class="category">{{item.category}}</span>
-                  <p class="price">{{item.price}} EGP</p>
-
-                  <button class="add-btn">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </swiper-slide>
-          }
-          </swiper-container>
+              </swiper-slide>
+            } @empty {
+              <h5> Not Found Products</h5>
+            }
+            </swiper-container>
+          </div>
         </div>
-      </div>
+
+        <!-- Related Products Section -->
+        <div class="col-12">
+          <div class="related-product">
+            <h2 class="m-0">Related Brand Products</h2>
+
+            <swiper-container
+              dir="rtl"
+              class="mySwiper wow fadeInUp"
+              pagination="false"
+              navigation="true"
+              loop="true"
+              slides-per-view="auto"
+              [breakpoints]="{
+                '0': { slidesPerView: 2, spaceBetween: 10 },
+                '768': { slidesPerView: 3, spaceBetween: 10 },
+                '1024': { slidesPerView: 4, spaceBetween: 15 }
+              }"
+            >
+            @for (item of relateProductsBrand; track $index) {
+              <swiper-slide>
+                <div class="product-card">
+                  <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
+                    <img [src]="item?.image" [alt]="item?.name"/>
+                  </div>
+
+                  <div class="content">
+                    <span class="brand">{{item?.brand}}</span>
+
+
+                    <h3 class="name m-0">{{item?.name}}</h3>
+                    <span class="category">{{item?.category}}</span>
+
+                    @if(item?.rate){
+                      <div class="rate-stars mb-2 text-warning d-flex align-items-center gap-1">
+                        <!-- Rate -->
+                        <span class="text-muted">{{ item?.rate }}</span>
+
+                        <!-- Full Stars -->
+                        @for (i of getStars(item?.rate).fullStars; track $index) {
+                          <i class="fa-solid fa-star"></i>
+                        }
+
+                        <!-- Half Star -->
+                        @if (getStars(item?.rate).halfStar) {
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                        }
+
+                        <!-- Empty Stars -->
+                        @for (i of getStars(item?.rate).emptyStars; track $index) {
+                          <i class="fa-regular fa-star text-secondary"></i>
+                        }
+                      </div>
+                    }
+
+                    <p class="price">{{item?.price}} EGP</p>
+
+                    <button class="add-btn" (click)="addRelatedToCart(item)">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </swiper-slide>
+            } @empty {
+              <h5> Not Found Products</h5>
+            }
+            </swiper-container>
+          </div>
+        </div>
+      }
+
     </div>
   </div>
 </div>

@@ -64,16 +64,16 @@
           }"
         >
         @for (item of slides; track $index) {
-          <swiper-slide  (click)="goToProductDetails()">
+          <swiper-slide  [routerLink]="'/product-details/' + item?.id">
             <div class="product-card">
               <div class="image-wrapper">
-                <img [src]="item.image" [alt]="item.name"/>
+                <img [src]="item?.image" [alt]="item?.name"/>
               </div>
 
               <div class="content">
-                <h3 class="name">{{item.name}}</h3>
-                <span class="category">{{item.category}}</span>
-                <p class="price">{{item.price}} EGP</p>
+                <h3 class="name">{{item?.name}}</h3>
+                <span class="category">{{item?.category}}</span>
+                <p class="price">{{item?.price}} EGP</p>
 
                 <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
@@ -103,16 +103,16 @@
           }"
         >
         @for (item of slides; track $index) {
-          <swiper-slide (click)="goToProductDetails()">
+          <swiper-slide [routerLink]="'/product-details/' + item?.id">
             <div class="product-card">
               <div class="image-wrapper">
-                <img [src]="item.image" [alt]="item.name"/>
+                <img [src]="item?.image" [alt]="item?.name"/>
               </div>
 
               <div class="content">
-                <h3 class="name">{{item.name}}</h3>
-                <span class="category">{{item.category}}</span>
-                <p class="price">{{item.price}} EGP</p>
+                <h3 class="name">{{item?.name}}</h3>
+                <span class="category">{{item?.category}}</span>
+                <p class="price">{{item?.price}} EGP</p>
 
                 <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
@@ -142,18 +142,40 @@
         @for (item of scenCare; track $index) {
           <swiper-slide>
             <div class="product-card">
-              <div class="image-wrapper cr" (click)="goToProductDetails()">
-                <img [src]="item.image" [alt]="item.name"/>
+              <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
+                <img [src]="item?.image" [alt]="item?.name"/>
               </div>
 
               <div class="content">
-                <span class="brand">{{item.brand}}</span>
+                <span class="brand">{{item?.brand}}</span>
 
 
-                <h3 class="name m-0">{{item.name}}</h3>
-                <span class="category">{{item.category}}</span>
+                <h3 class="name m-0">{{item?.name}}</h3>
+                <span class="category">{{item?.category}}</span>
 
-                <p class="price">{{item.price}} EGP</p>
+                @if(item?.rate){
+                  <div class="rate-stars mb-2 text-warning d-flex align-items-center gap-1">
+                    <!-- Rate -->
+                    <span class="text-muted">{{ item?.rate }}</span>
+
+                    <!-- Full Stars -->
+                    @for (i of getStars(item?.rate).fullStars; track $index) {
+                      <i class="fa-solid fa-star"></i>
+                    }
+
+                    <!-- Half Star -->
+                    @if (getStars(item?.rate).halfStar) {
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    }
+
+                    <!-- Empty Stars -->
+                    @for (i of getStars(item?.rate).emptyStars; track $index) {
+                      <i class="fa-regular fa-star text-secondary"></i>
+                    }
+                  </div>
+                }
+
+                <p class="price">{{item?.price}} EGP</p>
 
                 <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
@@ -185,14 +207,14 @@
         @for (item of makeUp; track $index) {
           <swiper-slide>
             <div class="product-card">
-              <div class="image-wrappercr" (click)="goToProductDetails()">
-                <img [src]="item.image" [alt]="item.name"/>
+              <div class="image-wrappercr" [routerLink]="'/product-details/' + item?.id">
+                <img [src]="item?.image" [alt]="item?.name"/>
               </div>
 
               <div class="content">
-                <h3 class="name">{{item.name}}</h3>
-                <span class="category">{{item.category}}</span>
-                <p class="price">{{item.price}} EGP</p>
+                <h3 class="name">{{item?.name}}</h3>
+                <span class="category">{{item?.category}}</span>
+                <p class="price">{{item?.price}} EGP</p>
 
                 <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
@@ -224,15 +246,15 @@
         @for (item of accessories; track $index) {
          <swiper-slide>
             <div class="product-card">
-              <div class="image-wrapper cr" (click)="goToProductDetails()">
-                <img [src]="item.image" [alt]="item.name"/>
-                <!-- <span class="category">{{item.category}}</span> -->
+              <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
+                <img [src]="item?.image" [alt]="item?.name"/>
+                <!-- <span class="category">{{item?.category}}</span> -->
               </div>
 
               <div class="content">
-                <h3 class="name">{{item.name}}</h3>
-                <span class="category">{{item.category}}</span>
-                <p class="price">{{item.price}} EGP</p>
+                <h3 class="name">{{item?.name}}</h3>
+                <span class="category">{{item?.category}}</span>
+                <p class="price">{{item?.price}} EGP</p>
 
                 <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
@@ -264,15 +286,15 @@
         @for (item of watches; track $index) {
           <swiper-slide>
             <div class="product-card">
-              <div class="image-wrapper cr" (click)="goToProductDetails()">
-                <img [src]="item.image" [alt]="item.name"/>
-                <!-- <span class="category">{{item.category}}</span> -->
+              <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
+                <img [src]="item?.image" [alt]="item?.name"/>
+                <!-- <span class="category">{{item?.category}}</span> -->
               </div>
 
               <div class="content">
-                <h3 class="name">{{item.name}}</h3>
-                <span class="category">{{item.category}}</span>
-                <p class="price">{{item.price}} EGP</p>
+                <h3 class="name">{{item?.name}}</h3>
+                <span class="category">{{item?.category}}</span>
+                <p class="price">{{item?.price}} EGP</p>
 
                 <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
@@ -304,8 +326,8 @@
         @for (item of slides; track $index) {
           <swiper-slide class="mx-3">
             <div class="d-flex flex-column justify-content-center align-items-center cr">
-              <img class="rounded-circle w-75 mx-auto" [src]="item.image" [alt]="item.name" />
-              <span class="category">{{item.category}}</span>
+              <img class="rounded-circle w-75 mx-auto" [src]="item?.image" [alt]="item?.name" />
+              <span class="category">{{item?.category}}</span>
             </div>
           </swiper-slide>
         } @empty {
