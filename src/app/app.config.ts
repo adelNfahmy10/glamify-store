@@ -7,8 +7,8 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideToastr } from 'ngx-toastr';
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { loadingInterceptor } from '../interceptors/loading/loading.interceptor';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 export const appConfig: ApplicationConfig = {
