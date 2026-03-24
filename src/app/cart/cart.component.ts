@@ -14,7 +14,7 @@ import Swal from 'sweetalert2'
 })
 export class CartComponent {
   private readonly _FormBuilder = inject(FormBuilder)
-  private readonly _ToastrService = inject(ToastrService)
+  private readonly _CartService = inject(CartService)
   private readonly _Router = inject(Router)
 
   cart = this.cartService.cartSignal;
@@ -103,33 +103,56 @@ export class CartComponent {
 
     // بناء بيانات الطلب
     const orderData = {
-      customerName: this.dataForm.value.name,
-      customerPhone: this.dataForm.value.phone,
-      customerAddress: this.dataForm.value.address,
-      cartProducts: this.summaryOrder,
+      orderId: Date.now(), // أو UUID
+      name: this.dataForm.value.name,
+      phone: this.dataForm.value.phone,
+      address: this.dataForm.value.address,
+      products: JSON.stringify(this.summaryOrder), // 👈 مهم
+      count: this.summaryOrder.length,
       subtotal: this.subtotal,
-      shipping: this.ShippingValue,
       total: this.totalWithShipping,
-      orderDate: new Date()
+      date: new Date().toISOString() // 👈 مهم بدل object
     };
 
-    Swal.fire({
-      title: 'Order Successfully',
-      icon: "success",
-      confirmButtonText: 'Done'
-    }).then(()=>{
-      this._Router.navigate(['/home']).then(() => {
-        window.location.reload();
-      });
+    const formData = new FormData()
+    formData.append('OrderId', String(orderData.orderId)),
+    formData.append('Date', orderData.date),
+    formData.append('Name', orderData.name),
+    formData.append('Phone', orderData.phone),
+    formData.append('Address', orderData.address),
+    formData.append('Products', orderData.products),
+    formData.append('Count', String(orderData.count)),
+    formData.append('SubTotal', String(orderData.subtotal)),
+    formData.append('Total', String(orderData.total)),
+
+    console.log(orderData);
+
+    this._CartService.orders(formData).subscribe({
+      next:(res)=>{
+        console.log(res);
+        Swal.fire({
+          title: 'Order Successfully',
+          icon: "success",
+          confirmButtonText: 'Done'
+        }).then(()=>{
+          this._Router.navigate(['/home']).then(() => {
+            window.location.reload();
+          });
+        })
+
+
+        this.cartService.clearCart();
+        this.quantities = {};
+        this.summaryOrder = [];
+        this.subtotal = 0;
+        this.totalWithShipping = 0;
+        this.dataForm.reset();
+      },
+      error:(err)=>{
+        console.log(err);
+      }
     })
 
 
-    // مثال: مسح الكارت بعد الإرسال
-    this.cartService.clearCart();
-    this.quantities = {};
-    this.summaryOrder = [];
-    this.subtotal = 0;
-    this.totalWithShipping = 0;
-    this.dataForm.reset();
   }
 }

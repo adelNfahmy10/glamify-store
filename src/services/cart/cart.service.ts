@@ -1,10 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal, WritableSignal } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
+  private readonly _HttpClient = inject(HttpClient)
+
   private storageKey = 'cart';
   private readonly _ToastrService = inject(ToastrService);
 
@@ -54,4 +58,12 @@ export class CartService {
     localStorage.removeItem(this.storageKey);
     this.cartSignal.set([]); // 🔥 تحديث الـ signal
   }
+
+  private scriptURL = "https://script.google.com/macros/s/AKfycbx1QArhYyGbbnTVj5RcnSkhoEKhI_OgXebvn5qtsfxi_woBb7x-0LspzlgbxiF4tXsW/exec"; // ضع رابط Google App Script هنا
+
+
+  orders(formData: FormData): Observable<any> {
+    return this._HttpClient.post(this.scriptURL, formData, { responseType: 'text' });
+  }
+
 }
