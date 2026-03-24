@@ -149,6 +149,7 @@ export class CartComponent {
           this._Router.navigate(['/home']).then(() => {
             window.location.reload();
           });
+          window.open(`https://wa.me/201012971190?text=New Order: ${orderData.orderId}`)
         })
 
         this.cartService.clearCart();
