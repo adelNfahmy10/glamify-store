@@ -3,11 +3,12 @@ import { isPlatformBrowser, NgClass } from '@angular/common';
 import { NgwWowService } from 'ngx-wow';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { RouterOutlet } from '@angular/router';
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgClass, NavbarComponent, RouterOutlet],
+  imports: [NgClass, NavbarComponent, RouterOutlet, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
