@@ -3,4 +3,5 @@
   <router-outlet></router-outlet>
   <app-footer></app-footer>
   <a (click)="scrollToTop()" [ngClass]="{'d-block': showArrow,'d-none': !showArrow}" class="arrowup cr"><i class="fa-solid fa-chevron-up"></i></a>
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
 </section>

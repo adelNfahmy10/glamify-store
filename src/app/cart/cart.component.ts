@@ -101,6 +101,14 @@ export class CartComponent {
       return;
     }
 
+    Swal.fire({
+      title: 'Submitting Order...',
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
+    });
+
     // بناء بيانات الطلب
     const orderData = {
       orderId: Date.now(), // أو UUID
@@ -111,7 +119,8 @@ export class CartComponent {
       count: this.summaryOrder.length,
       subtotal: this.subtotal,
       total: this.totalWithShipping,
-      date: new Date().toISOString() // 👈 مهم بدل object
+      date: new Date().toISOString(), // 👈 مهم بدل object
+      status: 'Pending',
     };
 
     const formData = new FormData()
@@ -124,14 +133,16 @@ export class CartComponent {
     formData.append('Count', String(orderData.count)),
     formData.append('SubTotal', String(orderData.subtotal)),
     formData.append('Total', String(orderData.total)),
-
-    console.log(orderData);
+    formData.append('Status',  orderData.status),
 
     this._CartService.orders(formData).subscribe({
       next:(res)=>{
-        console.log(res);
+
+        Swal.close();
+
         Swal.fire({
           title: 'Order Successfully',
+          text: 'Our team will contact you shortly',
           icon: "success",
           confirmButtonText: 'Done'
         }).then(()=>{
@@ -139,8 +150,7 @@ export class CartComponent {
             window.location.reload();
           });
         })
-
-
+        
         this.cartService.clearCart();
         this.quantities = {};
         this.summaryOrder = [];
@@ -149,10 +159,13 @@ export class CartComponent {
         this.dataForm.reset();
       },
       error:(err)=>{
-        console.log(err);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong. Please try again.",
+          confirmButtonText: 'OK'
+        });
       }
     })
-
-
   }
 }
