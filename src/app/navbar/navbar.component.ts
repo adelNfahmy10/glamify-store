@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit{
   background:string = 'transparent'
   lastScrollTop = 0;
   isNavbarVisible = true;
-  lang: string =  'ar';
+  lang: string =  'en';
 
   ngOnInit(): void {
     this._TranslateService.use(this.lang);
