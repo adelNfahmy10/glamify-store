@@ -150,7 +150,7 @@ export class CartComponent {
             window.location.reload();
           });
         })
-        
+
         this.cartService.clearCart();
         this.quantities = {};
         this.summaryOrder = [];
@@ -159,6 +159,8 @@ export class CartComponent {
         this.dataForm.reset();
       },
       error:(err)=>{
+        Swal.close();
+
         Swal.fire({
           icon: "error",
           title: "Oops...",
