@@ -402,8 +402,1576 @@ export class DataService {
       stock: 5,
       rate: 2.7,
     },
+    {
+      id: 14,
+      image: 'assets/image/skincare-image/Cerave-retinol.png',
+      name: 'CeraVe Resurfacing Retinol Serum for Post-Acne Marks & Pores 30ml',
+      brand: 'CeraVe',
+      category: 'Skincare',
+      price: 450,
+      discount: 0,
+      details: [
+        "Helps reduce the appearance of post-acne marks and skin discoloration while maintaining the skin barrier",
+        "Improves the look of uneven skin tone and hyperpigmentation",
+        "Lightweight, fast-absorbing formula",
+        "Non-greasy and non-drying",
+        "Suitable for sensitive skin",
+        "Contains Retinol, Niacinamide, and Licorice Root Extract",
+        "Use in the evening only; apply sunscreen during the day",
+        "Start with a small amount once weekly, then gradually increase usage",
+        "Avoid contact with eyes and lips; rinse thoroughly if contact occurs"
+      ],
+      specifications: [
+        "Size: 30 ml",
+        "Brand: CeraVe",
+        "Skin Type: Sensitive",
+        "Formulation: Serum",
+        "Key Ingredients: Retinol, Niacinamide, Licorice Root Extract"
+      ],
+      stock: 8,
+      rate: 4.3
+    },
+    {
+      id: 15,
+      image: 'assets/image/skincare-image/Skin-clinic-collagen.png',
+      name: 'Skin Clinic Collagen Face Cleanser 150ml',
+      brand: 'Skin Clinic',
+      category: 'Skincare',
+      price: 220,
+      discount: 0,
+      details: [
+        "Apply a small amount to damp face, gently massage with fingertips, then rinse thoroughly with water and pat dry",
+        "Helps reduce the appearance of blackheads and whiteheads",
+        "For external use only; keep out of reach of children"
+      ],
+      specifications: [
+        "Size: 150 ml",
+        "Weight: 150 g",
+        "Brand: Skin Clinic",
+        "Skin Type: All",
+        "Gender: Unisex",
+        "Formulation: Cleanser"
+      ],
+      stock: 10,
+      rate: 4.0
+    },
+    {
+      id: 16,
+      image: 'assets/image/skincare-image/Iva-7in1-face.png',
+      name: 'Eva 7-in-1 Vitamin Face Cream 45g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 180,
+      discount: 0,
+      details: [
+        "Daily face cream enriched with vitamins providing 7 benefits for the skin",
+        "Deeply hydrates and nourishes the skin (Vitamin B5 & E)",
+        "Reduces the appearance of pores (Vitamin B3)",
+        "Restores skin softness (Vitamin B5 & E)",
+        "Improves skin elasticity and firmness (Vitamin B5 & B3)",
+        "Brightens and purifies the skin for a radiant look",
+        "Evens out skin tone (Vitamin B3 & E)",
+        "Suitable for all skin types"
+      ],
+      specifications: [
+        "Size: 45 g",
+        "Brand: Iva",
+        "Skin Type: All",
+        "Gender: Unisex",
+        "Formulation: Cream",
+        "Key Ingredients: Vitamins B3, B5, E"
+      ],
+      stock: 12,
+      rate: 4.5
+    },
+    {
+      id: 17,
+      image: 'assets/image/skincare-image/Iva-body-lightening.png',
+      name: 'Eva Body Lightening & Even Tone Cream 150ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 250,
+      discount: 0,
+      details: [
+        "Body cream formulated to lighten and even out dark areas on elbows, knees, and underarms",
+        "Enriched with White Pearl Extract, Vitamin B3, and Octadecenedioic Acid",
+        "Lightweight texture and easy to apply for smooth, uniform skin",
+        "For external use only; avoid contact with eyes",
+        "Keep away from open flames and direct heat sources"
+      ],
+      specifications: [
+        "Size: 150 ml",
+        "Weight: 150 g",
+        "Brand: Iva",
+        "Skin Type: All",
+        "Gender: Unisex",
+        "Formulation: Cream",
+        "Key Ingredients: White Pearl Extract, Vitamin B3, Octadecenedioic Acid"
+      ],
+      stock: 15,
+      rate: 4.2
+    },
+    {
+      id: 18,
+      image: 'assets/image/skincare-image/Iva-aloe-hair-oil.png',
+      name: 'Eva Aloe Hair Oil Replacement 250ml',
+      brand: 'Eva',
+      category: 'skincare',
+      price: 300,
+      discount: 0,
+      details: [
+        "Rich in 12 vitamins, 20 minerals, and 17 proteins to nourish hair from roots to tips",
+        "Strengthens hair and reduces hair fall while promoting healthy growth and vitality",
+        "Smooths hair and enhances shine",
+        "Repairs and softens hair strands for thick, healthy hair",
+        "Detangles, styles, and reduces frizz",
+        "Unique formula that strengthens hair and nourishes the scalp",
+        "Suitable for all hair types"
+      ],
+      specifications: [
+        "Size: 250 ml",
+        "Weight: 250 g",
+        "Brand: Iva",
+        "Hair Type: All",
+        "Gender: Unisex",
+        "Shelf Life: 3 years",
+        "Formulation: Hair Oil"
+      ],
+      stock: 20,
+      rate: 4.4
+    },
+    {
+      id: 19,
+      image: 'assets/image/skincare-image/Iiva-glycerin-cream.png',
+      name: 'Eva Glycerin Cream for Dry Skin 20g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 120,
+      discount: 0,
+      details: [
+        "Moisturizing cream enriched with glycerin for deep hydration",
+        "Helps restore softness and smoothness to dry and rough skin",
+        "Lightweight, non-greasy formula suitable for daily use",
+        "Suitable for sensitive skin and all ages",
+        "Apply to clean, dry skin and massage gently until fully absorbed"
+      ],
+      specifications: [
+        "Size: 20 g",
+        "Brand: Iva",
+        "Skin Type: Dry",
+        "Gender: Unisex",
+        "Formulation: Cream",
+        "Key Ingredients: Glycerin"
+      ],
+      stock: 25,
+      rate: 4.3
+    },
+    {
+      id: 20,
+      image: 'assets/image/skincare-image/iva-honey-cream.png',
+      name: 'Eva Honey Face Cream 20g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 130,
+      discount: 0,
+      details: [
+        "Moisturizing cream enriched with honey for soft and nourished skin",
+        "Helps restore skin hydration and improve skin texture",
+        "Lightweight and non-greasy formula suitable for daily use",
+        "Suitable for all skin types, including sensitive skin",
+        "Apply to clean, dry skin and massage gently until fully absorbed"
+      ],
+      specifications: [
+        "Size: 20 g",
+        "Brand: Iva",
+        "Skin Type: All",
+        "Gender: Unisex",
+        "Formulation: Cream",
+        "Key Ingredients: Honey"
+      ],
+      stock: 30,
+      rate: 4.4
+    },
+    {
+      id: 21,
+      image: 'assets/image/skincare-image/iva-ivazleen-hand-cream.png',
+      name: 'Eva Skin Care Ivazleen Hand Cream for Deep Moisturization 60g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 150,
+      discount: 0,
+      details: [
+        "Rich hand cream formulated to deeply moisturize dry skin",
+        "Contains vitamins, vaseline, and glycerin to maintain long-lasting hydration",
+        "Leaves hands soft, smooth, and nourished throughout the day",
+        "Use before bedtime for maximum softness in the morning",
+        "For external use only; avoid contact with eyes; rinse thoroughly if contact occurs",
+        "Keep out of reach of children"
+      ],
+      specifications: [
+        "Size: 60 g",
+        "Brand: Iva",
+        "Skin Type: All",
+        "Gender: Unisex",
+        "Formulation: Cream",
+        "Model Number: 6223004376252",
+        "Target Skin Concern: Mixed/All"
+      ],
+      stock: 20,
+      rate: 4.5
+    },
+    {
+      id: 22,
+      image: 'assets/image/skincare-image/iva-ivazleen-body-lotion.png',
+      name: 'Eva Skin Care Ivazleen Body Lotion for Deep Moisturization 240ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 200,
+      discount: 0,
+      details: [
+        "Provides intensive hydration and silky-smooth skin with a rich, effective formula",
+        "Contains Vaseline to prevent moisture loss and protect the skin",
+        "Glycerin enhances skin's ability to retain hydration",
+        "Leaves skin feeling soft, nourished, and comfortable",
+        "Use before bedtime for maximum hydration and softness in the morning",
+        "For external use only; avoid contact with eyes"
+      ],
+      specifications: [
+        "Size: 240 ml",
+        "Brand: Iva",
+        "Skin Type: All",
+        "Gender: Women",
+        "Formulation: Cream/Lotion",
+        "Target Skin: All Skin Types"
+      ],
+      stock: 18,
+      rate: 4.4
+    },
+    {
+      id: 23,
+      image: 'assets/image/skincare-image/iva-c-kids-sunscreen.png',
+      name: 'Eva & C Kids Waterproof Sunscreen Cream SPF 50 200ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 280,
+      discount: 0,
+      details: [
+        "Protects children’s skin from harmful UV rays",
+        "Formulated with minerals, chemical filters, and antioxidants for broad-spectrum protection",
+        "Prevents sunburns and premature skin aging",
+        "Waterproof formula suitable for outdoor activities",
+        "Safe for daily use on all skin types"
+      ],
+      specifications: [
+        "Size: 200 ml",
+        "Brand: Iva",
+        "Skin Type: All",
+        "Gender: Kids/Unisex",
+        "Formulation: Cream",
+        "Color: Multi-color",
+        "Key Ingredients: UV Filters, Antioxidants, Minerals"
+      ],
+      stock: 22,
+      rate: 4.6
+    },
+    {
+      id: 24,
+      image: 'assets/image/skincare-image/iva-c-tinted-sunscreen.png',
+      name: 'Eva & C Tinted Face Sunscreen SPF 50+ 40ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 260,
+      discount: 0,
+      details: [
+        "Provides maximum protection against harmful UV rays, including long-wave and medium-wave UVA",
+        "Prevents sunburns and premature skin aging",
+        "Moisturizing formula designed for full coverage and skin protection with high-efficiency triple photoprotection system",
+        "Contains a blend of minerals to reflect sunlight, antioxidants, and chemical UV filters to absorb UV radiation",
+        "Safe for daily use on all skin types"
+      ],
+      specifications: [
+        "Size: 40 ml",
+        "Brand: Iva",
+        "Skin Type: All",
+        "Gender: Unisex",
+        "Formulation: Tinted Cream/Sunscreen",
+        "Model Name: Eva Sun And Sea Face Tinted Sunscreen 50+SPF",
+        "Key Ingredients: Minerals, Antioxidants, UV Filters"
+      ],
+      stock: 20,
+      rate: 4.6
+    },
+    {
+      id: 25,
+      image: 'assets/image/skincare-image/iva-c-sunscreen-50.png',
+      name: 'Eva & C Sunscreen SPF 50+ 20ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 180,
+      discount: 0,
+      details: [
+        "Provides maximum protection against harmful UV rays, including long-wave and medium-wave UVA",
+        "Moisturizing formula nourishes and deeply hydrates the skin",
+        "Lightweight, non-greasy texture leaves a natural, non-shiny finish",
+        "Safe for daily use on all skin types",
+        "Apply generously to face before sun exposure"
+      ],
+      specifications: [
+        "Size: 20 ml",
+        "Brand: Iva",
+        "Skin Type: All",
+        "Gender: Unisex",
+        "Formulation: Cream/Sunscreen",
+        "Key Features: Lightweight, Non-Greasy, Deeply Hydrating"
+      ],
+      stock: 25,
+      rate: 4.5
+    },
+    {
+      id: 26,
+      image: 'assets/image/skincare-image/iva-natural-glow-day-cream.png',
+      name: 'Eva Skin Care Natural Glow Day Cream SPF 30 50g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 210,
+      discount: 0,
+      details: [
+        "Day cream with SPF 30 that protects skin from harmful sun rays",
+        "Advanced formula with vitamins and natural ingredients to even out skin tone",
+        "Moisturizes and nourishes skin for a radiant, healthy glow",
+        "Suitable for all skin types",
+        "Apply daily on clean skin for best results"
+      ],
+      specifications: [
+        "Size: 50 g",
+        "Brand: Iva",
+        "Skin Type: All",
+        "Gender: Women",
+        "Formulation: Cream",
+        "Color: White",
+        "Model Number: 6223001382218",
+        "Model Name: Moisturizers Face Moisturizer-17"
+      ],
+      stock: 18,
+      rate: 4.5
+    },
+    {
+      id: 36,
+      image: 'assets/image/skincare-image/eva-deodorant-spring-lilies.png',
+      name: 'Eva Skin Care Senses Deodorant Roll-On - Spring Lilies',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 75,
+      discount: 0,
+      details: [
+        "Provides triple protection against sweat and odor",
+        "Keeps you fresh and pleasantly scented all day",
+        "Enriched with Vitamin E for smoother skin",
+        "Contains ginseng root extract to refresh and revitalize skin",
+        "Helps reduce perspiration effectively"
+      ],
+      specifications: [
+        "Scent: Spring Lilies",
+        "Formulation: Roll-On",
+        "Skin Type: All",
+        "Gender: Women",
+        "Size: 50g",
+        "Box Contents: Deodorant Roll-On"
+      ],
+      stock: 60,
+      rate: 4.2
+    },
+    {
+      id: 37,
+      image: 'assets/image/skincare-image/eva-deodorant-morning-blossom.png',
+      name: 'Eva Skin Care Senses Deodorant Roll-On - Morning Blossom',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 75,
+      discount: 0,
+      details: [
+        "Provides triple protection against sweat and odor",
+        "Keeps you fresh and pleasantly scented all day",
+        "Helps soothe and moisturize the skin",
+        "Enriched with glycerin for hydration",
+        "Contains oat extract to calm and soften skin",
+        "Effectively reduces perspiration"
+      ],
+      specifications: [
+        "Scent: Morning Blossom",
+        "Formulation: Roll-On",
+        "Skin Type: All",
+        "Gender: Women",
+        "Size: 50g",
+        "Box Contents: Deodorant Roll-On"
+      ],
+      stock: 55,
+      rate: 4.3
+    },
+    {
+      id: 38,
+      image: 'assets/image/skincare-image/eva-white-pearl-eye-cream.png',
+      name: 'Eva Skin Clinic White Pearl Eye Cream - 15ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 150,
+      discount: 0,
+      details: [
+        "Reduces the appearance of dark circles for an instant brightening effect",
+        "Minimizes under-eye puffiness for a refreshed look",
+        "Contains white pearl extract for a delicate luminous finish",
+        "Enriched with natural marine minerals to revitalize skin",
+        "Provides antioxidant benefits to protect delicate eye area"
+      ],
+      specifications: [
+        "Formulation: Cream",
+        "Skin Area: Eye",
+        "Skin Type: All",
+        "Gender: Women",
+        "Volume: 15ml",
+        "Box Contents: Eye Cream"
+      ],
+      stock: 40,
+      rate: 4.5
+    },
+    {
+      id: 39,
+      image: 'assets/image/skincare-image/eva-cozy-dream-body-serum.png',
+      name: 'Eva Senses Cozy Dream Body Serum - 150ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 170,
+      discount: 0,
+      details: [
+        "Provides a natural daily glow for your skin",
+        "Lightweight and fast-absorbing texture ideal for all skin types",
+        "Enhances your daily skincare routine",
+        "Maintains natural skin radiance",
+        "Reduces skin roughness for smoother feel",
+        "Enriched with Macadamia Oil and Moringa Oil for nourishment"
+      ],
+      specifications: [
+        "Formulation: Serum",
+        "Skin Type: All",
+        "Gender: Women",
+        "Volume: 150ml",
+        "Box Contents: Body Serum"
+      ],
+      stock: 45,
+      rate: 4.4
+    },
+    {
+      id: 40,
+      image: 'assets/image/skincare-image/eva-cozy-dream-body-serum-2.png',
+      name: 'Eva Senses Cozy Dream Body Serum - 150ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 170,
+      discount: 0,
+      details: [
+        "Provides a natural daily glow for your skin",
+        "Lightweight and fast-absorbing texture ideal for all skin types",
+        "Enhances your daily skincare routine",
+        "Maintains natural skin radiance",
+        "Reduces skin roughness for smoother feel",
+        "Enriched with Macadamia Oil and Moringa Oil for nourishment"
+      ],
+      specifications: [
+        "Formulation: Serum",
+        "Skin Type: All",
+        "Gender: Women",
+        "Volume: 150ml",
+        "Box Contents: Body Serum"
+      ],
+      stock: 45,
+      rate: 4.4
+    },
+    {
+      id: 41,
+      image: 'assets/image/skincare-image/eva-shea-flaxseed-hair-wax.png',
+      name: 'Eva Advanced Care Clinic Shea Butter & Flaxseed Hair Styling Wax - 75g',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 250,
+      discount: 0,
+      details: [
+        "Moisturizes and styles hair while protecting it from environmental damage",
+        "Enhances hair texture for smooth, manageable, and elegant look",
+        "Non-greasy formula ideal for curly, wavy, and textured hair",
+        "Enriched with Shea Butter and Flaxseed Extract for nourishment and hydration",
+        "Perfect for daily styling and maintaining hair health"
+      ],
+      specifications: [
+        "Formulation: Wax",
+        "Hair Type: Curly / Wavy / Textured",
+        "Gender: Women",
+        "Weight: 75g",
+        "Box Contents: Hair Styling Wax"
+      ],
+      stock: 30,
+      rate: 4.6
+    },
+    {
+      id: 42,
+      image: 'assets/image/skincare-image/eva-spotless-cream-tube.png',
+      name: 'Eva Spotless Cream Tube - 18g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 25,
+      discount: 0,
+      details: [
+        "Removes dead skin cells and deeply cleanses pores",
+        "Gentle on the skin and absorbs quickly",
+        "Non-greasy formula ideal for daily use",
+        "Helps achieve smoother and clearer skin"
+      ],
+      specifications: [
+        "Formulation: Cream",
+        "Skin Type: All",
+        "Gender: Women",
+        "Weight: 18g",
+        "Box Contents: Spotless Cream Tube"
+      ],
+      stock: 70,
+      rate: 4.3
+    },
+    {
+      id: 43,
+      image: 'assets/image/skincare-image/eva-rose-water-toner.png',
+      name: 'Eva Rose Water Face Toner - 100ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 40,
+      discount: 0,
+      details: [
+        "Enhances skin radiance and vitality",
+        "Reduces the appearance of pores",
+        "Restores natural skin balance for a fresh and glowing look",
+        "Gentle formula suitable for daily use"
+      ],
+      specifications: [
+        "Formulation: Toner",
+        "Skin Type: All",
+        "Gender: Women",
+        "Volume: 100ml",
+        "Box Contents: Face Toner"
+      ],
+      stock: 60,
+      rate: 4.4
+    },
+    {
+      id: 44,
+      image: 'assets/image/skincare-image/eva-glycerin-honey-soap.png',
+      name: 'Eva Skincare Glycerin Soap with Honey - 100g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 40,
+      discount: 0,
+      details: [
+        "Gentle, fragrance-free soap suitable for sensitive skin",
+        "Rich in natural oils to cleanse impurities and unclog pores",
+        "Nourishes and moisturizes skin for a healthy, clear, and radiant look",
+        "Ideal for daily use on all skin types"
+      ],
+      specifications: [
+        "Formulation: Soap",
+        "Skin Type: All (including sensitive)",
+        "Gender: Unisex",
+        "Weight: 100g",
+        "Box Contents: Glycerin Soap"
+      ],
+      stock: 80,
+      rate: 4.5
+    },
+    {
+      id: 45,
+      image: 'assets/image/skincare-image/eva-watermelon-lip-balm.png',
+      name: 'Eva Skin Care Senses Watermelon Lip Balm - 4g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 70,
+      discount: 0,
+      details: [
+        "Provides long-lasting hydration for dry or chapped lips",
+        "Contains Vaseline, Cocoa Butter, Shea Butter, and Vitamin E to soften and nourish lips",
+        "Gives lips a shiny, glossy look",
+        "Includes SPF 15 for protection against sun damage",
+        "Ideal for daily use"
+      ],
+      specifications: [
+        "Formulation: Balm",
+        "Flavor/Scent: Watermelon",
+        "Skin Type: All",
+        "Gender: Women",
+        "Weight: 4g",
+        "Box Contents: Lip Balm"
+      ],
+      stock: 50,
+      rate: 4.6
+    },
+    {
+      id: 46,
+      image: 'assets/image/skincare-image/eva-cranberry-lip-balm.png',
+      name: 'Eva Skin Care Senses Cranberry Lip Balm - 4g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 70,
+      discount: 0,
+      details: [
+        "Provides long-lasting hydration for dry or chapped lips",
+        "Contains Vaseline, Cocoa Butter, Shea Butter, and Vitamin E to soften and nourish lips",
+        "Gives lips a shiny, glossy look",
+        "Includes SPF 15 for protection against sun damage",
+        "Ideal for daily use"
+      ],
+      specifications: [
+        "Formulation: Balm",
+        "Flavor/Scent: Cranberry",
+        "Skin Type: All",
+        "Gender: Women",
+        "Weight: 4g",
+        "Box Contents: Lip Balm"
+      ],
+      stock: 50,
+      rate: 4.6
+    },
+    {
+      id: 47,
+      image: 'assets/image/skincare-image/eva-cranberry-lip-balm-2.png',
+      name: 'Eva Skin Care Senses Cranberry Lip Balm - 4g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 70,
+      discount: 0,
+      details: [
+        "Provides long-lasting hydration for dry or chapped lips",
+        "Contains Vaseline, Cocoa Butter, Shea Butter, and Vitamin E to soften and nourish lips",
+        "Gives lips a shiny, glossy look",
+        "Includes SPF 15 for protection against sun damage",
+        "Ideal for daily use"
+      ],
+      specifications: [
+        "Formulation: Balm",
+        "Flavor/Scent: Cranberry",
+        "Skin Type: All",
+        "Gender: Women",
+        "Weight: 4g",
+        "Box Contents: Lip Balm"
+      ],
+      stock: 50,
+      rate: 4.6
+    },
+    {
+      id: 48,
+      image: 'assets/image/skincare-image/eva-sweet-cherry-lip-balm.png',
+      name: 'Eva Skin Care Senses Sweet Cherry Lip Balm - 4g',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 70,
+      discount: 0,
+      details: [
+        "Provides long-lasting hydration for dry or chapped lips",
+        "Triple-layer moisturizing formula with Vaseline, Cocoa Butter, Shea Butter, and Vitamin E",
+        "Softens and nourishes lips while giving them shine and glow",
+        "Includes SPF 15 for sun protection",
+        "Ideal for daily use"
+      ],
+      specifications: [
+        "Formulation: Balm",
+        "Flavor/Scent: Sweet Cherry",
+        "Skin Type: All",
+        "Gender: Women",
+        "Weight: 4g",
+        "Box Contents: Lip Balm"
+      ],
+      stock: 50,
+      rate: 4.6
+    },
+    {
+      id: 49,
+      image: 'assets/image/skincare-image/eva-golden-hair-spray.png',
+      name: 'Eva Senses Golden Hair Spray - 100ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 120,
+      discount: 0,
+      details: [
+        "Lightweight and non-greasy formula for instant refreshment",
+        "Infused with nourishing ingredients like Honey and Panthenol to hydrate and smooth hair",
+        "Alcohol-free to prevent dryness or damage",
+        "Leaves hair soft, manageable, and pleasantly scented",
+        "Ideal for daily use and convenient on-the-go"
+      ],
+      specifications: [
+        "Formulation: Spray",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 100ml",
+        "Box Contents: Hair Spray"
+      ],
+      stock: 40,
+      rate: 4.5
+    },
+    {
+      id: 50,
+      image: 'assets/image/skincare-image/eva-aloe-hair-cream.png',
+      name: 'Eva Aloe Hair Styling Cream - 185g',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 85,
+      discount: 0,
+      details: [
+        "Enriched with concentrated Aloe Vera extract",
+        "Contains 12 vitamins, 20 minerals, and 17 types of proteins to nourish hair deeply",
+        "Strengthens hair from roots to ends, reducing hair fall",
+        "Promotes healthy hair growth and enhances shine",
+        "Leaves hair refreshed and manageable"
+      ],
+      specifications: [
+        "Formulation: Cream",
+        "Hair Type: All",
+        "Gender: Women",
+        "Weight: 185g",
+        "Box Contents: Hair Styling Cream"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 51,
+      image: 'assets/image/skincare-image/eva-brown-henna.png',
+      name: 'Eva Aloe Brown Hair Henna (6 Sachets x 10g)',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 130,
+      discount: 0,
+      details: [
+        "Enriched with concentrated Aloe Vera extract",
+        "Contains 12 vitamins, 20 minerals, and 17 types of proteins to nourish hair deeply",
+        "Strengthens hair from roots to ends, reducing hair fall",
+        "Provides full coverage for white hair",
+        "Leaves hair hydrated, nourished, shiny, and revitalized",
+        "Rich, long-lasting color for vibrant hair"
+      ],
+      specifications: [
+        "Formulation: Powder",
+        "Hair Type: All",
+        "Gender: Women",
+        "Quantity: 6 sachets x 10g",
+        "Box Contents: Brown Hair Henna Sachets"
+      ],
+      stock: 60,
+      rate: 4.6
+    },
+    {
+      id: 52,
+      image: 'assets/image/skincare-image/eva-growth-oil.png',
+      name: 'Eva Advanced Hair, Lash & Brow Growth Oil - 55ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 320,
+      discount: 0,
+      details: [
+        "Advanced hair care oil with 10 enriched oils for healthy growth",
+        "Improves hair surface properties and protects from environmental damage",
+        "Strengthens weak hair, lashes, and eyebrows for healthier growth",
+        "Reduces split ends and breakage",
+        "Multi-purpose natural oil blend for hair, lashes, and brows"
+      ],
+      specifications: [
+        "Formulation: Oil",
+        "Hair/Lash/Brow Type: All",
+        "Gender: Women",
+        "Volume: 55ml",
+        "Box Contents: Growth Oil Bottle"
+      ],
+      stock: 40,
+      rate: 4.7
+    },
+    {
+      id: 53,
+      image: 'assets/image/skincare-image/eva-aloe-hair-oil.png',
+      name: 'Eva Aloe Hair Strengthening Oil - 255ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 85,
+      discount: 0,
+      details: [
+        "Enriched with concentrated Aloe Vera extract",
+        "Contains 12 vitamins, 20 minerals, and 17 types of proteins to nourish hair deeply",
+        "Strengthens hair from roots to ends and reduces hair fall",
+        "Promotes healthy hair growth and restores hair vitality",
+        "Provides intensive care, nourishes scalp, and strengthens roots",
+        "Repairs and smooths hair for a dense and natural look"
+      ],
+      specifications: [
+        "Formulation: Oil",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 255ml",
+        "Box Contents: Hair Strengthening Oil Bottle"
+      ],
+      stock: 50,
+      rate: 4.6
+    },
+    {
+      id: 54,
+      image: 'assets/image/skincare-image/eva-aloe-hair-serum-special.png',
+      name: 'Eva Aloe Hair Strengthening Alternative Oil with Aloe & Silk Proteins - 250ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 90,
+      discount: 25,
+      details: [
+        "Enriched with concentrated Aloe Vera extract with 12 vitamins, 20 minerals, and 17 types of proteins to nourish hair deeply",
+        "Strengthens hair from roots to ends and promotes healthy hair growth",
+        "Restores vitality to hair and improves texture noticeably",
+        "Contains Aloe and Silk Proteins to rebuild damaged hair",
+        "Reduces split ends and breakage",
+        "Provides intensive and deep care for healthy, shiny hair"
+      ],
+      specifications: [
+        "Formulation: Oil",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 250ml",
+        "Box Contents: Hair Strengthening Oil Bottle"
+      ],
+      stock: 50,
+      rate: 4.6
+    },
+    {
+      id: 55,
+      image: 'assets/image/skincare-image/eva-advanced-kids-detangling-spray.png',
+      name: 'Eva Advanced Haircare Kids Detangling Spray - 185ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 125,
+      discount: 0,
+      details: [
+        "Advanced haircare spray for kids with Avocado and Marshmallow extract",
+        "Improves hair surface properties and protects from environmental damage",
+        "Makes detangling curly, wavy, and textured hair easy",
+        "Defines waves and curls for long-lasting style",
+        "Hydrates and nourishes hair for soft and manageable texture"
+      ],
+      specifications: [
+        "Formulation: Spray",
+        "Hair Type: Curly / Wavy / Textured",
+        "Gender: Kids",
+        "Volume: 185ml",
+        "Box Contents: Detangling Spray Bottle"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 56,
+      image: 'assets/image/skincare-image/eva-advanced-kids-curl-defining-conditioner.png',
+      name: 'Eva Advanced Haircare Kids Curl Defining Conditioner - 230ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 125,
+      discount: 0,
+      details: [
+        "Advanced haircare conditioner for kids with Avocado and Marshmallow extract",
+        "Prevents heavy minerals from tap water from sticking to hair",
+        "Moisturizes and enhances curl definition and shine",
+        "Gentle on skin and tear-free formula",
+        "Nourishes and hydrates curly, wavy, and textured hair"
+      ],
+      specifications: [
+        "Formulation: Conditioner",
+        "Hair Type: Curly / Wavy / Textured",
+        "Gender: Kids",
+        "Volume: 230ml",
+        "Box Contents: Curl Defining Conditioner Bottle"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 57,
+      image: 'assets/image/skincare-image/eva-advanced-hair-growth-conditioner.png',
+      name: 'Eva Advanced Haircare Hair Growth Conditioner - 230ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 160,
+      discount: 0,
+      details: [
+        "Advanced haircare conditioner with Cubexyl, Caffeine, and Ginseng extract",
+        "Prevents heavy minerals from tap water from adhering to hair",
+        "Gently nourishes and smooths weak and thinning hair",
+        "Enhances hair density and reduces hair fall",
+        "Formulated with a blend of active ingredients to support hair growth"
+      ],
+      specifications: [
+        "Formulation: Conditioner",
+        "Hair Type: Weak / Thinning",
+        "Gender: Women",
+        "Volume: 230ml",
+        "Box Contents: Hair Growth Conditioner Bottle"
+      ],
+      stock: 45,
+      rate: 4.6
+    },
+    {
+      id: 58,
+      image: 'assets/image/skincare-image/eva-advanced-hair-growth-ampoules.png',
+      name: 'Eva Advanced Haircare Hair Growth Ampoules - 6ml x 7',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 220,
+      discount: 0,
+      details: [
+        "Haircare ampoules with 1.5% Cubexyl, Caffeine, and Ginseng extract",
+        "Improves hair surface properties and protects from environmental damage",
+        "Helps reduce hair fall and enhance hair growth",
+        "Formulated with a blend of active ingredients to support hair density",
+        "Specifically designed for weak and thinning hair"
+      ],
+      specifications: [
+        "Formulation: Ampoules",
+        "Hair Type: Weak / Thinning",
+        "Gender: Women",
+        "Volume: 6ml x 7 ampoules",
+        "Box Contents: Hair Growth Ampoules"
+      ],
+      stock: 40,
+      rate: 4.7
+    },
+    {
+      id: 59,
+      image: 'assets/image/skincare-image/eva-aloe-argan-hair-mask.png',
+      name: 'Eva Aloe Hair Strengthening Mask with Moroccan Argan Oil - 250g',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 75,
+      discount: 0,
+      details: [
+        "Strengthening hair mask enriched with Aloe Vera and Moroccan Argan Oil",
+        "Provides deep hydration and nourishment",
+        "Reduces frizz and split ends",
+        "Leaves hair soft, smooth, and shiny",
+        "Ideal for daily or weekly hair care routine"
+      ],
+      specifications: [
+        "Formulation: Hair Mask",
+        "Hair Type: All",
+        "Gender: Women",
+        "Weight: 250g",
+        "Box Contents: Hair Mask"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 60,
+      image: 'assets/image/skincare-image/eva-advanced-growth-hair-mask.png',
+      name: 'Eva Advanced Care Hair Mask for Lengthening & Hydrating Damaged Hair - 200g',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 220,
+      discount: 0,
+      details: [
+        "Advanced hair care mask with Castor Oil and Rice Water for hair lengthening and hydration",
+        "Prevents heavy metals in tap water from adhering to hair",
+        "Deeply nourishes and strengthens damaged hair",
+        "Helps promote longer hair growth and reduces split ends and breakage",
+        "Ideal for weekly or regular hair care routine"
+      ],
+      specifications: [
+        "Formulation: Hair Mask",
+        "Hair Type: All",
+        "Gender: Women",
+        "Weight: 200g",
+        "Box Contents: Hair Mask"
+      ],
+      stock: 40,
+      rate: 4.5
+    },
+    {
+      id: 61,
+      image: 'assets/image/skincare-image/eva-aloe-argan-shampoo.png',
+      name: 'Eva Aloe Hair Strengthening Shampoo with Argan Oil - 230ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 85,
+      discount: 0,
+      details: [
+        "Strengthening shampoo enriched with Aloe Vera and Moroccan Argan Oil",
+        "Gives instant shine and controls frizz",
+        "Repairs, smooths, and hydrates hair strands",
+        "Reduces split ends and strengthens hair from roots to tips",
+        "Ideal for daily use or regular hair care routine"
+      ],
+      specifications: [
+        "Formulation: Shampoo",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 230ml",
+        "Box Contents: Shampoo Bottle"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 62,
+      image: 'assets/image/skincare-image/eva-growth-shampoo.png',
+      name: 'Eva Advanced Hair Growth Shampoo - 230ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 150,
+      discount: 0,
+      details: [
+        "Advanced hair care shampoo with Castor Oil and Rice Water",
+        "Promotes longer hair growth and strengthens hair",
+        "Prevents heavy minerals in tap water from adhering to hair",
+        "Gently cleanses damaged hair without drying",
+        "Reduces split ends and breakage"
+      ],
+      specifications: [
+        "Formulation: Shampoo",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 230ml",
+        "Box Contents: Shampoo Bottle"
+      ],
+      stock: 50,
+      rate: 4.6
+    },
+    {
+      id: 63,
+      image: 'assets/image/skincare-image/eva-respi-conditioner-marshmallow.png',
+      name: 'Eva Respi Conditioner - Marshmallow Scent 350ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 125,
+      discount: 0,
+      details: [
+        "Enhances natural shine and radiance of hair",
+        "Enriched with natural ingredients like Argan Oil, Chamomile Extract, and Marshmallow Root Extract",
+        "Helps control frizz and provides a smooth finish",
+        "Leaves hair glossy with a sweet marshmallow scent",
+        "Free from silicones, parabens, phthalates, and artificial colors"
+      ],
+      specifications: [
+        "Formulation: Conditioner",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 350ml",
+        "Box Contents: Conditioner Bottle"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 64,
+      image: 'assets/image/skincare-image/eva-respi-conditioner-berry.png',
+      name: 'Eva Respi Conditioner - Berry Scent 350ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 125,
+      discount: 0,
+      details: [
+        "Moisturizes thirsty hair deeply",
+        "Formulated with natural ingredients like Hyaluronic Acid, Jojoba Oil, and Hibiscus Flower Extract",
+        "Nourishes dry and damaged hair and restores moisture balance",
+        "Leaves hair refreshed with a vibrant berry scent",
+        "Free from silicones, parabens, phthalates, and artificial colors"
+      ],
+      specifications: [
+        "Formulation: Conditioner",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 350ml",
+        "Box Contents: Conditioner Bottle"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 65,
+      image: 'assets/image/skincare-image/eva-respi-shampoo-mocha.png',
+      name: 'Eva Respi Shampoo - Mocha Scent 350ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 120,
+      discount: 0,
+      details: [
+        "Strengthens weak hair",
+        "Formulated with natural and intensive ingredients like Almond Oil, Ginseng Rose Oil to fortify hair follicles",
+        "Reduces hair stress for healthier hair",
+        "Rich with a refreshing Mocha scent",
+        "Free from silicones, parabens, phthalates, and artificial colors"
+      ],
+      specifications: [
+        "Formulation: Shampoo",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 350ml",
+        "Box Contents: Shampoo Bottle"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 66,
+      image: 'assets/image/skincare-image/eva-respi-shampoo-coconut.png',
+      name: 'Eva Respi Shampoo - Coconut Scent 350ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 120,
+      discount: 0,
+      details: [
+        "Moisturizes and repairs damaged hair",
+        "Formulated with natural and balanced ingredients like Avocado Oil, Coconut Oil, and Shea Butter to nourish and strengthen hair",
+        "Refreshes and revitalizes hair",
+        "Rich with a refreshing Coconut scent",
+        "Free from silicones, parabens, phthalates, and artificial colors"
+      ],
+      specifications: [
+        "Formulation: Shampoo",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 350ml",
+        "Box Contents: Shampoo Bottle"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 67,
+      image: 'assets/image/skincare-image/eva-respi-shampoo-berry.png',
+      name: 'Eva Respi Shampoo - Berry Scent 350ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 120,
+      discount: 0,
+      details: [
+        "Moisturizes thirsty hair",
+        "Formulated with natural and balanced ingredients like Hyaluronic Acid, Jojoba Oil, and Hibiscus Flower Extract to deeply nourish dry and damaged hair",
+        "Restores moisture balance",
+        "Refreshing and invigorating Berry scent",
+        "Free from silicones, parabens, phthalates, and artificial colors"
+      ],
+      specifications: [
+        "Formulation: Shampoo",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 350ml",
+        "Box Contents: Shampoo Bottle"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 68,
+      image: 'assets/image/skincare-image/eva-respi-shampoo-marshmallow.png',
+      name: 'Eva Respi Shampoo - Marshmallow Scent 350ml',
+      brand: 'Eva',
+      category: 'Haircare',
+      price: 120,
+      discount: 0,
+      details: [
+        "Enhances natural shine and radiance of hair",
+        "Rich in natural and balanced ingredients like Argan Oil, Chamomile Extract, and Marshmallow Root Extract to boost shine and control frizz",
+        "Provides a glossy finish",
+        "Marshmallow candy scent",
+        "Free from silicones, parabens, phthalates, and artificial colors"
+      ],
+      specifications: [
+        "Formulation: Shampoo",
+        "Hair Type: All",
+        "Gender: Women",
+        "Volume: 350ml",
+        "Box Contents: Shampoo Bottle"
+      ],
+      stock: 50,
+      rate: 4.5
+    },
+    {
+      id: 69,
+      image: 'assets/image/skincare-image/eva-skin-clinic-night-cream-vitamin-c.png',
+      name: 'Eva Skin Clinic Night Cream with Vitamin C - 50ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 220,
+      discount: 0,
+      details: [
+        "Anti-aging night cream enriched with Vitamin C",
+        "Nourishes skin throughout the night",
+        "Helps reduce the appearance of fine lines and wrinkles",
+        "Promotes even skin tone and radiance",
+        "Improves skin elasticity and firmness"
+      ],
+      specifications: [
+        "Formulation: Cream",
+        "Skin Type: All",
+        "Gender: Women",
+        "Volume: 50ml",
+        "Box Contents: Night Cream"
+      ],
+      stock: 40,
+      rate: 4.6
+    },
+    {
+      id: 70,
+      image: 'assets/image/skincare-image/eva-skin-clinic-vitamin-a-serum.png',
+      name: 'Eva Skin Clinic Vitamin A Face Serum - 30ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 230,
+      discount: 0,
+      details: [
+        "Face serum enriched with Vitamin A",
+        "Improves skin texture and smoothness",
+        "Helps nourish and revitalize the skin"
+      ],
+      specifications: [
+        "Formulation: Serum",
+        "Skin Type: All",
+        "Gender: Women",
+        "Volume: 30ml",
+        "Box Contents: Vitamin A Serum"
+      ],
+      stock: 40,
+      rate: 4.5
+    },
+    {
+      id: 71,
+      image: 'assets/image/skincare-image/eva-skin-clinic-hyaluronic-serum.png',
+      name: 'Eva Skin Clinic Hyaluronic Acid Face Serum - 30ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 230,
+      discount: 0,
+      details: [
+        "Face serum enriched with 1.5% Hyaluronic Acid",
+        "Helps achieve plump, hydrated, and healthy-looking skin",
+        "Provides deep moisture and improves skin texture"
+      ],
+      specifications: [
+        "Formulation: Serum",
+        "Skin Type: All",
+        "Gender: Women",
+        "Volume: 30ml",
+        "Box Contents: Hyaluronic Acid Serum"
+      ],
+      stock: 40,
+      rate: 4.6
+    },
+    {
+      id: 72,
+      image: 'assets/image/skincare-image/eva-skin-clinic-collagen-filler.png',
+      name: 'Eva Skin Clinic Anti-Aging Collagen Filler for Deep Lines - 50ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 230,
+      discount: 0,
+      details: [
+        "Advanced 3D innovation to smooth and firm mature skin",
+        "Targets wrinkles with corrective effect on surface, depth, and volume",
+        "Enhances skin elasticity and provides a natural, youthful appearance"
+      ],
+      specifications: [
+        "Formulation: Serum",
+        "Skin Type: Mature",
+        "Gender: Women",
+        "Volume: 50ml",
+        "Box Contents: Collagen Filler"
+      ],
+      stock: 40,
+      rate: 4.7
+    },
+    {
+      id: 73,
+      image: 'assets/image/skincare-image/eva-hand-cream-gold-spell.png',
+      name: 'Eva Skin Care Senses Gold Spell Hand Cream - 60ml',
+      brand: 'Eva',
+      category: 'Skincare',
+      price: 65,
+      discount: 0,
+      details: [
+        "Effectively moisturizes dry hands",
+        "Rich formula with Vitamin E and powerful moisturizers",
+        "Helps reduce dryness and keeps skin soft and smooth all day"
+      ],
+      specifications: [
+        "Formulation: Cream",
+        "Skin Type: All",
+        "Gender: Women",
+        "Volume: 60ml",
+        "Box Contents: Hand Cream"
+      ],
+      stock: 60,
+      rate: 4.5
+    },
 
-    // ================= Perfumes =================
+  // ================= Makeups =================
+    {
+      id: 27,
+      image: 'assets/image/makeup-image/sheglam-primer.png',
+      name: 'SheGlam Primer Gel for Flawless Makeup',
+      brand: 'SheGlam',
+      category: 'Makeup',
+      price: 220,
+      discount: 0,
+      details: [
+        "Gives a smooth, flawless base for makeup application",
+        "Helps makeup last all day with perfect colors",
+        "Soft, lightweight gel texture suitable for all skin types",
+        "Ideal for medium skin tones",
+        "Apply a small amount evenly on face before makeup"
+      ],
+      specifications: [
+        "Color: Clear",
+        "Skin Type: All",
+        "Gender: Women",
+        "Coverage: Medium",
+        "Formulation: Gel",
+        "Model Number: SB25080425767326213",
+        "Remover Type: Wet Wipes"
+      ],
+      stock: 20,
+      rate: 4.4
+    },
+    {
+      id: 28,
+      image: 'assets/image/makeup-image/sheglam-foundation-butter-cream.png',
+      name: 'SheGlam Skinfinite Hydrating Foundation - Butter Cream',
+      brand: 'SheGlam',
+      category: 'Makeup',
+      price: 300,
+      discount: 0,
+      details: [
+        "Hydrates and smooths the skin while providing a natural, lightweight feel",
+        "Medium to full coverage that is buildable as needed",
+        "Gives a soft, even finish suitable for dry to normal skin",
+        "Vegan and cruelty-free formula",
+        "Apply on clean, moisturized skin using sponge, brush, or fingers",
+        "Set with powder or setting spray for longer wear"
+      ],
+      specifications: [
+        "Color: Butter Cream",
+        "Finish: Matte",
+        "Skin Type: All",
+        "Gender: Unisex",
+        "Coverage: Medium",
+        "Formulation: Liquid",
+        "Model Name: Butter Cream"
+      ],
+      stock: 18,
+      rate: 4.5
+    },
+    {
+      id: 29,
+      image: 'assets/image/makeup-image/sheglam-liquid-blush-love-cake.png',
+      name: 'SheGlam Color Bloom Liquid Blush - 101 Love Cake',
+      brand: 'SheGlam',
+      category: 'Makeup',
+      price: 180,
+      discount: 0,
+      details: [
+        "Luxurious liquid blush that adds a beautiful touch of color",
+        "Gel-cream formula with sponge applicator for easy blending",
+        "Rich, hydrating texture that leaves a natural, radiant finish",
+        "Contains nourishing ingredients like Vitamin C for skin care",
+        "Medium coverage suitable for all skin types"
+      ],
+      specifications: [
+        "Color: Light Skin / 101 Love Cake",
+        "Skin Type: All",
+        "Gender: Women",
+        "Coverage: Medium",
+        "Formulation: Gel-Cream",
+        "Model Number: 6971870591179"
+      ],
+      stock: 25,
+      rate: 4.5
+    },
+    {
+      id: 30,
+      image: 'assets/image/makeup-image/maybelline-sky-high-mascara.png',
+      name: 'Maybelline Lash Sensational Sky High Mascara - Black',
+      brand: 'Maybelline',
+      category: 'Makeup',
+      price: 220,
+      discount: 0,
+      details: [
+        "Provides full volume and unlimited length for lashes",
+        "Long-lasting formula up to 36 hours",
+        "Infused with bamboo extract and fibers for long, dense, lightweight lashes",
+        "Exclusive Flex Tower brush bends to coat every lash from root to tip",
+        "Easy to remove, does not flake or smudge",
+        "Dermatologist and ophthalmologist tested, suitable for sensitive eyes and contact lens wearers"
+      ],
+      specifications: [
+        "Color: Black",
+        "Finish: Natural",
+        "Formulation: Liquid",
+        "Skin Type: All",
+        "Gender: Women",
+        "Model Number: 30166967",
+        "Box Contents: Lash Sensational Sky High Mascara - Volumizing & Lengthening Black",
+        "Model Name: Mascara-5"
+      ],
+      stock: 30,
+      rate: 4.7
+    },
+    {
+      id: 31,
+      image: 'assets/image/makeup-image/maybelline-colossal-mascara.png',
+      name: 'Maybelline Colossal Mascara - 100% Black',
+      brand: 'Maybelline',
+      category: 'Makeup',
+      price: 200,
+      discount: 0,
+      details: [
+        "Gives lashes 7x bigger and clump-free in seconds",
+        "Collagen-enriched formula helps promote new lash growth",
+        "Huge brush delivers massive volume in a single coat",
+        "Water-resistant, smudge-free formula for thicker, fuller lashes",
+        "Tested by ophthalmologists, suitable for sensitive eyes and contact lens wearers",
+        "Highly pigmented formula for intense black color without clumps"
+      ],
+      specifications: [
+        "Color: Black",
+        "Finish: Matte",
+        "Formulation: Liquid",
+        "Skin Type: All",
+        "Gender: Women",
+        "Model Number: The Colossal",
+        "Box Contents: Colossal Mascara 100% Black",
+        "Model Name: The Colossal"
+      ],
+      stock: 28,
+      rate: 4.6
+    },
+    {
+      id: 32,
+      image: "assets/image/makeup-image/roseberry-kohl.png",
+      name: "Rose Berry Kohl Eyeliner - Black",
+      brand: "Rose Berry",
+      category: "Makeup",
+      price: 120,
+      discount: 0,
+      details: [
+        "Sweat, heat, and humidity-resistant formula",
+        "Provides high-definition eye lining for an intense look",
+        "Long-lasting wear throughout the day",
+        "Smooth application for precise and bold lines"
+      ],
+      specifications: [
+        "Color: Black",
+        "Skin Type: All",
+        "Formulation: Pencil",
+        "Gender: Women",
+        "Model Number: MRB454",
+        "Box Contents: Kohl Eyeliner"
+      ],
+      stock: 35,
+      rate: 4.3
+    },
+    {
+      id: 33,
+      image: 'assets/image/makeup-image/technic-eyeshadow.png',
+      name: 'Technic Eyeshadow Palette',
+      brand: 'Technic',
+      category: 'Makeup',
+      price: 180,
+      discount: 0,
+      details: [
+        "Highly pigmented formula for rich color payoff",
+        "Easy to blend for seamless eye looks",
+        "Perfect for both natural daytime and bold night looks",
+        "Long-lasting formula for all-day wear"
+      ],
+      specifications: [
+        "Gender: Women",
+        "Formulation: Powder",
+        "Skin Tone: Medium",
+        "Box Contents: Eyeshadow Palette"
+      ],
+      stock: 40,
+      rate: 4.4
+    },
+    {
+      id: 34,
+      image: 'assets/image/makeup-image/nars-foundation.png',
+      name: 'NARS Natural Radiant Longwear Foundation',
+      brand: 'NARS',
+      category: 'Makeup',
+      price: 950,
+      discount: 0,
+      details: [
+        "Lightweight formula that blends effortlessly for a natural radiant finish",
+        "Provides medium coverage to conceal imperfections and fine lines",
+        "Enhances skin elasticity for a smoother texture over time",
+        "Delivers true-to-skin color for a flawless look",
+        "Hydrating and refreshing formula for comfortable all-day wear",
+        "Long-lasting foundation suitable for day and night looks"
+      ],
+      specifications: [
+        "Finish: Natural Radiant",
+        "Skin Tone: Medium",
+        "Formulation: Liquid",
+        "Skin Type: All",
+        "Coverage: Medium",
+        "Gender: Women",
+        "Model Name: Natural Radiant",
+        "Box Contents: Foundation Bottle"
+      ],
+      stock: 25,
+      rate: 4.7
+    },
+    {
+      id: 35,
+      image: 'assets/image/makeup-image/huda-easy-bake-powder.png',
+      name: 'Huda Beauty Easy Bake Loose Powder - Cupcake',
+      brand: 'Huda Beauty',
+      category: 'Makeup',
+      price: 850,
+      discount: 0,
+      details: [
+        "Lightweight silky texture that blends seamlessly into the skin",
+        "Brightens and smooths under-eye area for a flawless finish",
+        "Controls shine all day with a soft matte glow",
+        "Easy-to-use baking powder with controlled dispensing mesh",
+        "Helps set makeup and enhance facial features",
+        "Provides subtle color correction with a natural finish"
+      ],
+      specifications: [
+        "Color: Cupcake",
+        "Skin Tone: Fair",
+        "Formulation: Loose Powder",
+        "Skin Type: All",
+        "Coverage: Light",
+        "Gender: Women",
+        "Model Number: B07MW12YHK",
+        "Box Contents: Loose Powder"
+      ],
+      stock: 30,
+      rate: 4.8
+    },
+
+  // ================= Accessories =================
+    { id: 74, image: 'assets/image/accessories-image/1.jpeg', name: 'Classic Gold Chain', brand: 'GoldenStyle', category: 'Accessories', price: 450, discount: 50, details: 'Elegant gold chain perfect for formal and stylish looks.', specifications: 'Chain' },
+    { id: 75, image: 'assets/image/accessories-image/2.jpeg', name: 'Trendy Leather Bracelet', brand: 'UrbanChic', category: 'Accessories', price: 300, discount: 30, details: 'Fashionable leather bracelet suitable for daily wear.', specifications: 'Bracelet / Wristband' },
+    { id: 76, image: 'assets/image/accessories-image/3.jpeg', name: 'Men’s Leather Belt', brand: 'StylePro', category: 'Accessories', price: 350, discount: 40, details: 'Premium leather belt for a classic masculine look.', specifications: 'Bracelet / Wristband' },
+    { id: 77, image: 'assets/image/accessories-image/4.jpeg', name: 'Elegant Pearl Necklace', brand: 'LuxWear', category: 'Accessories', price: 500, discount: 60, details: 'Luxurious pearl necklace for a sophisticated appearance.', specifications: 'Chain' },
+    { id: 78, image: 'assets/image/accessories-image/5.jpeg', name: 'Minimalist Silver Necklace', brand: 'ChicStyle', category: 'Accessories', price: 220, discount: 20, details: 'Simple silver necklace suitable for everyday outfits.', specifications: 'Chain' },
+    { id: 79, image: 'assets/image/accessories-image/6.jpeg', name: 'Luxury Gold Bracelet', brand: 'LuxWear', category: 'Accessories', price: 1200, discount: 150, details: 'Premium gold bracelet for special occasions.', specifications: 'Bracelet / Wristband' },
+    { id: 80, image: 'assets/image/accessories-image/7.jpeg', name: 'Colorful Hair Ring Set', brand: 'ChicStyle', category: 'Accessories', price: 180, discount: 15, details: 'Set of colorful and practical hair rings.', specifications: 'Ring' },
+    { id: 81, image: 'assets/image/accessories-image/8.jpeg', name: 'Trendy Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Stylish keychain set with attractive designs.', specifications: 'Chain' },
+    { id: 82, image: 'assets/image/accessories-image/9.jpeg', name: 'Classic Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Classic keychain set suitable for multiple uses.', specifications: 'Chain' },
+    { id: 83, image: 'assets/image/accessories-image/10.jpeg', name: 'Fashionable Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Trendy keychain set perfect for any outfit.', specifications: 'Chain' },
+    { id: 84, image: 'assets/image/accessories-image/11.jpeg', name: 'Elegant Ring Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Elegant ring key set for a unique look.', specifications: 'Ring' },
+    { id: 85, image: 'assets/image/accessories-image/12.jpeg', name: 'Silver Ring Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Premium silver ring key set.', specifications: 'Ring' },
+    { id: 86, image: 'assets/image/accessories-image/13.jpeg', name: 'Minimalist Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Simple and practical keychain set.', specifications: 'Chain' },
+    { id: 87, image: 'assets/image/accessories-image/14.jpeg', name: 'Classic Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Classic keychain set for everyday use.', specifications: 'Chain' },
+
+  // ================= Perfumes =================
     { id: 9, image: 'assets/image/logos/glamify-logo.png', name: 'Luxury Perfume', brand: 'EliteScents', category: 'Perfumes', price: 1200, discount: 200, details: 'عطر فاخر يدوم طويلاً ويعطي رائحة جذابة ومميزة.' },
     { id: 10, image: 'assets/image/logos/glamify-logo.png', name: 'Floral Essence', brand: 'AromaWorld', category: 'Perfumes', price: 950, discount: 150, details: 'عطر زهري خفيف يناسب الاستخدام اليومي.' },
     { id: 11, image: 'assets/image/logos/glamify-logo.png', name: 'Night Oud', brand: 'OrientalScents', category: 'Perfumes', price: 1800, discount: 300, details: 'عطر غني بالعود والباتشولي لرائحة فاخرة لا تُنسى.' },
@@ -412,16 +1980,6 @@ export class DataService {
     { id: 14, image: 'assets/image/logos/glamify-logo.png', name: 'Ocean Breeze', brand: 'FreshAroma', category: 'Perfumes', price: 650, discount: 80, details: 'عطر منعش برائحة البحر والنسمات العليلة.' },
     { id: 15, image: 'assets/image/logos/glamify-logo.png', name: 'Rose Garden', brand: 'AromaWorld', category: 'Perfumes', price: 900, discount: 100, details: 'عطر زهري كلاسيكي بنفحات الورد الطبيعي.' },
     { id: 16, image: 'assets/image/logos/glamify-logo.png', name: 'Midnight Musk', brand: 'EliteScents', category: 'Perfumes', price: 1300, discount: 200, details: 'عطر غامض وجذاب يناسب المناسبات الخاصة.' },
-
-    // ================= Makeup =================
-    { id: 17, image: 'assets/image/logos/glamify-logo.png', name: 'Matte Lipstick', brand: 'ColorFiesta', category: 'Makeup', price: 220, discount: 0, details: 'روج مطفي طويل الأمد، غني بالألوان الزاهية والناعمة.' },
-    { id: 18, image: 'assets/image/logos/glamify-logo.png', name: 'Liquid Foundation', brand: 'SkinPerfect', category: 'Makeup', price: 400, discount: 50, details: 'فاونديشن سائل خفيف يغطي العيوب ويعطي مظهر طبيعي.' },
-    { id: 19, image: 'assets/image/logos/glamify-logo.png', name: 'Eyeshadow Palette', brand: 'Glamify', category: 'Makeup', price: 550, discount: 100, details: 'باليت ظلال عيون بألوان متعددة مناسبة لجميع المناسبات.' },
-    { id: 20, image: 'assets/image/logos/glamify-logo.png', name: 'Blush Powder', brand: 'ColorFiesta', category: 'Makeup', price: 300, discount: 50, details: 'بودرة خدود لإشراقة طبيعية وملمس ناعم.' },
-    { id: 21, image: 'assets/image/logos/glamify-logo.png', name: 'Eyeliner Pencil', brand: 'Glamify', category: 'Makeup', price: 180, discount: 20, details: 'قلم تحديد العيون بدقة عالية ولمسة مثالية.' },
-    { id: 22, image: 'assets/image/logos/glamify-logo.png', name: 'Mascara Volume', brand: 'ColorFiesta', category: 'Makeup', price: 250, discount: 30, details: 'ماسكارا لإطلالة كثيفة وطويلة الأمد للرموش.' },
-    { id: 23, image: 'assets/image/logos/glamify-logo.png', name: 'Lip Gloss', brand: 'Glamify', category: 'Makeup', price: 200, discount: 20, details: 'لمعان شفاه غني بالألوان واللمسة الحريرية.' },
-    { id: 24, image: 'assets/image/logos/glamify-logo.png', name: 'Concealer Stick', brand: 'SkinPerfect', category: 'Makeup', price: 350, discount: 50, details: 'كريم لإخفاء العيوب والهالات السوداء بدقة.' },
 
     // ================= Watches =================
     { id: 25, image: 'assets/image/logos/glamify-logo.png', name: 'Classic Watch', brand: 'TimeMaster', category: 'Watches', price: 2500, discount: 300, details: 'ساعة كلاسيكية أنيقة مناسبة لجميع المناسبات اليومية والرسمية.' },
@@ -433,21 +1991,16 @@ export class DataService {
     { id: 31, image: 'assets/image/logos/glamify-logo.png', name: 'Chronograph Watch', brand: 'ActiveTime', category: 'Watches', price: 4000, discount: 500, details: 'ساعة كرونوغراف بمميزات احترافية عالية.' },
     { id: 32, image: 'assets/image/logos/glamify-logo.png', name: 'Minimalist Watch', brand: 'TechTime', category: 'Watches', price: 2200, discount: 200, details: 'ساعة بسيطة وعصرية للستايل اليومي.' },
 
-    // ================= Accessories =================
-    { id: 33, image: 'assets/image/logos/glamify-logo.png', name: 'Leather Wallet', brand: 'StylePro', category: 'Accessories', price: 450, discount: 50, details: 'محفظة جلدية أنيقة لحمل النقود والبطاقات.' },
-    { id: 34, image: 'assets/image/logos/glamify-logo.png', name: 'Sunglasses', brand: 'SunGuard', category: 'Accessories', price: 300, discount: 30, details: 'نظارة شمسية عصرية لحماية العين من الأشعة الضارة.' },
-    { id: 35, image: 'assets/image/logos/glamify-logo.png', name: 'Leather Belt', brand: 'StylePro', category: 'Accessories', price: 350, discount: 40, details: 'حزام جلدي عالي الجودة لإطلالة أنيقة.' },
-    { id: 36, image: 'assets/image/logos/glamify-logo.png', name: 'Silk Scarf', brand: 'LuxWear', category: 'Accessories', price: 500, discount: 60, details: 'وشاح حريري فاخر لإطلالة راقية.' },
-    { id: 37, image: 'assets/image/logos/glamify-logo.png', name: 'Fashion Bracelet', brand: 'ChicStyle', category: 'Accessories', price: 220, discount: 20, details: 'سوار عصري بسيط لإطلالة يومية.' },
-    { id: 38, image: 'assets/image/logos/glamify-logo.png', name: 'Gold Necklace', brand: 'LuxWear', category: 'Accessories', price: 1200, discount: 150, details: 'قلادة ذهبية فاخرة تناسب المناسبات الخاصة.' },
-    { id: 39, image: 'assets/image/logos/glamify-logo.png', name: 'Hairband Set', brand: 'ChicStyle', category: 'Accessories', price: 180, discount: 15, details: 'مجموعة أربطة شعر ملونة وعملية.' },
-    { id: 40, image: 'assets/image/logos/glamify-logo.png', name: 'Keychain Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'مجموعة مفاتيح عصرية مع تصاميم جذابة.' },
   ];
 
   // ================== Functions ==================
   getAllProducts(): Product[] { return this.products; }
-  getProductsByCategory(category: string): Product[] { return this.products.filter(p => p.category === category); }
-  getProductsByBrand(brand: string): Product[] { return this.products.filter(p => p.brand === brand); }
+  getProductsByCategory(categoryName: string): Product[] {
+    return this.products.filter(p => p.category.toLowerCase() === categoryName.toLowerCase());
+  }
+  getProductsByBrand(brand: string): Product[] {
+    return this.products.filter(p => p.brand.toLowerCase() === brand.toLowerCase());
+  }
 
   getProductSkincare(): Product[] { return this.getProductsByCategory('Skincare'); }
   getProductPerfume(): Product[] { return this.getProductsByCategory('Perfumes'); }
