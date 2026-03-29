@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 export interface Product {
   id: number;
   image: string;
+  images?:string[];
   name: string;
   brand: string;
   category: string;  // Added category
@@ -23,6 +24,11 @@ export class DataService {
     {
       id: 1,
       image: 'assets/image/skincare-image/Mineral-89.png',
+      images:[
+        'assets/image/skincare-image/Mineral-89.png',
+        'assets/image/skincare-image/Mineral-89-2.png',
+        'assets/image/skincare-image/Mineral-89-3.png',
+      ],
       name: 'Vichy Mineral 89 Moisturizer',
       brand: 'Vichy',
       category: 'Skincare',
@@ -56,6 +62,11 @@ export class DataService {
     {
       id: 2,
       image: 'assets/image/skincare-image/Serum-Mineral-89.png',
+      images:[
+        'assets/image/skincare-image/Serum-Mineral-89.png',
+        'assets/image/skincare-image/Serum-Mineral-89-2.png',
+        'assets/image/skincare-image/Serum-Mineral-89-3.png',
+      ],
       name: 'Vichy Mineral 89 Eye Moisturizer',
       brand: 'Vichy',
       category: 'Skincare',
@@ -79,6 +90,11 @@ export class DataService {
     {
       id: 3,
       image: 'assets/image/skincare-image/Serum-Lefit-Active.png',
+      images:[
+        'assets/image/skincare-image/Serum-Lefit-Active.png',
+        'assets/image/skincare-image/Serum-Lefit-Active-2.png',
+        'assets/image/skincare-image/Serum-Lefit-Active-3.png',
+      ],
       name: 'Vichy Liftactiv Vitamin C 16% Serum',
       brand: 'Vichy',
       category: 'Skincare',
@@ -113,6 +129,11 @@ export class DataService {
     {
       id: 4,
       image: 'assets/image/skincare-image/Lefit-Active-Seshylist.png',
+      images:[
+        'assets/image/skincare-image/Lefit-Active-Seshylist.png',
+        'assets/image/skincare-image/Lefit-Active-Seshylist-2.png',
+        'assets/image/skincare-image/Lefit-Active-Seshylist-3.png',
+      ],
       name: 'Vichy Liftactiv Specialist B3 Dark Spot Serum 30ml',
       brand: 'Vichy',
       category: 'Skincare',
@@ -145,7 +166,12 @@ export class DataService {
     },
     {
       id: 5,
-      image: 'assets/image/skincare-image/Capital-Solary.png',
+      image: 'assets/image/skincare-image/Capital-Solary.jpg',
+      images:[
+        'assets/image/skincare-image/Capital-Solary.jpg',
+        // 'assets/image/skincare-image/Capital-Solary-2.png',
+        'assets/image/skincare-image/Capital-Solary-3.png',
+      ],
       name: 'Vichy Capital Solute UV-Age Sunscreen SPF 50',
       brand: 'Vichy',
       category: 'Skincare',
@@ -183,19 +209,30 @@ export class DataService {
     },
     {
       id: 6,
-      image: 'assets/image/skincare-image/Edial-Solary.png',
-      name: 'Vichy Ideal Soleil Sunscreen Cream Matte Finish SPF 50',
+      image: 'assets/image/skincare-image/Edial-Solary.webp',
+      images:[
+        'assets/image/skincare-image/Edial-Solary.webp',
+        'assets/image/skincare-image/Edial-Solary-2.webp',
+        'assets/image/skincare-image/Edial-Solary-3.png',
+        'assets/image/skincare-image/Edial-Solary-4.png'
+      ],
+      name: 'SPF 50 Velvety cream skin perfecting action',
       brand: 'Vichy',
       category: 'Skincare',
       price: 650,
       discount: 0,
-      details: `Apply frequently in generous amounts. Suitable for combination to oily skin. Water-resistant and hypoallergenic.`,
+      details: `The Velvety Cream SPF 50+ provides the optimal protection against all harmful rays that can damage your skin. The formula has an extremely effective filtering system that ensures ultimate sun protection, immediately leaving you with softer skin and a healthy glow. It is enriched with Vichy Thermal Spa Water which is soothing, fortifying and regenerating for your skin, while also preventing wrinkles and spots.`,
       stock: 5,
       rate: 3.7,
     },
     {
       id: 7,
       image: 'assets/image/skincare-image/Normadirm.png',
+      images: [
+        'assets/image/skincare-image/Normadirm.png',
+        'assets/image/skincare-image/Normadirm-2.png',
+        'assets/image/skincare-image/Normadirm-3.png',
+      ],
       name: 'Vichy Normaderm Phytosolution Daily Moisturizer',
       brand: 'Vichy',
       category: 'Skincare',
@@ -230,6 +267,11 @@ export class DataService {
     {
       id: 8,
       image: 'assets/image/skincare-image/Mozel-Vichy.png',
+      images: [
+        'assets/image/skincare-image/Mozel-Vichy.png',
+        'assets/image/skincare-image/Mozel-Vichy-2.png',
+        'assets/image/skincare-image/Mozel-Vichy-3.png',
+      ],
       name: 'Vichy Suncare Sunscreen Anti-Aging SPF 50',
       brand: 'Vichy',
       category: 'Skincare',
@@ -260,6 +302,11 @@ export class DataService {
     {
       id: 9,
       image: 'assets/image/skincare-image/Peauty-Duo.png',
+      images: [
+        'assets/image/skincare-image/Peauty-Duo.png',
+        'assets/image/skincare-image/Peauty-Duo-2.png',
+        'assets/image/skincare-image/Peauty-Duo-3.png',
+      ],
       name: 'Vichy Beauty Deo Anti-Perspirant 48h for Women',
       brand: 'Vichy',
       category: 'Skincare',
@@ -290,6 +337,11 @@ export class DataService {
     {
       id: 10,
       image: 'assets/image/skincare-image/Lefit-Active-Cologen-spicalist.png',
+      images: [
+        'assets/image/skincare-image/Lefit-Active-Cologen-spicalist.png',
+        'assets/image/skincare-image/Lefit-Active-Cologen-spicalist-2.png',
+        'assets/image/skincare-image/Lefit-Active-Cologen-spicalist-3.png',
+      ],
       name: 'Vichy Liftactiv Collagen Specialist Anti-Wrinkle & Firming Day Cream 50ml',
       brand: 'Vichy',
       category: 'Skincare',
@@ -318,6 +370,11 @@ export class DataService {
     {
       id: 11,
       image: 'assets/image/skincare-image/Liftactiv.png',
+      images: [
+        'assets/image/skincare-image/Liftactiv.png',
+        'assets/image/skincare-image/Liftactiv.png',
+        'assets/image/skincare-image/Liftactiv.png',
+      ],
       name: 'Vichy Liftactiv Supreme Anti-Wrinkle Eye Care 15ml',
       brand: 'Vichy',
       category: 'Skincare',
@@ -345,6 +402,11 @@ export class DataService {
     {
       id: 12,
       image: 'assets/image/skincare-image/Facial-Cleanser.png',
+      images: [
+        'assets/image/skincare-image/Facial-Cleanser.png',
+        'assets/image/skincare-image/Facial-Cleanser.png',
+        'assets/image/skincare-image/Facial-Cleanser.png',
+      ],
       name: 'Vichy Facial Cleanser Gel 200ml',
       brand: 'Vichy',
       category: 'Skincare',
@@ -375,6 +437,11 @@ export class DataService {
     {
       id: 13,
       image: 'assets/image/skincare-image/Normaderm-Phytosolution.png',
+      images: [
+        'assets/image/skincare-image/Normaderm-Phytosolution.png',
+        'assets/image/skincare-image/Normaderm-Phytosolution.png',
+        'assets/image/skincare-image/Normaderm-Phytosolution.png',
+      ],
       name: 'Vichy Normaderm Phytosolution Gel Cleanser 200ml',
       brand: 'Vichy',
       category: 'Skincare',

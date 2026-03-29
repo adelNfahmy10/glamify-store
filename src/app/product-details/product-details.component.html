@@ -8,49 +8,24 @@
             dir="rtl"
             style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
             thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image"/>
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
+            @for (item of product.images; track $index) {
+              <swiper-slide>
+                <img [src]="item" [alt]="product.name" />
+              </swiper-slide>
+            } @empty {
+              <swiper-slide>
+                <img [src]="product.image" [alt]="product.name" />
+              </swiper-slide>
+            }
           </swiper-container>
 
           <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
             watch-slides-progress="true">
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
-            <swiper-slide>
-              <img [src]="product.image" />
-            </swiper-slide>
+            @for (item of product.images; track $index) {
+              <swiper-slide>
+                <img [src]="item" [alt]="product.name" />
+              </swiper-slide>
+            }
           </swiper-container>
         </div>
        }
