@@ -6,7 +6,7 @@ export interface Product {
   images?:string[];
   name: string;
   brand: string;
-  category: string;  // Added category
+  category: string;
   price: number;
   discount?: number;
   details: any;
@@ -58,6 +58,134 @@ export class DataService {
       ],
       stock: 5,
       rate:4,
+    },
+    {
+      id: 101,
+      image: 'assets/image/skincare-image/vichy-dercos-anti-dandruff.jpeg',
+      name: 'Vichy Dercos Anti-Dandruff Shampoo',
+      brand: 'Vichy',
+      category: 'Haircare',
+      price: 750,
+      discount: 150,
+      details: [
+        "Effectively eliminates visible dandruff from the first use.",
+        "Provides long-lasting anti-dandruff protection for up to 6 weeks.",
+        "Enriched with Selenium DS for antifungal action and scalp soothing.",
+        "Helps reduce itching, redness, and irritation of the scalp.",
+        "Contains Ceramides to strengthen and restore the scalp barrier.",
+        "Controls excess oil and sebum production for oily scalp types.",
+        "Leaves hair clean, fresh, and detoxified from roots to ends.",
+        "Gentle formula suitable for daily use."
+      ],
+      specifications: [
+        "Brand: Vichy",
+        "Model Name: Dercos Anti-Dandruff Nourishing Shampoo",
+        "Size: 200ml",
+        "Hair Type: Normal to Oily Hair",
+        "Concern: Dandruff",
+        "Gender: Unisex",
+        "Model Number: 3337871330286",
+        "Usage: Apply on wet hair, leave for 2 minutes on first use, then rinse thoroughly",
+        "Treatment Duration: 4 weeks recommended",
+        "UV Protection: Moderate"
+      ]
+    },
+    {
+      id: 102,
+      image: 'assets/image/skincare-image/vichy-anthelios-uvmune-400.jpeg',
+      name: 'Vichy Anthelios UVMune 400 Oil Control Invisible Fluid Sunscreen SPF 50+',
+      brand: 'Vichy',
+      category: 'Skincare',
+      price: 1100,
+      discount: 200,
+      details: [
+        "Provides advanced broad-spectrum protection against UVA and UVB rays.",
+        "Powered by UVMune 400 technology for enhanced protection against ultra-long UVA rays.",
+        "Helps control excess oil and shine, ideal for oily skin types.",
+        "Lightweight invisible fluid texture that absorbs quickly without leaving white marks.",
+        "Reduces dullness and keeps the skin looking fresh and healthy.",
+        "Suitable for daily use with a non-greasy and breathable finish.",
+        "Offers high SPF 50+ protection against harmful sun exposure."
+      ],
+      specifications: [
+        "Brand: Vichy",
+        "Model Name: Anthelios UVMune 400 Oil Control Invisible Fluid Sunscreen SPF 50+",
+        "Size: 50ml",
+        "Skin Type: Oily Skin",
+        "Concern: Dull Skin",
+        "Texture: Cream",
+        "Gender: Unisex",
+        "Model Number: 3337875847292",
+        "UV Protection: High SPF 50+"
+      ]
+    },
+    {
+      id: 103,
+      image: 'assets/image/skincare-image/cerave-moisturising-lotion.webp',
+      name: 'CeraVe Moisturising Lotion for Dry to Very Dry Skin',
+      brand: 'CeraVe',
+      category: 'Skincare',
+      price: 670,
+      discount: 120,
+      details: [
+        "Lightweight, non-greasy, and fast-absorbing formula.",
+        "Developed by dermatologists for daily face and body use.",
+        "Provides up to 24-hour hydration with continuous moisture release.",
+        "Helps restore and maintain the skin’s natural protective barrier.",
+        "Enriched with Hyaluronic Acid to retain skin moisture.",
+        "Suitable for dry to very dry skin types.",
+        "Fragrance-free and gentle on sensitive skin."
+      ],
+      specifications: [
+        "Brand: CeraVe",
+        "Model Name: Moisturising Lotion",
+        "Size: 236ml",
+        "Skin Type: Dry to Very Dry Skin",
+        "Concern: Dryness",
+        "Texture: Lotion",
+        "Gender: Unisex",
+        "Technology: MVE Delivery Technology",
+        "Key Ingredients: Ceramides (1, 3, 6-II), Hyaluronic Acid",
+        "Usage: Suitable for face and body",
+        "Fragrance: Fragrance-Free"
+      ]
+    },
+    {
+      id: 104,
+      image: 'assets/image/skincare-image/cerave-hydrating-cleanser.jpg',
+      images: [
+        // 'assets/image/skincare-image/cerave-hydrating-cleanser.jpg',
+        // 'assets/image/skincare-image/cerave-hydrating-cleanser-2.jpg',
+        // 'assets/image/skincare-image/cerave-hydrating-cleanser-3.jpg',
+      ],
+      name: 'CeraVe Hydrating Cleanser for Normal to Dry Skin',
+      brand: 'CeraVe',
+      category: 'Skincare',
+      price: 620,
+      discount: 120,
+      details: [
+        "Gently cleanses the skin without stripping moisture or leaving it tight or dry.",
+        "Suitable for normal to dry and sensitive skin types.",
+        "Developed with dermatologists and accepted by the National Eczema Association.",
+        "Removes dirt, oil, and light makeup effectively.",
+        "Enriched with Hyaluronic Acid to help retain the skin’s natural moisture.",
+        "Contains 3 essential Ceramides to restore and maintain the skin barrier.",
+        "Features MVE Delivery Technology for continuous hydration throughout the day.",
+        "Non-comedogenic, fragrance-free, and non-irritating formula.",
+        "Suitable for both adults and children.",
+        "Leaves skin soft, refreshed, and hydrated after every use."
+      ],
+      specifications: [
+        "Product Weight: 534 g",
+        "Size / Volume: 473 ml",
+        "Gender: Unisex",
+        "Target Skin Type: Normal to Dry Skin",
+        "Skin Concerns: Dryness",
+        "Formulation: Cream Cleanser",
+        "Model Name: Hydrating Cleanser"
+      ],
+      stock: 10,
+      rate: 4.5
     },
     {
       id: 2,
@@ -2070,6 +2198,7 @@ export class DataService {
   }
 
   getProductSkincare(): Product[] { return this.getProductsByCategory('Skincare'); }
+  getProductHaircare(): Product[] { return this.getProductsByCategory('haircare'); }
   getProductPerfume(): Product[] { return this.getProductsByCategory('Perfumes'); }
   getProductMakeup(): Product[] { return this.getProductsByCategory('Makeup'); }
   getProductWatches(): Product[] { return this.getProductsByCategory('Watches'); }

@@ -97,12 +97,13 @@ $text-muted: #aaa;
     .old-price{
       font-size: 14px;
       text-decoration: line-through;
-      font-weight: bold;
+      position: relative;
+      top: 10px;
     }
 
     .price {
       font-size: 18px;
-      color: $mainColor;
+      // color: $mainColor;
       margin-bottom: 15px;
       font-weight: bold;
     }

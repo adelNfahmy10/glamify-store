@@ -125,7 +125,7 @@
       </div> -->
 
       <div class="skinCare py-3">
-        <h2>Skin Care</h2>
+        <h2>Skincare</h2>
         <swiper-container
           dir="rtl"
           class="mySwiper wow fadeInUp"
@@ -175,7 +175,86 @@
                   </div>
                 }
 
-                <p class="price">{{item?.price}} EGP</p>
+                <div class="pricing d-flex align-items-center gap-1">
+                  @if(item?.discount){
+                    <p class="old-price">{{item?.price}} EGP</p>
+                    <p class="price">{{ (item?.price || 0) - (item?.discount || 0) }} EGP</p>
+                  } @else {
+                    <p class="price">{{item?.price}} EGP</p>
+                  }
+                </div>
+
+                <button class="add-btn" (click)="addToCart(item)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </swiper-slide>
+        } @empty {
+          <h5> Not Found Products</h5>
+        }
+        </swiper-container>
+      </div>
+
+      <div class="hairCare py-3">
+        <h2>Haircare</h2>
+        <swiper-container
+          dir="rtl"
+          class="mySwiper wow fadeInUp"
+          pagination="false"
+          navigation="true"
+          loop="true"
+          slides-per-view="auto"
+          [breakpoints]="{
+            '0': { slidesPerView: 2, spaceBetween: 10 },
+            '768': { slidesPerView: 3, spaceBetween: 10 },
+            '1024': { slidesPerView: 4, spaceBetween: 15 }
+          }"
+        >
+        @for (item of hairCare; track $index) {
+          <swiper-slide>
+            <div class="product-card">
+              <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
+                <img [src]="item?.image" [alt]="item?.name"/>
+              </div>
+
+              <div class="content">
+                <span class="brand">{{item?.brand}}</span>
+
+
+                <h3 class="name m-0">{{item?.name}}</h3>
+                <span class="category">{{item?.category}}</span>
+
+                @if(item?.rate){
+                  <div class="rate-stars mb-2 text-warning d-flex align-items-center gap-1">
+                    <!-- Rate -->
+                    <span class="text-muted">{{ item?.rate }}</span>
+
+                    <!-- Full Stars -->
+                    @for (i of getStars(item?.rate).fullStars; track $index) {
+                      <i class="fa-solid fa-star"></i>
+                    }
+
+                    <!-- Half Star -->
+                    @if (getStars(item?.rate).halfStar) {
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                    }
+
+                    <!-- Empty Stars -->
+                    @for (i of getStars(item?.rate).emptyStars; track $index) {
+                      <i class="fa-regular fa-star text-secondary"></i>
+                    }
+                  </div>
+                }
+
+                <div class="pricing d-flex align-items-center gap-1">
+                  @if(item?.discount){
+                    <p class="old-price">{{item?.price}} EGP</p>
+                    <p class="price">{{ (item?.price || 0) - (item?.discount || 0) }} EGP</p>
+                  } @else {
+                    <p class="price">{{item?.price}} EGP</p>
+                  }
+                </div>
 
                 <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart

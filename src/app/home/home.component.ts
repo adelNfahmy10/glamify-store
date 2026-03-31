@@ -22,6 +22,7 @@ export class HomeComponent {
   isBrowser = false;
   allProducts: Product[] = [];
   scenCare: Product[] = [];
+  hairCare: Product[] = [];
   makeUp: Product[] = [];
   perfume: Product[] = [];
   watches: Product[] = [];
@@ -40,6 +41,7 @@ export class HomeComponent {
     this.isBrowser = isPlatformBrowser(this._PLATFORM_ID);
     this.allProducts = this._DataService.getAllProducts();
     this.scenCare = this._DataService.getProductSkincare();
+    this.hairCare = this._DataService.getProductHaircare();
     this.perfume = this._DataService.getProductPerfume();
     this.makeUp = this._DataService.getProductMakeup();
     this.accessories = this._DataService.getProductAccessories();
