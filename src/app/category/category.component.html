@@ -106,7 +106,14 @@
                     </div>
                   }
 
-                  <p class="price">{{item?.price}} EGP</p>
+                  <div class="pricing d-flex align-items-center gap-1">
+                    @if(item?.discount){
+                      <p class="old-price">{{item?.price}} EGP</p>
+                      <p class="price">{{ (item?.price || 0) - (item?.discount || 0) }} EGP</p>
+                    } @else {
+                      <p class="price">{{item?.price}} EGP</p>
+                    }
+                  </div>
 
                   <button class="add-btn" (click)="addToCart(item)">
                     Add to Cart

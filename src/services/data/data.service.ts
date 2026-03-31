@@ -32,8 +32,8 @@ export class DataService {
       name: 'Vichy Mineral 89 Moisturizer',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 800,
-      discount: 50,
+      price: 1280,
+      discount: 230,
       details: [
         "Provides 24-hour hydration from the first use and +21% plumping after 4 weeks.",
         "Strengthens the skin barrier against daily aggressors.",
@@ -88,7 +88,9 @@ export class DataService {
         "Usage: Apply on wet hair, leave for 2 minutes on first use, then rinse thoroughly",
         "Treatment Duration: 4 weeks recommended",
         "UV Protection: Moderate"
-      ]
+      ],
+      stock: 5,
+      rate: 4.8,
     },
     {
       id: 102,
@@ -117,7 +119,9 @@ export class DataService {
         "Gender: Unisex",
         "Model Number: 3337875847292",
         "UV Protection: High SPF 50+"
-      ]
+      ],
+      stock: 5,
+      rate: 4.9,
     },
     {
       id: 103,
@@ -148,7 +152,9 @@ export class DataService {
         "Key Ingredients: Ceramides (1, 3, 6-II), Hyaluronic Acid",
         "Usage: Suitable for face and body",
         "Fragrance: Fragrance-Free"
-      ]
+      ],
+      stock: 5,
+      rate: 5,
     },
     {
       id: 104,
@@ -162,7 +168,7 @@ export class DataService {
       brand: 'CeraVe',
       category: 'Skincare',
       price: 620,
-      discount: 120,
+      discount: 120 ,
       details: [
         "Gently cleanses the skin without stripping moisture or leaving it tight or dry.",
         "Suitable for normal to dry and sensitive skin types.",
@@ -185,7 +191,7 @@ export class DataService {
         "Model Name: Hydrating Cleanser"
       ],
       stock: 10,
-      rate: 4.5
+      rate: 4.8
     },
     {
       id: 2,
@@ -198,8 +204,8 @@ export class DataService {
       name: 'Vichy Mineral 89 Eye Moisturizer',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 450,
-      discount: 30,
+      price: 1220,
+      discount: 210,
       details: [
         "Moisturizes and deeply hydrates the skin",
         "Helps improve the appearance of tired eyes and adds brightness",
@@ -226,8 +232,8 @@ export class DataService {
       name: 'Vichy Liftactiv Vitamin C 16% Serum',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 950,
-      discount: 100,
+      price: 1680,
+      discount: 240,
       details: [
         "Apply a few drops using the applicator on clean skin, avoiding the eye area. Leave for a few moments, then apply your daily moisturizer and sunscreen.",
         "Improves skin radiance by up to 40% in 4 weeks and provides +51% more even skin tone",
@@ -265,8 +271,8 @@ export class DataService {
       name: 'Vichy Liftactiv Specialist B3 Dark Spot Serum 30ml',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 1050,
-      discount: 150,
+      price: 1720,
+      discount: 240,
       details:[
         "Apply morning and evening. Use a few drops on clean, dry skin, avoiding the eye and lip areas.",
         "Contains 15% Niacinamide, Glycolic Acid (AHA), and exfoliating agents",
@@ -303,8 +309,8 @@ export class DataService {
       name: 'Vichy Capital Solute UV-Age Sunscreen SPF 50',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 780,
-      discount: 0,
+      price: 1110,
+      discount: 200,
       details: [
         "Apply every morning after your daily skincare routine. Shake well before use and reapply frequently to maintain sun protection.",
         "Very high SPF 50 protection against UV rays and pollution",
@@ -347,11 +353,11 @@ export class DataService {
       name: 'SPF 50 Velvety cream skin perfecting action',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 650,
-      discount: 0,
+      price: 1110,
+      discount: 230,
       details: `The Velvety Cream SPF 50+ provides the optimal protection against all harmful rays that can damage your skin. The formula has an extremely effective filtering system that ensures ultimate sun protection, immediately leaving you with softer skin and a healthy glow. It is enriched with Vichy Thermal Spa Water which is soothing, fortifying and regenerating for your skin, while also preventing wrinkles and spots.`,
       stock: 5,
-      rate: 3.7,
+      rate: 4.4,
     },
     {
       id: 7,
@@ -364,8 +370,8 @@ export class DataService {
       name: 'Vichy Normaderm Phytosolution Daily Moisturizer',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 500,
-      discount: 0,
+      price: 1050,
+      discount: 180,
       details: [
         "Apply generously and reapply frequently, especially after swimming, sweating, or towel drying",
         "Tinted sunscreen with SPF 50 suitable for combination to oily skin",
@@ -390,7 +396,7 @@ export class DataService {
         "Formulation: Cream"
       ],
       stock: 5,
-      rate: 3.2,
+      rate: 4.7,
     },
     {
       id: 8,
@@ -403,8 +409,8 @@ export class DataService {
       name: 'Vichy Suncare Sunscreen Anti-Aging SPF 50',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 700,
-      discount: 0,
+      price: 1080,
+      discount: 115,
       details: [
         "Apply daily on clean, dry underarms",
         "Excessive sweating protection for up to 72 hours with fast-drying formula suitable for sensitive skin",
@@ -425,7 +431,7 @@ export class DataService {
         "Package Contents: Stress Resist Excessive Perspiration Deodorant 50ml"
       ],
       stock: 5,
-      rate: 3.7,
+      rate: 4.4,
     },
     {
       id: 9,
@@ -438,8 +444,8 @@ export class DataService {
       name: 'Vichy Beauty Deo Anti-Perspirant 48h for Women',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 280,
-      discount: 0,
+      price: 820,
+      discount: 210,
       details:  [
         "Apply daily on clean, dry underarms",
         "Purifies skin and reduces first signs of hair growth",
@@ -473,8 +479,8 @@ export class DataService {
       name: 'Vichy Liftactiv Collagen Specialist Anti-Wrinkle & Firming Day Cream 50ml',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 950,
-      discount: 0,
+      price: 1580,
+      discount: 290,
       details: [
         "Apply a thin layer on clean, dry skin",
         "Reduces the appearance of wrinkles by 24% after 8 weeks",
@@ -493,7 +499,7 @@ export class DataService {
         "Formulation: Cream"
       ],
       stock: 5,
-      rate: 3.2,
+      rate: 4.7,
     },
     {
       id: 11,
@@ -506,8 +512,8 @@ export class DataService {
       name: 'Vichy Liftactiv Supreme Anti-Wrinkle Eye Care 15ml',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 600,
-      discount: 0,
+      price: 1040,
+      discount: 110,
       details: [
         "Apply morning and evening with light taps around the eyes, starting from dark circles, eyelids, under the brow, and surrounding wrinkles",
         "Distribute the cream gently without pressing, starting from the inner eye area outwards",
@@ -525,7 +531,7 @@ export class DataService {
         "Formulation: Cream"
       ],
       stock: 5,
-      rate: 3.9,
+      rate: 4.8,
     },
     {
       id: 12,
@@ -538,8 +544,8 @@ export class DataService {
       name: 'Vichy Facial Cleanser Gel 200ml',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 300,
-      discount: 0,
+      price: 780,
+      discount: 120,
       details: [
         "Suitable for all skin types",
         "Gel texture for gentle cleansing",
@@ -560,7 +566,7 @@ export class DataService {
         "Sun Protection: SPF 50"
       ],
       stock: 5,
-      rate: 4.3,
+      rate: 4.6,
     },
     {
       id: 13,
@@ -573,8 +579,8 @@ export class DataService {
       name: 'Vichy Normaderm Phytosolution Gel Cleanser 200ml',
       brand: 'Vichy',
       category: 'Skincare',
-      price: 400,
-      discount: 0,
+      price: 750,
+      discount: 100,
       details:[
         "Use twice daily, morning and evening, on damp skin; massage into a foam and rinse thoroughly",
         "Avoid the eye area; in case of contact with eyes, rinse immediately with plenty of water",
@@ -595,7 +601,7 @@ export class DataService {
         "Formulation: Gel"
       ],
       stock: 5,
-      rate: 2.7,
+      rate: 4.7,
     },
     {
       id: 14,
@@ -603,8 +609,8 @@ export class DataService {
       name: 'CeraVe Resurfacing Retinol Serum for Post-Acne Marks & Pores 30ml',
       brand: 'CeraVe',
       category: 'Skincare',
-      price: 450,
-      discount: 0,
+      price: 870,
+      discount: 110,
       details: [
         "Helps reduce the appearance of post-acne marks and skin discoloration while maintaining the skin barrier",
         "Improves the look of uneven skin tone and hyperpigmentation",
@@ -624,7 +630,7 @@ export class DataService {
         "Key Ingredients: Retinol, Niacinamide, Licorice Root Extract"
       ],
       stock: 8,
-      rate: 4.3
+      rate: 4.6
     },
     {
       id: 15,
@@ -632,8 +638,8 @@ export class DataService {
       name: 'Skin Clinic Collagen Face Cleanser 150ml',
       brand: 'Skin Clinic',
       category: 'Skincare',
-      price: 220,
-      discount: 0,
+      price: 195,
+      discount: 50,
       details: [
         "Apply a small amount to damp face, gently massage with fingertips, then rinse thoroughly with water and pat dry",
         "Helps reduce the appearance of blackheads and whiteheads",
@@ -648,7 +654,7 @@ export class DataService {
         "Formulation: Cleanser"
       ],
       stock: 10,
-      rate: 4.0
+      rate: 4.7
     },
     {
       id: 16,
@@ -656,8 +662,8 @@ export class DataService {
       name: 'Eva 7-in-1 Vitamin Face Cream 45g',
       brand: 'Eva',
       category: 'Skincare',
-      price: 180,
-      discount: 0,
+      price: 60,
+      discount: 7,
       details: [
         "Daily face cream enriched with vitamins providing 7 benefits for the skin",
         "Deeply hydrates and nourishes the skin (Vitamin B5 & E)",
@@ -685,8 +691,8 @@ export class DataService {
       name: 'Eva Body Lightening & Even Tone Cream 150ml',
       brand: 'Eva',
       category: 'Skincare',
-      price: 250,
-      discount: 0,
+      price: 75,
+      discount: 11,
       details: [
         "Body cream formulated to lighten and even out dark areas on elbows, knees, and underarms",
         "Enriched with White Pearl Extract, Vitamin B3, and Octadecenedioic Acid",
@@ -704,7 +710,7 @@ export class DataService {
         "Key Ingredients: White Pearl Extract, Vitamin B3, Octadecenedioic Acid"
       ],
       stock: 15,
-      rate: 4.2
+      rate: 4.5
     },
     {
       id: 18,
@@ -712,8 +718,8 @@ export class DataService {
       name: 'Eva Aloe Hair Oil Replacement 250ml',
       brand: 'Eva',
       category: 'skincare',
-      price: 300,
-      discount: 0,
+      price: 110,
+      discount: 28,
       details: [
         "Rich in 12 vitamins, 20 minerals, and 17 proteins to nourish hair from roots to tips",
         "Strengthens hair and reduces hair fall while promoting healthy growth and vitality",
@@ -741,8 +747,8 @@ export class DataService {
       name: 'Eva Glycerin Cream for Dry Skin 20g',
       brand: 'Eva',
       category: 'Skincare',
-      price: 120,
-      discount: 0,
+      price: 24,
+      discount: 8,
       details: [
         "Moisturizing cream enriched with glycerin for deep hydration",
         "Helps restore softness and smoothness to dry and rough skin",
@@ -759,7 +765,7 @@ export class DataService {
         "Key Ingredients: Glycerin"
       ],
       stock: 25,
-      rate: 4.3
+      rate: 4.6
     },
     {
       id: 20,
@@ -767,8 +773,8 @@ export class DataService {
       name: 'Eva Honey Face Cream 20g',
       brand: 'Eva',
       category: 'Skincare',
-      price: 130,
-      discount: 0,
+      price: 24,
+      discount: 8,
       details: [
         "Moisturizing cream enriched with honey for soft and nourished skin",
         "Helps restore skin hydration and improve skin texture",
@@ -793,8 +799,8 @@ export class DataService {
       name: 'Eva Skin Care Ivazleen Hand Cream for Deep Moisturization 60g',
       brand: 'Eva',
       category: 'Skincare',
-      price: 150,
-      discount: 0,
+      price: 126,
+      discount: 27,
       details: [
         "Rich hand cream formulated to deeply moisturize dry skin",
         "Contains vitamins, vaseline, and glycerin to maintain long-lasting hydration",
@@ -821,8 +827,8 @@ export class DataService {
       name: 'Eva Skin Care Ivazleen Body Lotion for Deep Moisturization 240ml',
       brand: 'Eva',
       category: 'Skincare',
-      price: 200,
-      discount: 0,
+      price: 120,
+      discount: 15,
       details: [
         "Provides intensive hydration and silky-smooth skin with a rich, effective formula",
         "Contains Vaseline to prevent moisture loss and protect the skin",
@@ -848,8 +854,8 @@ export class DataService {
       name: 'Eva & C Kids Waterproof Sunscreen Cream SPF 50 200ml',
       brand: 'Eva',
       category: 'Skincare',
-      price: 280,
-      discount: 0,
+      price: 287,
+      discount: 73,
       details: [
         "Protects children’s skin from harmful UV rays",
         "Formulated with minerals, chemical filters, and antioxidants for broad-spectrum protection",
@@ -875,8 +881,8 @@ export class DataService {
       name: 'Eva & C Tinted Face Sunscreen SPF 50+ 40ml',
       brand: 'Eva',
       category: 'Skincare',
-      price: 260,
-      discount: 0,
+      price: 190,
+      discount: 11,
       details: [
         "Provides maximum protection against harmful UV rays, including long-wave and medium-wave UVA",
         "Prevents sunburns and premature skin aging",
@@ -902,8 +908,8 @@ export class DataService {
       name: 'Eva & C Sunscreen SPF 50+ 20ml',
       brand: 'Eva',
       category: 'Skincare',
-      price: 180,
-      discount: 0,
+      price: 190,
+      discount: 11,
       details: [
         "Provides maximum protection against harmful UV rays, including long-wave and medium-wave UVA",
         "Moisturizing formula nourishes and deeply hydrates the skin",
@@ -928,8 +934,8 @@ export class DataService {
       name: 'Eva Skin Care Natural Glow Day Cream SPF 30 50g',
       brand: 'Eva',
       category: 'Skincare',
-      price: 210,
-      discount: 0,
+      price: 135,
+      discount: 42,
       details: [
         "Day cream with SPF 30 that protects skin from harmful sun rays",
         "Advanced formula with vitamins and natural ingredients to even out skin tone",
@@ -956,8 +962,8 @@ export class DataService {
       name: 'Eva Skin Care Senses Deodorant Roll-On - Spring Lilies',
       brand: 'Eva',
       category: 'Skincare',
-      price: 75,
-      discount: 0,
+      price: 150,
+      discount: 23,
       details: [
         "Provides triple protection against sweat and odor",
         "Keeps you fresh and pleasantly scented all day",
@@ -974,7 +980,7 @@ export class DataService {
         "Box Contents: Deodorant Roll-On"
       ],
       stock: 60,
-      rate: 4.2
+      rate: 4.5
     },
     {
       id: 37,
@@ -982,8 +988,8 @@ export class DataService {
       name: 'Eva Skin Care Senses Deodorant Roll-On - Morning Blossom',
       brand: 'Eva',
       category: 'Skincare',
-      price: 75,
-      discount: 0,
+      price: 150,
+      discount: 23,
       details: [
         "Provides triple protection against sweat and odor",
         "Keeps you fresh and pleasantly scented all day",
@@ -1001,7 +1007,7 @@ export class DataService {
         "Box Contents: Deodorant Roll-On"
       ],
       stock: 55,
-      rate: 4.3
+      rate: 4.6
     },
     {
       id: 38,
@@ -1009,8 +1015,8 @@ export class DataService {
       name: 'Eva Skin Clinic White Pearl Eye Cream - 15ml',
       brand: 'Eva',
       category: 'Skincare',
-      price: 150,
-      discount: 0,
+      price: 280,
+      discount: 76,
       details: [
         "Reduces the appearance of dark circles for an instant brightening effect",
         "Minimizes under-eye puffiness for a refreshed look",
@@ -1035,8 +1041,8 @@ export class DataService {
       name: 'Eva Senses Cozy Dream Body Serum - 150ml',
       brand: 'Eva',
       category: 'Skincare',
-      price: 170,
-      discount: 0,
+      price: 175,
+      discount: 6,
       details: [
         "Provides a natural daily glow for your skin",
         "Lightweight and fast-absorbing texture ideal for all skin types",
@@ -1128,7 +1134,7 @@ export class DataService {
         "Box Contents: Spotless Cream Tube"
       ],
       stock: 70,
-      rate: 4.3
+      rate: 4.6
     },
     {
       id: 43,
@@ -1791,8 +1797,8 @@ export class DataService {
       name: 'Eva Skin Clinic Night Cream with Vitamin C - 50ml',
       brand: 'Eva',
       category: 'Skincare',
-      price: 220,
-      discount: 0,
+      price: 295,
+      discount: 90,
       details: [
         "Anti-aging night cream enriched with Vitamin C",
         "Nourishes skin throughout the night",
@@ -2066,7 +2072,7 @@ export class DataService {
         "Box Contents: Kohl Eyeliner"
       ],
       stock: 35,
-      rate: 4.3
+      rate: 4.6
     },
     {
       id: 33,
