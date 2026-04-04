@@ -60,10 +60,15 @@ export class CartService {
   }
 
   private scriptURL = "https://script.google.com/macros/s/AKfycbx1QArhYyGbbnTVj5RcnSkhoEKhI_OgXebvn5qtsfxi_woBb7x-0LspzlgbxiF4tXsW/exec"; // ضع رابط Google App Script هنا
+  private reqURL = "https://script.google.com/macros/s/AKfycbwekRhEDYM_Hcy7v3JybXUSI-L0RsZ9xjVwaWNDS4WwueMoBQQAUzvmM6vyBmHViI1n/exec"; // ضع رابط Google App Script هنا
 
 
   orders(formData: FormData): Observable<any> {
     return this._HttpClient.post(this.scriptURL, formData, { responseType: 'text' });
+  }
+
+  productRequset(formData: FormData): Observable<any> {
+    return this._HttpClient.post(this.reqURL, formData, { responseType: 'text' });
   }
 
 }

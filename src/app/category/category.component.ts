@@ -42,6 +42,8 @@ export class CategoryComponent implements OnInit{
     this._ActivatedRoute.paramMap.subscribe({
       next:(param:any)=>{
         this.categoryName = param.get('name')
+        console.log(this.categoryName);
+
         this.AllProductsByCategory = this._DataService.getProductsByCategory(this.categoryName)
         this.brands = Array.from(new Set(this.AllProductsByCategory.map(p => p.brand)));
         this.brands = Array.from(new Set(this.AllProductsByCategory.map(p => p.brand)));

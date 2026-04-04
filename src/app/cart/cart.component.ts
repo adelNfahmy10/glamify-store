@@ -137,9 +137,7 @@ export class CartComponent {
 
     this._CartService.orders(formData).subscribe({
       next:(res)=>{
-
         Swal.close();
-
         Swal.fire({
           title: 'Order Successfully',
           text: 'Our team will contact you shortly',
@@ -149,7 +147,7 @@ export class CartComponent {
           this._Router.navigate(['/home']).then(() => {
             window.location.reload();
           });
-          // window.open(`https://wa.me/201012971190?text=My Order: ${orderData.orderId}`)
+          // window.open(`https://wa.me/201559873992?text=My Order: ${orderData.orderId}`)
         })
 
         this.cartService.clearCart();

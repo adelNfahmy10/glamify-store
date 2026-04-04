@@ -84,13 +84,53 @@ export class DataService {
         "Hair Type: Normal to Oily Hair",
         "Concern: Dandruff",
         "Gender: Unisex",
-        "Model Number: 3337871330286",
         "Usage: Apply on wet hair, leave for 2 minutes on first use, then rinse thoroughly",
         "Treatment Duration: 4 weeks recommended",
         "UV Protection: Moderate"
       ],
       stock: 5,
       rate: 4.8,
+    },
+    {
+      id: 222,
+      image: 'assets/image/skincare-image/effaclar-h-iso-biome.jpeg',
+      images: [
+        // 'assets/image/skincare-image/effaclar-h-iso-biome.png',
+        // 'assets/image/skincare-image/effaclar-h-iso-biome-2.png',
+        // 'assets/image/skincare-image/effaclar-h-iso-biome-3.png',
+      ],
+      name: 'La Roche-Posay Effaclar H Iso-Biome Moisturizer',
+      brand: 'La Roche-Posay',
+      category: 'Skincare',
+      price: 850,
+      discount: 250,
+      details: [
+        "Provides intense hydration for oily skin weakened by acne treatments.",
+        "Helps soothe irritation and reduce dryness and discomfort.",
+        "Non-comedogenic formula that does not clog pores.",
+        "Suitable for sensitive and oily skin types.",
+        "Enriched with prebiotics to support the skin microbiome balance.",
+        "Contains niacinamide to reduce redness and calm the skin.",
+        "Formulated with panthenol and glycerin for deep hydration.",
+        "Helps restore and strengthen the skin barrier.",
+        "Reduces blemishes and improves skin texture.",
+        "Provides long-lasting comfort and hydration.",
+        "Helps relieve itching and skin irritation.",
+        "Tested under dermatological control and suitable with acne treatments.",
+        "Promotes faster skin recovery and healthier-looking skin."
+      ],
+      specifications: [
+        "Brand: La Roche-Posay",
+        "Product Name: Effaclar H Iso-Biome Moisturizer",
+        "Size: 40 ml",
+        "Skin Type: Oily & Sensitive Skin",
+        "Concern: Acne Treatment Dryness, Irritation",
+        "Texture: Cream",
+        "Key Ingredients: Niacinamide, Panthenol, Glycerin, Prebiotics, Thermal Spring Water",
+        "Gender: Unisex"
+      ],
+      stock: 5,
+      rate: 4.7
     },
     {
       id: 102,
@@ -117,8 +157,44 @@ export class DataService {
         "Concern: Dull Skin",
         "Texture: Cream",
         "Gender: Unisex",
-        "Model Number: 3337875847292",
         "UV Protection: High SPF 50+"
+      ],
+      stock: 5,
+      rate: 4.9,
+    },
+    {
+      id: 190,
+      image: 'assets/image/skincare-image/Cerave-oil-control.png',
+      name: 'CeraVe Oil Control Sunscreen SPF 50+',
+      brand: 'CeraVe',
+      category: 'Skincare',
+      price: 800,
+      discount: 200,
+      details: [
+        "Provides broad-spectrum protection against UVA and UVB rays.",
+        "Formulated specifically for oily and combination skin types.",
+        "Helps control excess oil and reduce shine throughout the day.",
+        "Lightweight, fast-absorbing formula with a non-greasy finish.",
+        "Enriched with niacinamide to help soothe and calm the skin.",
+        "Contains essential ceramides to support the skin barrier.",
+        "Does not leave white cast, suitable for daily use.",
+        "Keeps skin hydrated while maintaining a matte appearance.",
+        "Ideal for use under makeup.",
+        "SPF 50+ ensures high protection from sun damage."
+      ],
+      specifications: [
+        "Brand: CeraVe",
+        "Product Name: Oil Control Sunscreen SPF 50+",
+        "Size: 50ml",
+        "Skin Type: Oily & Combination Skin",
+        "Concern: Oil Control, Sun Protection",
+        "Texture: Lightweight Fluid",
+        "Finish: Matte / Non-Greasy",
+        "Key Ingredients: Niacinamide, Ceramides, Silica",
+        "Gender: Unisex",
+        "SPF: 50+",
+        "UV Protection: Broad Spectrum (UVA & UVB)",
+        "Water Resistant: Yes"
       ],
       stock: 5,
       rate: 4.9,
@@ -215,7 +291,6 @@ export class DataService {
         "Size: 15 ml",
         "Gender: Unisex",
         "Target Skin Type: Sensitive skin",
-        "Model Number: 3337875596763",
         "Model Name: Mineral"
       ],
       stock: 5,
@@ -254,7 +329,6 @@ export class DataService {
         "Target Skin Type: All skin types",
         "Skin Concerns: Fine lines",
         "Formulation: Liquid",
-        "Model Number: 3337875796583",
         "Model Name: Liftactiv Vitamin C 16% Serum"
       ],
       stock: 5,
@@ -355,7 +429,17 @@ export class DataService {
       category: 'Skincare',
       price: 1110,
       discount: 230,
-      details: `The Velvety Cream SPF 50+ provides the optimal protection against all harmful rays that can damage your skin. The formula has an extremely effective filtering system that ensures ultimate sun protection, immediately leaving you with softer skin and a healthy glow. It is enriched with Vichy Thermal Spa Water which is soothing, fortifying and regenerating for your skin, while also preventing wrinkles and spots.`,
+      details: [
+        "Provides broad-spectrum SPF 50+ protection against UVA and UVB rays.",
+        "Helps prevent sun-induced skin damage including wrinkles, spots, and premature aging.",
+        "Velvety cream texture that absorbs quickly and leaves a soft, non-greasy finish.",
+        "Enriched with Vichy Thermal Spa Water to soothe, fortify, and regenerate the skin.",
+        "Lightweight and comfortable for daily use on all skin types.",
+        "Enhances skin radiance and leaves a healthy glow.",
+        "Prevents dryness and helps maintain skin hydration.",
+        "Non-comedogenic and suitable for sensitive skin.",
+        "Ideal for use under makeup or as part of your daily skincare routine."
+      ],
       stock: 5,
       rate: 4.4,
     },
@@ -463,7 +547,6 @@ export class DataService {
         "Gender: Unisex",
         "Target Skin Type: Sensitive",
         "Package Contents: Beauty Deo Anti-Perspirant 48Hr Roll-On 50ml",
-        "Model Number / Name: Anti-Transpirant"
       ],
       stock: 5,
       rate: 4.9,
@@ -815,7 +898,6 @@ export class DataService {
         "Skin Type: All",
         "Gender: Unisex",
         "Formulation: Cream",
-        "Model Number: 6223004376252",
         "Target Skin Concern: Mixed/All"
       ],
       stock: 20,
@@ -950,7 +1032,6 @@ export class DataService {
         "Gender: Women",
         "Formulation: Cream",
         "Color: White",
-        "Model Number: 6223001382218",
         "Model Name: Moisturizers Face Moisturizer-17"
       ],
       stock: 18,
@@ -1931,7 +2012,6 @@ export class DataService {
         "Gender: Women",
         "Coverage: Medium",
         "Formulation: Gel",
-        "Model Number: SB25080425767326213",
         "Remover Type: Wet Wipes"
       ],
       stock: 20,
@@ -1986,7 +2066,6 @@ export class DataService {
         "Gender: Women",
         "Coverage: Medium",
         "Formulation: Gel-Cream",
-        "Model Number: 6971870591179"
       ],
       stock: 25,
       rate: 4.5
@@ -2013,7 +2092,6 @@ export class DataService {
         "Formulation: Liquid",
         "Skin Type: All",
         "Gender: Women",
-        "Model Number: 30166967",
         "Box Contents: Lash Sensational Sky High Mascara - Volumizing & Lengthening Black",
         "Model Name: Mascara-5"
       ],
@@ -2042,7 +2120,6 @@ export class DataService {
         "Formulation: Liquid",
         "Skin Type: All",
         "Gender: Women",
-        "Model Number: The Colossal",
         "Box Contents: Colossal Mascara 100% Black",
         "Model Name: The Colossal"
       ],
@@ -2068,7 +2145,6 @@ export class DataService {
         "Skin Type: All",
         "Formulation: Pencil",
         "Gender: Women",
-        "Model Number: MRB454",
         "Box Contents: Kohl Eyeliner"
       ],
       stock: 35,
@@ -2149,7 +2225,6 @@ export class DataService {
         "Skin Type: All",
         "Coverage: Light",
         "Gender: Women",
-        "Model Number: B07MW12YHK",
         "Box Contents: Loose Powder"
       ],
       stock: 30,

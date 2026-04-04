@@ -73,9 +73,15 @@
           @for (item of paginatedProducts; track $index) {
             <div class="col-lg-3 col-md-4 col-sm-6">
               <div class="product-card">
-                <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
-                  <img [src]="item?.image" [alt]="item?.name"/>
-                </div>
+                @if(!['Makeup', 'Accessories', 'Watch'].includes(categoryName)){
+                  <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
+                    <img [src]="item?.image" [alt]="item?.name"/>
+                  </div>
+                } @else {
+                   <div class="image-wrapper cr">
+                    <img [src]="item?.image" [alt]="item?.name"/>
+                  </div>
+                }
 
                 <div class="content">
                   <span class="brand">{{item?.brand}}</span>
@@ -106,18 +112,23 @@
                     </div>
                   }
 
-                  <div class="pricing d-flex align-items-center gap-1">
-                    @if(item?.discount){
-                      <p class="old-price">{{item?.price}} EGP</p>
-                      <p class="price">{{ (item?.price || 0) - (item?.discount || 0) }} EGP</p>
-                    } @else {
-                      <p class="price">{{item?.price}} EGP</p>
-                    }
-                  </div>
+                  @if(!['Makeup', 'Accessories', 'Watch'].includes(categoryName)){
+                    <div class="pricing d-flex align-items-center gap-1">
+                      @if(item?.discount){
+                        <p class="old-price">{{item?.price}} EGP</p>
+                        <p class="price">{{ (item?.price || 0) - (item?.discount || 0) }} EGP</p>
+                      } @else {
+                        <p class="price">{{item?.price}} EGP</p>
+                      }
+                    </div>
 
-                  <button class="add-btn" (click)="addToCart(item)">
-                    Add to Cart
-                  </button>
+                    <button class="add-btn" (click)="addToCart(item)">
+                      Add to Cart
+                    </button>
+                  } @else {
+                    <h4 class="text-center text-danger fw-bold">Sold Out</h4>
+                  }
+
                 </div>
               </div>
             </div>

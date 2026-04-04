@@ -286,7 +286,7 @@
         @for (item of makeUp; track $index) {
           <swiper-slide>
             <div class="product-card">
-              <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
+              <div class="image-wrapper cr">
                 <img [src]="item?.image" [alt]="item?.name"/>
               </div>
 
@@ -320,17 +320,18 @@
                 }
 
                 <div class="pricing d-flex align-items-center gap-1">
-                  @if(item?.discount){
+                  <!-- @if(item?.discount){
                     <p class="old-price">{{item?.price}} EGP</p>
                     <p class="price">{{ (item?.price || 0) - (item?.discount || 0) }} EGP</p>
                   } @else {
                     <p class="price">{{item?.price}} EGP</p>
-                  }
+                  } -->
+                    <h4 class=" text-center text-danger fw-bold">Sold Out</h4>
                 </div>
 
-                <button class="add-btn" (click)="addToCart(item)">
+                <!-- <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
-                </button>
+                </button> -->
               </div>
             </div>
           </swiper-slide>
@@ -358,7 +359,7 @@
         @for (item of accessories; track $index) {
          <swiper-slide>
             <div class="product-card">
-              <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
+              <div class="image-wrapper cr">
                 <img [src]="item?.image" [alt]="item?.name"/>
                 <!-- <span class="category">{{item?.category}}</span> -->
               </div>
@@ -393,17 +394,18 @@
                 }
 
                 <div class="pricing d-flex align-items-center gap-1">
-                  @if(item?.discount){
+                  <!-- @if(item?.discount){
                     <p class="old-price">{{item?.price}} EGP</p>
                     <p class="price">{{ (item?.price || 0) - (item?.discount || 0) }} EGP</p>
                   } @else {
                     <p class="price">{{item?.price}} EGP</p>
-                  }
+                  } -->
+                    <h4 class=" text-center text-danger fw-bold">Sold Out</h4>
                 </div>
 
-                <button class="add-btn" (click)="addToCart(item)">
+                <!-- <button class="add-btn" (click)="addToCart(item)">
                   Add to Cart
-                </button>
+                </button> -->
               </div>
             </div>
           </swiper-slide>
@@ -413,7 +415,7 @@
         </swiper-container>
       </div>
 
-      <div class="watch py-3">
+      <!-- <div class="watch py-3">
         <h2>Watches</h2>
         <swiper-container
           dir="rtl"
@@ -433,7 +435,7 @@
             <div class="product-card">
               <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
                 <img [src]="item?.image" [alt]="item?.name"/>
-                <!-- <span class="category">{{item?.category}}</span> -->
+                <span class="category">{{item?.category}}</span>
               </div>
 
               <div class="content">
@@ -445,20 +447,16 @@
 
                 @if(item?.rate){
                   <div class="rate-stars mb-2 text-warning d-flex align-items-center gap-1">
-                    <!-- Rate -->
                     <span class="text-muted">{{ item?.rate }}</span>
 
-                    <!-- Full Stars -->
                     @for (i of getStars(item?.rate).fullStars; track $index) {
                       <i class="fa-solid fa-star"></i>
                     }
 
-                    <!-- Half Star -->
                     @if (getStars(item?.rate).halfStar) {
                       <i class="fa-solid fa-star-half-stroke"></i>
                     }
 
-                    <!-- Empty Stars -->
                     @for (i of getStars(item?.rate).emptyStars; track $index) {
                       <i class="fa-regular fa-star text-secondary"></i>
                     }
@@ -484,9 +482,9 @@
           <h5> Not Found Products</h5>
         }
         </swiper-container>
-      </div>
+      </div> -->
 
-      <div class="saving-delivery py-3">
+      <!-- <div class="saving-delivery py-3">
         <h2>Saving Corner | Free Delivery</h2>
         <swiper-container
           dir="rtl"
@@ -512,7 +510,7 @@
           <h5> Not Found Products</h5>
         }
         </swiper-container>
-      </div>
+      </div> -->
     </div>
   }
 
