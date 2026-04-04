@@ -22,7 +22,7 @@ export class DataService {
   private products: Product[] = [
   // ================= Skincare =================
     {
-      id: 1,
+      id: 4,
       image: 'assets/image/skincare-image/Mineral-89.png',
       images:[
         'assets/image/skincare-image/Mineral-89.png',
@@ -60,7 +60,7 @@ export class DataService {
       rate:4,
     },
     {
-      id: 101,
+      id: 5,
       image: 'assets/image/skincare-image/vichy-dercos-anti-dandruff.jpeg',
       name: 'Vichy Dercos Anti-Dandruff Shampoo',
       brand: 'Vichy',
@@ -92,7 +92,7 @@ export class DataService {
       rate: 4.8,
     },
     {
-      id: 222,
+      id: 6,
       image: 'assets/image/skincare-image/effaclar-h-iso-biome.jpeg',
       images: [
         // 'assets/image/skincare-image/effaclar-h-iso-biome.png',
@@ -133,7 +133,7 @@ export class DataService {
       rate: 4.7
     },
     {
-      id: 102,
+      id: 7,
       image: 'assets/image/skincare-image/vichy-anthelios-uvmune-400.jpeg',
       name: 'Vichy Anthelios UVMune 400 Oil Control Invisible Fluid Sunscreen SPF 50+',
       brand: 'Vichy',
@@ -163,7 +163,7 @@ export class DataService {
       rate: 4.9,
     },
     {
-      id: 190,
+      id: 8,
       image: 'assets/image/skincare-image/Cerave-oil-control.png',
       name: 'CeraVe Oil Control Sunscreen SPF 50+',
       brand: 'CeraVe',
@@ -200,7 +200,7 @@ export class DataService {
       rate: 4.9,
     },
     {
-      id: 103,
+      id: 9,
       image: 'assets/image/skincare-image/cerave-moisturising-lotion.webp',
       name: 'CeraVe Moisturising Lotion for Dry to Very Dry Skin',
       brand: 'CeraVe',
@@ -233,7 +233,7 @@ export class DataService {
       rate: 5,
     },
     {
-      id: 104,
+      id: 10,
       image: 'assets/image/skincare-image/cerave-hydrating-cleanser.jpg',
       images: [
         // 'assets/image/skincare-image/cerave-hydrating-cleanser.jpg',
@@ -270,7 +270,7 @@ export class DataService {
       rate: 4.8
     },
     {
-      id: 2,
+      id: 11,
       image: 'assets/image/skincare-image/Serum-Mineral-89.png',
       images:[
         'assets/image/skincare-image/Serum-Mineral-89.png',
@@ -297,7 +297,7 @@ export class DataService {
       rate:4.6,
     },
     {
-      id: 3,
+      id: 12,
       image: 'assets/image/skincare-image/Serum-Lefit-Active.png',
       images:[
         'assets/image/skincare-image/Serum-Lefit-Active.png',
@@ -335,7 +335,7 @@ export class DataService {
       rate:4.3,
     },
     {
-      id: 4,
+      id: 13,
       image: 'assets/image/skincare-image/Lefit-Active-Seshylist.png',
       images:[
         'assets/image/skincare-image/Lefit-Active-Seshylist.png',
@@ -373,50 +373,49 @@ export class DataService {
       rate: 5,
     },
     {
-      id: 5,
-      image: 'assets/image/skincare-image/Capital-Solary.jpg',
-      images:[
-        'assets/image/skincare-image/Capital-Solary.jpg',
-        // 'assets/image/skincare-image/Capital-Solary-2.png',
-        'assets/image/skincare-image/Capital-Solary-3.png',
-      ],
-      name: 'Vichy Capital Solute UV-Age Sunscreen SPF 50',
-      brand: 'Vichy',
-      category: 'Skincare',
-      price: 1110,
-      discount: 200,
-      details: [
-        "Apply every morning after your daily skincare routine. Shake well before use and reapply frequently to maintain sun protection.",
-        "Very high SPF 50 protection against UV rays and pollution",
-        "Targets signs of aging, dryness, and dull skin",
-        "Helps correct and protect against wrinkles and dark spots",
-        "Strengthens the skin barrier function",
-        "Suitable for all skin types and tones with an invisible finish",
-        "Dermatologist recommended",
-        "Hypoallergenic, non-comedogenic, and safe for sensitive eyes",
-        "Ophthalmologically tested under medical supervision",
-        "Clinically tested on 43 women over 56 days to reduce dark spot pigmentation",
-        "Advanced fluid sunscreen formula for the face with high protection",
-        "Enriched with peptides, niacinamide, and Vitamin E",
-        "Powered by patented Netlock technology for enhanced UV protection",
-        "Helps protect against UV-induced wrinkles and dark spots",
-        "Lightweight, breathable texture with no white cast or sticky residue",
-        "Leaves the skin looking healthier, smoother, and well-protected"
-      ],
-      specifications: [
-        "Size: 40 ml",
-        "Gender: Unisex",
-        "Target Skin Type: All skin types",
-        "UV Protection: High protection against harmful UV rays",
-        "Skin Concerns: Dryness",
-        "Formulation: Fluid",
-        "Model Name: Suncare Sunscreen-7"
-      ],
-      stock: 5,
-      rate: 4.7,
+    id: 14,
+    image: 'assets/image/skincare-image/Capital-Solary.jpg',
+    images:[
+      'assets/image/skincare-image/Capital-Solary.jpg',
+      'assets/image/skincare-image/Capital-Solary-3.png',
+    ],
+    name: 'Vichy Capital Solute UV-Age Sunscreen SPF 50',
+    brand: 'Vichy',
+    category: 'Skincare',
+    price: 1110,
+    discount: 200,
+    details: [
+      "Apply every morning after your daily skincare routine. Shake well before use and reapply frequently to maintain sun protection.",
+      "Very high SPF 50 protection against UV rays and pollution",
+      "Targets signs of aging, dryness, and dull skin",
+      "Helps correct and protect against wrinkles and dark spots",
+      "Strengthens the skin barrier function",
+      "Suitable for all skin types and tones with an invisible finish",
+      "Dermatologist recommended",
+      "Hypoallergenic, non-comedogenic, and safe for sensitive eyes",
+      "Ophthalmologically tested under medical supervision",
+      "Clinically tested on 43 women over 56 days to reduce dark spot pigmentation",
+      "Advanced fluid sunscreen formula for the face with high protection",
+      "Enriched with peptides, niacinamide, and Vitamin E",
+      "Powered by patented Netlock technology for enhanced UV protection",
+      "Helps protect against UV-induced wrinkles and dark spots",
+      "Lightweight, breathable texture with no white cast or sticky residue",
+      "Leaves the skin looking healthier, smoother, and well-protected"
+    ],
+    specifications: [
+      "Size: 40 ml",
+      "Gender: Unisex",
+      "Target Skin Type: All skin types",
+      "UV Protection: High protection against harmful UV rays",
+      "Skin Concerns: Dryness",
+      "Formulation: Fluid",
+      "Model Name: Suncare Sunscreen-7"
+    ],
+    stock: 5,
+    rate: 4.7,
     },
     {
-      id: 6,
+      id: 15,
       image: 'assets/image/skincare-image/Edial-Solary.webp',
       images:[
         'assets/image/skincare-image/Edial-Solary.webp',
@@ -444,7 +443,7 @@ export class DataService {
       rate: 4.4,
     },
     {
-      id: 7,
+      id: 16,
       image: 'assets/image/skincare-image/Normadirm.png',
       images: [
         'assets/image/skincare-image/Normadirm.png',
@@ -483,7 +482,7 @@ export class DataService {
       rate: 4.7,
     },
     {
-      id: 8,
+      id: 17,
       image: 'assets/image/skincare-image/Mozel-Vichy.png',
       images: [
         'assets/image/skincare-image/Mozel-Vichy.png',
@@ -518,7 +517,7 @@ export class DataService {
       rate: 4.4,
     },
     {
-      id: 9,
+      id: 18,
       image: 'assets/image/skincare-image/Peauty-Duo.png',
       images: [
         'assets/image/skincare-image/Peauty-Duo.png',
@@ -552,7 +551,7 @@ export class DataService {
       rate: 4.9,
     },
     {
-      id: 10,
+      id: 19,
       image: 'assets/image/skincare-image/Lefit-Active-Cologen-spicalist.png',
       images: [
         'assets/image/skincare-image/Lefit-Active-Cologen-spicalist.png',
@@ -585,7 +584,7 @@ export class DataService {
       rate: 4.7,
     },
     {
-      id: 11,
+      id: 20,
       image: 'assets/image/skincare-image/Liftactiv.png',
       images: [
         'assets/image/skincare-image/Liftactiv.png',
@@ -610,14 +609,13 @@ export class DataService {
         "Size: 15 ml",
         "Gender: Unisex",
         "Target Skin Type: All skin types",
-        "Skin Concerns: Anti-aging",
         "Formulation: Cream"
       ],
       stock: 5,
       rate: 4.8,
     },
     {
-      id: 12,
+      id: 21,
       image: 'assets/image/skincare-image/Facial-Cleanser.png',
       images: [
         'assets/image/skincare-image/Facial-Cleanser.png',
@@ -652,7 +650,7 @@ export class DataService {
       rate: 4.6,
     },
     {
-      id: 13,
+      id: 22,
       image: 'assets/image/skincare-image/Normaderm-Phytosolution.png',
       images: [
         'assets/image/skincare-image/Normaderm-Phytosolution.png',
@@ -687,7 +685,7 @@ export class DataService {
       rate: 4.7,
     },
     {
-      id: 14,
+      id: 23,
       image: 'assets/image/skincare-image/Cerave-retinol.png',
       name: 'CeraVe Resurfacing Retinol Serum for Post-Acne Marks & Pores 30ml',
       brand: 'CeraVe',
@@ -716,7 +714,7 @@ export class DataService {
       rate: 4.6
     },
     {
-      id: 15,
+      id: 24,
       image: 'assets/image/skincare-image/Skin-clinic-collagen.png',
       name: 'Skin Clinic Collagen Face Cleanser 150ml',
       brand: 'Skin Clinic',
@@ -740,7 +738,7 @@ export class DataService {
       rate: 4.7
     },
     {
-      id: 16,
+      id: 25,
       image: 'assets/image/skincare-image/Iva-7in1-face.png',
       name: 'Eva 7-in-1 Vitamin Face Cream 45g',
       brand: 'Eva',
@@ -769,7 +767,7 @@ export class DataService {
       rate: 4.5
     },
     {
-      id: 17,
+      id: 26,
       image: 'assets/image/skincare-image/Iva-body-lightening.png',
       name: 'Eva Body Lightening & Even Tone Cream 150ml',
       brand: 'Eva',
@@ -796,7 +794,7 @@ export class DataService {
       rate: 4.5
     },
     {
-      id: 18,
+      id: 27,
       image: 'assets/image/skincare-image/Iva-aloe-hair-oil.png',
       name: 'Eva Aloe Hair Oil Replacement 250ml',
       brand: 'Eva',
@@ -825,7 +823,7 @@ export class DataService {
       rate: 4.4
     },
     {
-      id: 19,
+      id: 28,
       image: 'assets/image/skincare-image/Iiva-glycerin-cream.png',
       name: 'Eva Glycerin Cream for Dry Skin 20g',
       brand: 'Eva',
@@ -851,7 +849,7 @@ export class DataService {
       rate: 4.6
     },
     {
-      id: 20,
+      id: 29,
       image: 'assets/image/skincare-image/iva-honey-cream.png',
       name: 'Eva Honey Face Cream 20g',
       brand: 'Eva',
@@ -877,7 +875,7 @@ export class DataService {
       rate: 4.4
     },
     {
-      id: 21,
+      id: 30,
       image: 'assets/image/skincare-image/iva-ivazleen-hand-cream.png',
       name: 'Eva Skin Care Ivazleen Hand Cream for Deep Moisturization 60g',
       brand: 'Eva',
@@ -904,7 +902,7 @@ export class DataService {
       rate: 4.5
     },
     {
-      id: 22,
+      id: 31,
       image: 'assets/image/skincare-image/iva-ivazleen-body-lotion.png',
       name: 'Eva Skin Care Ivazleen Body Lotion for Deep Moisturization 240ml',
       brand: 'Eva',
@@ -931,7 +929,7 @@ export class DataService {
       rate: 4.4
     },
     {
-      id: 23,
+      id: 32,
       image: 'assets/image/skincare-image/iva-c-kids-sunscreen.png',
       name: 'Eva & C Kids Waterproof Sunscreen Cream SPF 50 200ml',
       brand: 'Eva',
@@ -958,7 +956,7 @@ export class DataService {
       rate: 4.6
     },
     {
-      id: 24,
+      id: 33,
       image: 'assets/image/skincare-image/iva-c-tinted-sunscreen.png',
       name: 'Eva & C Tinted Face Sunscreen SPF 50+ 40ml',
       brand: 'Eva',
@@ -985,7 +983,7 @@ export class DataService {
       rate: 4.6
     },
     {
-      id: 25,
+      id: 34,
       image: 'assets/image/skincare-image/iva-c-sunscreen-50.png',
       name: 'Eva & C Sunscreen SPF 50+ 20ml',
       brand: 'Eva',
@@ -1011,7 +1009,7 @@ export class DataService {
       rate: 4.5
     },
     {
-      id: 26,
+      id: 35,
       image: 'assets/image/skincare-image/iva-natural-glow-day-cream.png',
       name: 'Eva Skin Care Natural Glow Day Cream SPF 30 50g',
       brand: 'Eva',
@@ -1992,7 +1990,7 @@ export class DataService {
 
   // ================= Makeups =================
     {
-      id: 27,
+      id: 74,
       image: 'assets/image/makeup-image/sheglam-primer.png',
       name: 'SheGlam Primer Gel for Flawless Makeup',
       brand: 'SheGlam',
@@ -2018,7 +2016,7 @@ export class DataService {
       rate: 4.4
     },
     {
-      id: 28,
+      id: 75,
       image: 'assets/image/makeup-image/sheglam-foundation-butter-cream.png',
       name: 'SheGlam Skinfinite Hydrating Foundation - Butter Cream',
       brand: 'SheGlam',
@@ -2046,7 +2044,7 @@ export class DataService {
       rate: 4.5
     },
     {
-      id: 29,
+      id: 76,
       image: 'assets/image/makeup-image/sheglam-liquid-blush-love-cake.png',
       name: 'SheGlam Color Bloom Liquid Blush - 101 Love Cake',
       brand: 'SheGlam',
@@ -2071,7 +2069,7 @@ export class DataService {
       rate: 4.5
     },
     {
-      id: 30,
+      id: 77,
       image: 'assets/image/makeup-image/maybelline-sky-high-mascara.png',
       name: 'Maybelline Lash Sensational Sky High Mascara - Black',
       brand: 'Maybelline',
@@ -2099,7 +2097,7 @@ export class DataService {
       rate: 4.7
     },
     {
-      id: 31,
+      id: 78,
       image: 'assets/image/makeup-image/maybelline-colossal-mascara.png',
       name: 'Maybelline Colossal Mascara - 100% Black',
       brand: 'Maybelline',
@@ -2127,7 +2125,7 @@ export class DataService {
       rate: 4.6
     },
     {
-      id: 32,
+      id: 79,
       image: "assets/image/makeup-image/roseberry-kohl.png",
       name: "Rose Berry Kohl Eyeliner - Black",
       brand: "Rose Berry",
@@ -2151,7 +2149,7 @@ export class DataService {
       rate: 4.6
     },
     {
-      id: 33,
+      id: 74,
       image: 'assets/image/makeup-image/technic-eyeshadow.png',
       name: 'Technic Eyeshadow Palette',
       brand: 'Technic',
@@ -2174,7 +2172,7 @@ export class DataService {
       rate: 4.4
     },
     {
-      id: 34,
+      id: 75,
       image: 'assets/image/makeup-image/nars-foundation.png',
       name: 'NARS Natural Radiant Longwear Foundation',
       brand: 'NARS',
@@ -2203,7 +2201,7 @@ export class DataService {
       rate: 4.7
     },
     {
-      id: 35,
+      id: 76,
       image: 'assets/image/makeup-image/huda-easy-bake-powder.png',
       name: 'Huda Beauty Easy Bake Loose Powder - Cupcake',
       brand: 'Huda Beauty',
@@ -2232,40 +2230,40 @@ export class DataService {
     },
 
   // ================= Accessories =================
-    { id: 74, image: 'assets/image/accessories-image/1.jpeg', name: 'Classic Gold Chain', brand: 'GoldenStyle', category: 'Accessories', price: 450, discount: 50, details: 'Elegant gold chain perfect for formal and stylish looks.', specifications: 'Chain' },
-    { id: 75, image: 'assets/image/accessories-image/2.jpeg', name: 'Trendy Leather Bracelet', brand: 'UrbanChic', category: 'Accessories', price: 300, discount: 30, details: 'Fashionable leather bracelet suitable for daily wear.', specifications: 'Bracelet / Wristband' },
-    { id: 76, image: 'assets/image/accessories-image/3.jpeg', name: 'Men’s Leather Belt', brand: 'StylePro', category: 'Accessories', price: 350, discount: 40, details: 'Premium leather belt for a classic masculine look.', specifications: 'Bracelet / Wristband' },
-    { id: 77, image: 'assets/image/accessories-image/4.jpeg', name: 'Elegant Pearl Necklace', brand: 'LuxWear', category: 'Accessories', price: 500, discount: 60, details: 'Luxurious pearl necklace for a sophisticated appearance.', specifications: 'Chain' },
-    { id: 78, image: 'assets/image/accessories-image/5.jpeg', name: 'Minimalist Silver Necklace', brand: 'ChicStyle', category: 'Accessories', price: 220, discount: 20, details: 'Simple silver necklace suitable for everyday outfits.', specifications: 'Chain' },
-    { id: 79, image: 'assets/image/accessories-image/6.jpeg', name: 'Luxury Gold Bracelet', brand: 'LuxWear', category: 'Accessories', price: 1200, discount: 150, details: 'Premium gold bracelet for special occasions.', specifications: 'Bracelet / Wristband' },
-    { id: 80, image: 'assets/image/accessories-image/7.jpeg', name: 'Colorful Hair Ring Set', brand: 'ChicStyle', category: 'Accessories', price: 180, discount: 15, details: 'Set of colorful and practical hair rings.', specifications: 'Ring' },
-    { id: 81, image: 'assets/image/accessories-image/8.jpeg', name: 'Trendy Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Stylish keychain set with attractive designs.', specifications: 'Chain' },
-    { id: 82, image: 'assets/image/accessories-image/9.jpeg', name: 'Classic Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Classic keychain set suitable for multiple uses.', specifications: 'Chain' },
-    { id: 83, image: 'assets/image/accessories-image/10.jpeg', name: 'Fashionable Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Trendy keychain set perfect for any outfit.', specifications: 'Chain' },
-    { id: 84, image: 'assets/image/accessories-image/11.jpeg', name: 'Elegant Ring Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Elegant ring key set for a unique look.', specifications: 'Ring' },
-    { id: 85, image: 'assets/image/accessories-image/12.jpeg', name: 'Silver Ring Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Premium silver ring key set.', specifications: 'Ring' },
-    { id: 86, image: 'assets/image/accessories-image/13.jpeg', name: 'Minimalist Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Simple and practical keychain set.', specifications: 'Chain' },
-    { id: 87, image: 'assets/image/accessories-image/14.jpeg', name: 'Classic Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Classic keychain set for everyday use.', specifications: 'Chain' },
+    { id: 77, image: 'assets/image/accessories-image/1.jpeg', name: 'Classic Gold Chain', brand: 'GoldenStyle', category: 'Accessories', price: 450, discount: 50, details: 'Elegant gold chain perfect for formal and stylish looks.', specifications: 'Chain' },
+    { id: 78, image: 'assets/image/accessories-image/2.jpeg', name: 'Trendy Leather Bracelet', brand: 'UrbanChic', category: 'Accessories', price: 300, discount: 30, details: 'Fashionable leather bracelet suitable for daily wear.', specifications: 'Bracelet / Wristband' },
+    { id: 79, image: 'assets/image/accessories-image/3.jpeg', name: 'Men’s Leather Belt', brand: 'StylePro', category: 'Accessories', price: 350, discount: 40, details: 'Premium leather belt for a classic masculine look.', specifications: 'Bracelet / Wristband' },
+    { id: 80, image: 'assets/image/accessories-image/4.jpeg', name: 'Elegant Pearl Necklace', brand: 'LuxWear', category: 'Accessories', price: 500, discount: 60, details: 'Luxurious pearl necklace for a sophisticated appearance.', specifications: 'Chain' },
+    { id: 81, image: 'assets/image/accessories-image/5.jpeg', name: 'Minimalist Silver Necklace', brand: 'ChicStyle', category: 'Accessories', price: 220, discount: 20, details: 'Simple silver necklace suitable for everyday outfits.', specifications: 'Chain' },
+    { id: 82, image: 'assets/image/accessories-image/6.jpeg', name: 'Luxury Gold Bracelet', brand: 'LuxWear', category: 'Accessories', price: 1200, discount: 150, details: 'Premium gold bracelet for special occasions.', specifications: 'Bracelet / Wristband' },
+    { id: 83, image: 'assets/image/accessories-image/7.jpeg', name: 'Colorful Hair Ring Set', brand: 'ChicStyle', category: 'Accessories', price: 180, discount: 15, details: 'Set of colorful and practical hair rings.', specifications: 'Ring' },
+    { id: 84, image: 'assets/image/accessories-image/8.jpeg', name: 'Trendy Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Stylish keychain set with attractive designs.', specifications: 'Chain' },
+    { id: 85, image: 'assets/image/accessories-image/9.jpeg', name: 'Classic Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Classic keychain set suitable for multiple uses.', specifications: 'Chain' },
+    { id: 86, image: 'assets/image/accessories-image/10.jpeg', name: 'Fashionable Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Trendy keychain set perfect for any outfit.', specifications: 'Chain' },
+    { id: 87, image: 'assets/image/accessories-image/11.jpeg', name: 'Elegant Ring Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Elegant ring key set for a stylish and practical accessory.', specifications: 'Ring' },
+    { id: 88, image: 'assets/image/accessories-image/12.jpeg', name: 'Silver Ring Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Premium silver ring key set.', specifications: 'Ring' },
+    { id: 89, image: 'assets/image/accessories-image/13.jpeg', name: 'Minimalist Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Simple and practical keychain set.', specifications: 'Chain' },
+    { id: 90, image: 'assets/image/accessories-image/14.jpeg', name: 'Classic Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Classic keychain set for everyday use.', specifications: 'Chain' },
 
   // ================= Perfumes =================
-    { id: 9, image: 'assets/image/logos/glamify-logo.png', name: 'Luxury Perfume', brand: 'EliteScents', category: 'Perfumes', price: 1200, discount: 200, details: 'عطر فاخر يدوم طويلاً ويعطي رائحة جذابة ومميزة.' },
-    { id: 10, image: 'assets/image/logos/glamify-logo.png', name: 'Floral Essence', brand: 'AromaWorld', category: 'Perfumes', price: 950, discount: 150, details: 'عطر زهري خفيف يناسب الاستخدام اليومي.' },
-    { id: 11, image: 'assets/image/logos/glamify-logo.png', name: 'Night Oud', brand: 'OrientalScents', category: 'Perfumes', price: 1800, discount: 300, details: 'عطر غني بالعود والباتشولي لرائحة فاخرة لا تُنسى.' },
-    { id: 12, image: 'assets/image/logos/glamify-logo.png', name: 'Citrus Splash', brand: 'FreshAroma', category: 'Perfumes', price: 700, discount: 100, details: 'عطر منعش برائحة الحمضيات مناسب للصيف.' },
-    { id: 13, image: 'assets/image/logos/glamify-logo.png', name: 'Vanilla Nights', brand: 'SweetScents', category: 'Perfumes', price: 850, discount: 120, details: 'عطر دافئ بنكهة الفانيليا لسهرات المساء.' },
-    { id: 14, image: 'assets/image/logos/glamify-logo.png', name: 'Ocean Breeze', brand: 'FreshAroma', category: 'Perfumes', price: 650, discount: 80, details: 'عطر منعش برائحة البحر والنسمات العليلة.' },
-    { id: 15, image: 'assets/image/logos/glamify-logo.png', name: 'Rose Garden', brand: 'AromaWorld', category: 'Perfumes', price: 900, discount: 100, details: 'عطر زهري كلاسيكي بنفحات الورد الطبيعي.' },
-    { id: 16, image: 'assets/image/logos/glamify-logo.png', name: 'Midnight Musk', brand: 'EliteScents', category: 'Perfumes', price: 1300, discount: 200, details: 'عطر غامض وجذاب يناسب المناسبات الخاصة.' },
+    { id: 91, image: 'assets/image/logos/glamify-logo.png', name: 'Luxury Perfume', brand: 'EliteScents', category: 'Perfumes', price: 1200, discount: 200, details: 'عطر فاخر يدوم طويلاً ويعطي رائحة جذابة ومميزة.' },
+    { id: 92, image: 'assets/image/logos/glamify-logo.png', name: 'Floral Essence', brand: 'AromaWorld', category: 'Perfumes', price: 950, discount: 150, details: 'عطر زهري خفيف يناسب الاستخدام اليومي.' },
+    { id: 93, image: 'assets/image/logos/glamify-logo.png', name: 'Night Oud', brand: 'OrientalScents', category: 'Perfumes', price: 1800, discount: 300, details: 'عطر غني بالعود والباتشولي لرائحة فاخرة لا تُنسى.' },
+    { id: 94, image: 'assets/image/logos/glamify-logo.png', name: 'Citrus Splash', brand: 'FreshAroma', category: 'Perfumes', price: 700, discount: 100, details: 'عطر منعش برائحة الحمضيات مناسب للصيف.' },
+    { id: 95, image: 'assets/image/logos/glamify-logo.png', name: 'Vanilla Nights', brand: 'SweetScents', category: 'Perfumes', price: 850, discount: 120, details: 'عطر دافئ بنكهة الفانيليا لسهرات المساء.' },
+    { id: 96, image: 'assets/image/logos/glamify-logo.png', name: 'Ocean Breeze', brand: 'FreshAroma', category: 'Perfumes', price: 650, discount: 80, details: 'عطر منعش برائحة البحر والنسمات العليلة.' },
+    { id: 97, image: 'assets/image/logos/glamify-logo.png', name: 'Rose Garden', brand: 'AromaWorld', category: 'Perfumes', price: 900, discount: 100, details: 'عطر زهري كلاسيكي بنفحات الورد الطبيعي.' },
+    { id: 98, image: 'assets/image/logos/glamify-logo.png', name: 'Midnight Musk', brand: 'EliteScents', category: 'Perfumes', price: 1300, discount: 200, details: 'عطر غامض وجذاب يناسب المناسبات الخاصة.' },
 
     // ================= Watches =================
-    { id: 25, image: 'assets/image/logos/glamify-logo.png', name: 'Classic Watch', brand: 'TimeMaster', category: 'Watches', price: 2500, discount: 300, details: 'ساعة كلاسيكية أنيقة مناسبة لجميع المناسبات اليومية والرسمية.' },
-    { id: 26, image: 'assets/image/logos/glamify-logo.png', name: 'Sport Watch', brand: 'ActiveTime', category: 'Watches', price: 1800, discount: 200, details: 'ساعة رياضية مقاومة للماء مع خصائص متعددة للرياضيين.' },
-    { id: 27, image: 'assets/image/logos/glamify-logo.png', name: 'Luxury Gold Watch', brand: 'GoldTime', category: 'Watches', price: 4500, discount: 500, details: 'ساعة ذهبية فاخرة لإطلالة راقية ومميزة.' },
-    { id: 28, image: 'assets/image/logos/glamify-logo.png', name: 'Smart Watch', brand: 'TechTime', category: 'Watches', price: 3500, discount: 400, details: 'ساعة ذكية بمميزات متعددة مثل متابعة النشاطات والتنبيهات.' },
-    { id: 29, image: 'assets/image/logos/glamify-logo.png', name: 'Leather Strap Watch', brand: 'TimeMaster', category: 'Watches', price: 2700, discount: 250, details: 'ساعة كلاسيكية بحزام جلدي فاخر.' },
-    { id: 30, image: 'assets/image/logos/glamify-logo.png', name: 'Silver Watch', brand: 'GoldTime', category: 'Watches', price: 3000, discount: 300, details: 'ساعة فضية أنيقة مع لمسة عصرية.' },
-    { id: 31, image: 'assets/image/logos/glamify-logo.png', name: 'Chronograph Watch', brand: 'ActiveTime', category: 'Watches', price: 4000, discount: 500, details: 'ساعة كرونوغراف بمميزات احترافية عالية.' },
-    { id: 32, image: 'assets/image/logos/glamify-logo.png', name: 'Minimalist Watch', brand: 'TechTime', category: 'Watches', price: 2200, discount: 200, details: 'ساعة بسيطة وعصرية للستايل اليومي.' },
+    { id: 99, image: 'assets/image/logos/glamify-logo.png', name: 'Classic Watch', brand: 'TimeMaster', category: 'Watches', price: 2500, discount: 300, details: 'ساعة كلاسيكية أنيقة مناسبة لجميع المناسبات اليومية والرسمية.' },
+    { id: 100, image: 'assets/image/logos/glamify-logo.png', name: 'Sport Watch', brand: 'ActiveTime', category: 'Watches', price: 1800, discount: 200, details: 'ساعة رياضية مقاومة للماء مع خصائص متعددة للرياضيين.' },
+    { id: 101, image: 'assets/image/logos/glamify-logo.png', name: 'Luxury Gold Watch', brand: 'GoldTime', category: 'Watches', price: 4500, discount: 500, details: 'ساعة ذهبية فاخرة لإطلالة راقية ومميزة.' },
+    { id: 102, image: 'assets/image/logos/glamify-logo.png', name: 'Smart Watch', brand: 'TechTime', category: 'Watches', price: 3500, discount: 400, details: 'ساعة ذكية بمميزات متعددة مثل متابعة النشاطات والتنبيهات.' },
+    { id: 103, image: 'assets/image/logos/glamify-logo.png', name: 'Leather Strap Watch', brand: 'TimeMaster', category: 'Watches', price: 2700, discount: 250, details: 'ساعة كلاسيكية بحزام جلدي فاخر.' },
+    { id: 104, image: 'assets/image/logos/glamify-logo.png', name: 'Silver Watch', brand: 'GoldTime', category: 'Watches', price: 3000, discount: 300, details: 'ساعة فضية أنيقة مع لمسة عصرية.' },
+    { id: 105, image: 'assets/image/logos/glamify-logo.png', name: 'Chronograph Watch', brand: 'ActiveTime', category: 'Watches', price: 4000, discount: 500, details: 'ساعة كرونوغراف بمميزات احترافية عالية.' },
+    { id: 106, image: 'assets/image/logos/glamify-logo.png', name: 'Minimalist Watch', brand: 'TechTime', category: 'Watches', price: 2200, discount: 200, details: 'ساعة بسيطة وعصرية للستايل اليومي.' },
 
   ];
 
