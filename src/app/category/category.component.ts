@@ -30,7 +30,7 @@ export class CategoryComponent implements OnInit{
   // Filters
   brands: string[] = [];
   brandFilter: string = 'all';
-  priceFilter: number = 2000;
+  priceFilter: number = 10000;
   rateFilter: number = 0;
 
   ngOnInit(): void {
@@ -45,7 +45,7 @@ export class CategoryComponent implements OnInit{
         console.log(this.categoryName);
 
         this.AllProductsByCategory = this._DataService.getProductsByCategory(this.categoryName)
-        this.brands = Array.from(new Set(this.AllProductsByCategory.map(p => p.brand)));
+
         this.brands = Array.from(new Set(this.AllProductsByCategory.map(p => p.brand)));
         // تحديث Pagination بعد الفلتر
         this.applyFilters(); // هنا نطبق الفلاتر مباشرة (حتى لو فلتر البراند حالياً 'all')
