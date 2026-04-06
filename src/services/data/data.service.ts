@@ -2078,6 +2078,381 @@ export class DataService {
     //   rate: 4.5
     // },
 
+  // ================= Perfumes =================
+    {
+      id: 91,
+      image: 'assets/image/perfume-image/khomra-200ml.jpeg',
+      name: 'Khomra 200ml Perfume',
+      brand: 'Khomra',
+      category: 'Perfumes',
+      price: 1650,
+      discount: 250,
+      details: [
+        "Fragrance inspired by Lattafa Khamrah with a rich oriental scent",
+        "Warm blend of vanilla, cinnamon, and amber notes",
+        "Perfect for winter and evening occasions",
+        "Long-lasting performance with strong projection",
+        "Suitable for both men and women"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Oriental Sweet",
+        "Top Notes: Cinnamon, Nutmeg",
+        "Middle Notes: Dates, Praline, Tuberose",
+        "Base Notes: Vanilla, Tonka Bean, Amberwood, Myrrh",
+        "Longevity: 8-12 hours",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 92,
+      image: 'assets/image/perfume-image/Ulramal.jpeg',
+      name: 'Ultra Male 200ml Perfume',
+      brand: 'Ultra Male',
+      category: 'Perfumes',
+      price: 1200,
+      discount: 250,
+      details: [
+        "Inspired by Jean Paul Gaultier Ultra Male fragrance",
+        "Sweet and spicy masculine scent",
+        "Ideal for night outings and special occasions",
+        "Strong projection and noticeable scent trail",
+        "Highly attractive and youthful fragrance"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Oriental Fougere",
+        "Top Notes: Pear, Lavender, Mint",
+        "Middle Notes: Cinnamon, Clary Sage",
+        "Base Notes: Black Vanilla, Amber, Patchouli",
+        "Longevity: 8-10 hours",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 93,
+      image: 'assets/image/perfume-image/Mercedes-Benz.jpeg',
+      name: 'Mercedes Benz 200ml Perfume',
+      brand: 'Mercedes Benz',
+      category: 'Perfumes',
+      price: 1100,
+      discount: 200,
+      details: [
+        "Elegant and luxurious fragrance inspired by Mercedes Benz perfumes",
+        "Fresh woody scent suitable for daily wear",
+        "Balanced blend of citrus and woody notes",
+        "Perfect for office and casual use",
+        "Moderate to long-lasting performance"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Woody Aromatic",
+        "Top Notes: Bergamot, Lemon",
+        "Middle Notes: Violet, Nutmeg, Galbanum",
+        "Base Notes: Cedarwood, Vetiver, Patchouli",
+        "Longevity: 6-8 hours",
+        "Concentration: Eau de Toilette / Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 94,
+      image: 'assets/image/perfume-image/ASD.jpeg',
+      name: 'ASD 200ml Perfume',
+      brand: 'ASD',
+      category: 'Perfumes',
+      price: 1100,
+      discount: 200,
+      details: [
+        "Modern fragrance with a balanced fresh and warm scent",
+        "Suitable for daily wear and casual outings",
+        "Soft projection with noticeable scent trail",
+        "Designed for long-lasting freshness",
+        "Unisex fragrance suitable for all occasions"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Fresh / Woody",
+        "Longevity: 6-8 hours",
+        "Usage: Daily / Casual",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 95,
+      image: 'assets/image/perfume-image/versace-yellow.jpeg',
+      name: 'Versace Yellow 200ml Perfume',
+      brand: 'Versace',
+      category: 'Perfumes',
+      price: 1100,
+      discount: 200,
+      details: [
+        "Inspired by :contentReference[oaicite:0]{index=0} Yellow Diamond fragrance",
+        "Fresh citrus floral scent with a bright feminine touch",
+        "Perfect for summer and daytime use",
+        "Light and refreshing fragrance",
+        "Elegant and clean scent profile"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Citrus Floral",
+        "Top Notes: Lemon, Bergamot, Neroli",
+        "Middle Notes: Orange Blossom, Freesia",
+        "Base Notes: Musk, Amber, Wood",
+        "Longevity: 5-7 hours",
+        "Usage: Daytime / Summer",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 96,
+      image: 'assets/image/perfume-image/acqua-di-gio.jpeg',
+      name: 'Acqua Di Gio 200ml Perfume',
+      brand: 'Acqua Di Gio',
+      category: 'Perfumes',
+      price: 1050,
+      discount: 150,
+      details: [
+        "Inspired by :contentReference[oaicite:1]{index=1} Acqua di Gio",
+        "Fresh aquatic fragrance with citrus notes",
+        "Clean and energetic scent for everyday use",
+        "Perfect for hot weather and summer",
+        "One of the most popular masculine scents"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Aquatic Fresh",
+        "Top Notes: Bergamot, Lemon, Marine Notes",
+        "Middle Notes: Jasmine, Rosemary",
+        "Base Notes: Musk, Cedarwood, Patchouli",
+        "Longevity: 5-8 hours",
+        "Usage: Daily / Summer",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 97,
+      image: 'assets/image/perfume-image/Laboba-pardise-garden.jpeg',
+      name: 'Laboba Paradise Garden 200ml Perfume',
+      brand: 'Laboba Paradise Garden',
+      category: 'Perfumes',
+      price: 1280,
+      discount: 280,
+      details: [
+        "Tropical-inspired fragrance with a sweet fruity scent",
+        "Fresh and vibrant aroma suitable for summer",
+        "Light and uplifting fragrance",
+        "Perfect for casual and daytime wear",
+        "Unisex scent with a playful character"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Fruity Fresh",
+        "Top Notes: Tropical Fruits, Citrus",
+        "Middle Notes: Floral Notes",
+        "Base Notes: Musk, Soft Woods",
+        "Longevity: 4-6 hours",
+        "Usage: Daytime / Summer",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 98,
+      image: 'assets/image/perfume-image/layton-demarly.jpg',
+      name: 'Layton Demarly 200ml',
+      brand: 'Layton Demarly',
+      category: 'Perfumes',
+      price: 1280,
+      discount: 380,
+      details: [
+        "Inspired by :contentReference[oaicite:0]{index=0} Layton",
+        "Luxurious oriental fragrance with a sweet spicy character",
+        "Perfect for winter and evening occasions",
+        "Highly attractive scent with strong projection",
+        "Elegant and premium fragrance experience"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Oriental Spicy",
+        "Top Notes: Apple, Bergamot, Lavender",
+        "Middle Notes: Jasmine, Violet",
+        "Base Notes: Vanilla, Cardamom, Sandalwood, Pepper",
+        "Longevity: 8-12 hours",
+        "Usage: Evening / Winter",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 99,
+      image: 'assets/image/perfume-image/Asyrdmardy.jpg',
+      name: 'Asyrdmardy 200ml',
+      brand: 'Asyrdmardy',
+      category: 'Perfumes',
+      price: 1280,
+      discount: 330,
+      details: [
+        "Premium fragrance with a rich and modern scent profile",
+        "Balanced blend of sweet and woody notes",
+        "Suitable for special occasions and evening wear",
+        "Long-lasting performance with noticeable projection",
+        "Unisex fragrance with a luxurious feel"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Woody Sweet",
+        "Longevity: 7-10 hours",
+        "Usage: Evening / Occasions",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 100,
+      image: 'assets/image/perfume-image/SAUVAGE.jpg',
+      name: 'Sauvage 200ml Perfume',
+      brand: 'Sauvage',
+      category: 'Perfumes',
+      price: 1800,
+      discount: 350,
+      details: [
+        "Inspired by :contentReference[oaicite:1]{index=1} Sauvage",
+        "Fresh spicy fragrance with a bold masculine character",
+        "Perfect for daily wear and all seasons",
+        "Strong projection and long-lasting scent",
+        "One of the most popular and versatile fragrances"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Fresh Spicy",
+        "Top Notes: Bergamot, Pepper",
+        "Middle Notes: Lavender, Sichuan Pepper",
+        "Base Notes: Ambroxan, Cedarwood",
+        "Longevity: 8-12 hours",
+        "Usage: Daily / All Seasons",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 101,
+      image: 'assets/image/perfume-image/Speed-millesime-imperial.jpg',
+      name: 'Speed Millesime Imperial 200ml',
+      brand: 'Speed Millesime Imperial',
+      category: 'Perfumes',
+      price: 2200,
+      discount: 350,
+      details: [
+        "",
+      ],
+      specifications: [
+        "",
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 102,
+      image: 'assets/image/perfume-image/Stronger-with-you-gold.jpg',
+      name: 'Stronger With You 200ml',
+      brand: 'Stronger With You',
+      category: 'Perfumes',
+      price: 1400,
+      discount: 120,
+      details: [
+        "Inspired by :contentReference[oaicite:1]{index=1} Stronger With You",
+        "Warm sweet fragrance with a romantic and modern vibe",
+        "Perfect for winter and night outings",
+        "Highly attractive scent with strong projection",
+        "Ideal for dates and special occasions"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Warm Sweet",
+        "Top Notes: Cardamom, Pink Pepper",
+        "Middle Notes: Sage, Melon",
+        "Base Notes: Vanilla, Chestnut, Amberwood",
+        "Longevity: 8-10 hours",
+        "Usage: Evening / Winter",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 103,
+      image: 'assets/image/perfume-image/speed-aventus-white.jpg',
+      name: 'Speed Aventus 200ml',
+      brand: 'Speed Aventus',
+      category: 'Perfumes',
+      price: 1400,
+      discount: 120,
+      details: [
+        "Inspired by :contentReference[oaicite:2]{index=2} Aventus",
+        "Fruity smoky fragrance with a bold masculine character",
+        "Perfect balance between freshness and depth",
+        "Strong projection and long-lasting performance",
+        "One of the most iconic and attractive scents"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Fruity Smoky",
+        "Top Notes: Pineapple, Bergamot, Apple",
+        "Middle Notes: Birch, Patchouli, Jasmine",
+        "Base Notes: Musk, Oakmoss, Ambergris",
+        "Longevity: 8-12 hours",
+        "Usage: All Seasons / Daily",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+    {
+      id: 104,
+      image: 'assets/image/perfume-image/visatchy-yours-madosa.jpg',
+      name: 'Visatchy Yours 200ml',
+      brand: 'Visatchy Yours',
+      category: 'Perfumes',
+      price: 1600,
+      discount: 220,
+      details: [
+        "Inspired by :contentReference[oaicite:3]{index=3} Eros",
+        "Fresh sweet fragrance with a strong youthful vibe",
+        "Perfect for parties and night events",
+        "High projection and attention-grabbing scent",
+        "Popular among younger audiences"
+      ],
+      specifications: [
+        "Size: 200ml",
+        "Fragrance Type: Fresh Sweet",
+        "Top Notes: Mint, Lemon, Apple",
+        "Middle Notes: Tonka Bean, Ambroxan",
+        "Base Notes: Vanilla, Cedarwood, Vetiver",
+        "Longevity: 7-10 hours",
+        "Usage: Night / Parties",
+        "Concentration: Eau de Parfum"
+      ],
+      stock: 60,
+      rate: 4.9
+    },
+
+
   // ================= Makeups =================
     // {
     //   id: 74,
@@ -2335,15 +2710,6 @@ export class DataService {
     // { id: 89, image: 'assets/image/accessories-image/13.jpeg', name: 'Minimalist Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Simple and practical keychain set.', specifications: 'Chain' },
     // { id: 90, image: 'assets/image/accessories-image/14.jpeg', name: 'Classic Chain Key Set', brand: 'StylePro', category: 'Accessories', price: 90, discount: 10, details: 'Classic keychain set for everyday use.', specifications: 'Chain' },
 
-  // ================= Perfumes =================
-    // { id: 91, image: 'assets/image/logos/glamify-logo.png', name: 'Luxury Perfume', brand: 'EliteScents', category: 'Perfumes', price: 1200, discount: 200, details: 'عطر فاخر يدوم طويلاً ويعطي رائحة جذابة ومميزة.' },
-    // { id: 92, image: 'assets/image/logos/glamify-logo.png', name: 'Floral Essence', brand: 'AromaWorld', category: 'Perfumes', price: 950, discount: 150, details: 'عطر زهري خفيف يناسب الاستخدام اليومي.' },
-    // { id: 93, image: 'assets/image/logos/glamify-logo.png', name: 'Night Oud', brand: 'OrientalScents', category: 'Perfumes', price: 1800, discount: 300, details: 'عطر غني بالعود والباتشولي لرائحة فاخرة لا تُنسى.' },
-    // { id: 94, image: 'assets/image/logos/glamify-logo.png', name: 'Citrus Splash', brand: 'FreshAroma', category: 'Perfumes', price: 700, discount: 100, details: 'عطر منعش برائحة الحمضيات مناسب للصيف.' },
-    // { id: 95, image: 'assets/image/logos/glamify-logo.png', name: 'Vanilla Nights', brand: 'SweetScents', category: 'Perfumes', price: 850, discount: 120, details: 'عطر دافئ بنكهة الفانيليا لسهرات المساء.' },
-    // { id: 96, image: 'assets/image/logos/glamify-logo.png', name: 'Ocean Breeze', brand: 'FreshAroma', category: 'Perfumes', price: 650, discount: 80, details: 'عطر منعش برائحة البحر والنسمات العليلة.' },
-    // { id: 97, image: 'assets/image/logos/glamify-logo.png', name: 'Rose Garden', brand: 'AromaWorld', category: 'Perfumes', price: 900, discount: 100, details: 'عطر زهري كلاسيكي بنفحات الورد الطبيعي.' },
-    // { id: 98, image: 'assets/image/logos/glamify-logo.png', name: 'Midnight Musk', brand: 'EliteScents', category: 'Perfumes', price: 1300, discount: 200, details: 'عطر غامض وجذاب يناسب المناسبات الخاصة.' },
 
     // ================= Watches =================
     // { id: 99, image: 'assets/image/logos/glamify-logo.png', name: 'Classic Watch', brand: 'TimeMaster', category: 'Watches', price: 2500, discount: 300, details: 'ساعة كلاسيكية أنيقة مناسبة لجميع المناسبات اليومية والرسمية.' },
