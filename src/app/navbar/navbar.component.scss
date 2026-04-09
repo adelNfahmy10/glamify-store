@@ -24,6 +24,12 @@ $second-color: #c97b77;
       padding-right: 50px; // المسافة بين الرسائل
       font-weight: bold;
       white-space: nowrap;
+      img{
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        margin-right: 5px;
+      }
     }
 
     // نسخ إضافية للنصوص عشان الحركة تكون سلسة
@@ -94,7 +100,7 @@ $second-color: #c97b77;
   gap: 10px;
 
   .logo {
-    width: 80px;
+    width: 70px;
   }
 
   .search-box {

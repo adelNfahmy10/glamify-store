@@ -1,21 +1,21 @@
 <section class="navbar-section p-0" id="navbar-section">
   <div class="ads-bar p-2">
     <div class="ads-track">
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
-      <span>🔥 Special offers for all our customers 🔥</span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
+      <span><img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"> Special offers for all our customers <img src="assets/image/logos/gs-logo-removebg-preview.png" alt="glamify store"></span>
     </div>
   </div>
 
@@ -58,19 +58,21 @@
           <input type="search" class="form-control search border-0 h-100" placeholder="Search By Name Or Brand..." [(ngModel)]="searchWord" (input)="onSearch()">
 
           @if(searchWord){
-            <ul class="search-list list-unstyled m-0 p-0">
-              @for (item of filteredProducts; track $index) {
-                <li class="p-2 d-flex align-items-center gap-2 cr" (click)="goToProduct(item.id)">
-                  <div>
-                    <img [src]="item.image" [alt]="">
-                  </div>
-                  <div>
-                    <p class="m-0">{{item.name}}</p>
-                    <span class="m-0 main-color">{{ (item?.price || 0) - (item?.discount || 0) }} EGP</span>
-                  </div>
-                </li>
-              }
-            </ul>
+            @if(filteredProducts.length){
+              <ul class="search-list list-unstyled m-0 p-0">
+                @for (item of filteredProducts; track $index) {
+                  <li class="p-2 d-flex align-items-center gap-2 cr" (click)="goToProduct(item.id)">
+                    <div>
+                      <img [src]="item.image" [alt]="">
+                    </div>
+                    <div>
+                      <p class="m-0">{{item.name}}</p>
+                      <span class="m-0 main-color">{{ (item?.price || 0) - (item?.discount || 0) }} EGP</span>
+                    </div>
+                  </li>
+                }
+              </ul>
+            }
           }
         </div>
 
