@@ -3,6 +3,7 @@ import { CartService } from '../../services/cart/cart.service';
 import { DataService } from '../../services/data/data.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
+import { ProductService } from '../../services/products/product.service';
 
 @Component({
   selector: 'app-product-details',
@@ -13,6 +14,7 @@ import { isPlatformBrowser } from '@angular/common';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProductDetailsComponent {
+  private readonly _ProductService = inject(ProductService);
   private readonly _DataService = inject(DataService);
   private readonly _ActivatedRoute = inject(ActivatedRoute);
   private readonly _CartService = inject(CartService);
@@ -20,7 +22,7 @@ export class ProductDetailsComponent {
 
   isBrowser = false;
   product: any;
-  productId!: number;
+  productId!: any;
   productCategory!: string;
   productBrand!: string;
   relateProductsCategory:any [] = []
@@ -34,8 +36,22 @@ export class ProductDetailsComponent {
   ngOnInit() {
     this.isBrowser = isPlatformBrowser(this._PLATFORM_ID);
     this.getProductById();
+    this.getProduct()
   }
 
+
+  getProduct():void{
+    this._ActivatedRoute.paramMap.subscribe({
+      next:(params)=>{
+        this.productId = params.get('id');
+        this._ProductService.getProductById(this.productId).subscribe({
+          next:(res)=>{
+            this.product = res
+          }
+        })
+      }
+    })
+  }
   getProductById(): void {
     this._ActivatedRoute.paramMap.subscribe({
       next: (param) => {

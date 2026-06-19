@@ -1,0 +1,213 @@
+<section>
+  <div class="container">
+    <h2 class="text-center text-white">Update Product</h2>
+    <div class="update-product">
+
+      <form [formGroup]="productForm" (ngSubmit)="submit()">
+        <div class="card p-3 rounded-4">
+          <!-- NAME -->
+          <div class="mb-3">
+            <label class="form-label">Product Name</label>
+            <input class="form-control" formControlName="name">
+          </div>
+
+          <!-- PRICE / DISCOUNT -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Price</label>
+              <input type="number" class="form-control" formControlName="price">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Discount</label>
+              <input type="number" class="form-control" formControlName="discount">
+            </div>
+          </div>
+
+          <!-- RATE / STOCK -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Rate</label>
+              <input type="number" class="form-control" formControlName="rate">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Stock</label>
+              <input type="number" class="form-control" formControlName="stock">
+            </div>
+          </div>
+
+          <!-- BRAND / CATEGORY -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Brand</label>
+              <select class="form-select" name="brand" id="brand" formControlName="brand">
+                @for(brand of brands ; track $index){
+                  <option [value]="brand.name">{{brand.name}}</option>
+                }
+              </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Category</label>
+              <select class="form-select" name="category" id="category" formControlName="category">
+                @for(cat of categories; track $index){
+                  <option [value]="cat.name">{{cat.name}}</option>
+                }
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card p-3 rounded-4 mt-4">
+          <!-- ADD IMAGES -->
+          <div class="mb-3 border-bottom pb-3">
+            <label class="form-label">Add New Images</label>
+
+            <input
+              type="file"
+              class="form-control"
+              multiple
+              (change)="onImagesSelected($event)"
+            />
+          </div>
+
+          <!-- MAIN IMAGE -->
+          <div class="mb-3">
+            <label class="form-label">Main Image</label>
+
+            <div class="main-image position-relative">
+
+              <img
+                [src]="productForm.value.image"
+                class="img-fluid rounded border main-image"
+              />
+
+              <span
+                class="x-mark cr position-absolute top-0 end-0"
+                (click)="removeMainImage()"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </span>
+
+            </div>
+          </div>
+
+          <!-- IMAGES -->
+          <div class="mb-3">
+            <label class="form-label">Images</label>
+
+            <div class="row g-3">
+
+              @for (img of productForm.value.images; track $index) {
+
+                <div class="col-md-3 position-relative images-box">
+
+                  <img
+                    [src]="img"
+                    class="img-fluid rounded border"
+                    (click)="setAsMainImage(img)"
+                  />
+
+                  <span
+                    class="x-mark cr"
+                    (click)="removeImage($index)"
+                  >
+                    <i class="fa-solid fa-xmark"></i>
+                  </span>
+
+                  @if(productForm.value.image === img){
+                    <span class="main-badge">
+                      <i class="fa-solid fa-star"></i>
+                      Main
+                    </span>
+                  }
+
+                </div>
+
+              }
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card p-3 rounded-4 mt-4">
+          <!-- DETAILS ARRAY -->
+          <div class="mb-3">
+            <label class="form-label">Details</label>
+
+            @for (d of productForm.value.details; track $index) {
+              <div class="mb-2 position-relative">
+
+                <input
+                  class="form-control"
+                  [value]="d"
+                  (input)="updateDetail($index, $event)"
+                />
+
+                <span
+                  class="x-mark cr"
+                  (click)="removeDetail($index)"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+
+              </div>
+            }
+
+            <button
+              type="button"
+              class="btn btn-outline-success btn-sm"
+              (click)="addDetail()"
+            >
+              + Add
+            </button>
+          </div>
+
+          <!-- SPECIFICATIONS ARRAY -->
+          <div class="mb-3">
+            <label class="form-label">Specifications</label>
+
+            @for (s of productForm.value.specifications; track $index) {
+              <div class="mb-2 position-relative">
+
+                <input
+                  class="form-control"
+                  [value]="s"
+                  (input)="updateSpecification($index, $event)"
+                />
+
+                <span
+                  class="x-mark cr"
+                  (click)="removeSpecification($index)"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+
+              </div>
+            }
+
+            <button
+              type="button"
+              class="btn btn-outline-success btn-sm"
+              (click)="addSpecification()"
+            >
+              + Add
+            </button>
+          </div>
+        </div>
+
+
+        <!-- BUTTON -->
+        <button class="btn main-btn w-100 mt-3 border" type="submit">
+          Update Product
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>

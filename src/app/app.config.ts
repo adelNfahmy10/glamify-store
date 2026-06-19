@@ -1,4 +1,4 @@
-import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter, withInMemoryScrolling, withViewTransitions } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -9,6 +9,9 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideToastr } from 'ngx-toastr';
 import { loadingInterceptor } from '../interceptors/loading/loading.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 
 export const appConfig: ApplicationConfig = {
@@ -27,6 +30,12 @@ export const appConfig: ApplicationConfig = {
       fallbackLang: 'en'
     }),
     provideToastr(),
-    importProvidersFrom(NgxSpinnerModule)
+    importProvidersFrom(NgxSpinnerModule),
+    provideFirebaseApp(() =>
+      initializeApp(environment.firebase)
+    ),
+    provideFirestore(() =>
+      getFirestore()
+    )
   ]
 };

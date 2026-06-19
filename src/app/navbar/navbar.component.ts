@@ -6,6 +6,7 @@ import { CartService } from '../../services/cart/cart.service';
 import { DataService, Product } from '../../services/data/data.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { ToastrService } from 'ngx-toastr';
+import { CategoryService } from '../../services/category/category.service';
 
 @Component({
   selector: 'app-navbar',
@@ -22,10 +23,12 @@ export class NavbarComponent implements OnInit{
   private readonly _Router = inject(Router)
   private readonly _CartService = inject(CartService)
   private readonly _ToastrService = inject(ToastrService)
+  private readonly _CategoryService = inject(CategoryService)
 
   cartCount = this._CartService.cartSignal;
   allProducts: Product[] = [];
   filteredProducts: Product[] = [];
+  categories:any[] = []
   navbarWidth:string = '100%'
   navbarTop:string = '0'
   background:string = 'transparent'
@@ -35,6 +38,8 @@ export class NavbarComponent implements OnInit{
   lang: string =  'en';
 
   ngOnInit(): void {
+    this.getCategoies();
+
     this._TranslateService.use(this.lang);
     if (isPlatformBrowser(this._PLATFORM_ID)) {
       this.updateHtmlAttributes();
@@ -64,6 +69,12 @@ export class NavbarComponent implements OnInit{
   goToProduct(id:any) {
     this._Router.navigate(['/product-details/', id]);
     this.searchWord = '';
+  }
+
+  getCategoies(): void {
+    this._CategoryService.getAllCategories().subscribe(res => {
+      this.categories = res;
+    });
   }
 
   @HostListener('window:scroll') onScroll(){

@@ -1,0 +1,85 @@
+<section>
+  <div class="container">
+    <h2 class="text-center text-white">All Products</h2>
+
+    <div class="view-products">
+      <div class="card p-3 rounded-4">
+        <!-- EMPTY STATE -->
+        @if(products.length === 0){
+          <div class="text-center text-muted py-4">
+            No products available
+          </div>
+        }
+
+        <!-- LIST -->
+        @if(products.length > 0){
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (product of products; track $index) {
+                  <tr>
+                    <th scope="row">{{$index + 1}}</th>
+                    <td>
+                      <div class="product-image">
+                        <img
+                          [src]="product.image"
+                          class="rounded"
+                          style="width: 60px; height: 60px; object-fit: cover;"
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <div class="fw-bold">{{ product.name }}</div>
+                        <small class="text-muted">
+                          {{ product.brand }} • {{ product.category }}
+                        </small>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="fw-bold main-color">
+                        {{ product.price | number}} EGP
+                      </span>
+                    </td>
+                    <td>
+                      <div class="d-flex gap-2">
+
+                        <button class="btn btn-sm btn-secondary"  [routerLink]="'/product-details/' + product?.id">
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button>
+
+                        <button class="btn btn-sm btn-warning"  [routerLink]="'/update-product/' + product?.id">
+                          <i class="fa-regular fa-pen-to-square"></i>
+                        </button>
+
+                        <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </button>
+
+                      </div>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+
+        }
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+</section>

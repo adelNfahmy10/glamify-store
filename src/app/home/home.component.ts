@@ -4,6 +4,7 @@ import { Router, RouterLink } from '@angular/router';
 import { DataService, Product } from '../../services/data/data.service';
 import { CartService } from '../../services/cart/cart.service';
 import { ToastrService } from 'ngx-toastr';
+import { ProductService } from '../../services/products/product.service';
 
 @Component({
   selector: 'app-home',
@@ -15,10 +16,12 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class HomeComponent {
   private readonly _Router = inject(Router)
+  private readonly _ProductService = inject(ProductService)
   private readonly _DataService = inject(DataService)
   private readonly _CartService = inject(CartService)
   private readonly _PLATFORM_ID = inject(PLATFORM_ID)
 
+  products:any[] = []
   isBrowser = false;
   allProducts: Product[] = [];
   scenCare: Product[] = [];
@@ -38,6 +41,7 @@ export class HomeComponent {
   }
 
   ngOnInit(): void {
+    this.getAllProducts()
     this.isBrowser = isPlatformBrowser(this._PLATFORM_ID);
     this.allProducts = this._DataService.getAllProducts();
     this.scenCare = this._DataService.getProductSkincare();
@@ -46,6 +50,23 @@ export class HomeComponent {
     this.makeUp = this._DataService.getProductMakeup();
     this.accessories = this._DataService.getProductAccessories();
     this.watches = this._DataService.getProductWatches();
+  }
+
+  getAllProducts():void{
+    this._ProductService.getAllProducts().subscribe({
+      next:(res)=>{
+        this.products = res
+        console.log(res);
+      }
+    })
+  }
+
+  get perfumesProducts() {
+    return this.products.filter(item => item.category === 'Perfumes');
+  }
+
+  get skincareProducts() {
+    return this.products.filter(item => item.category === 'Skincare');
   }
 
   getStars(rate?: any) {

@@ -1,0 +1,185 @@
+<section>
+  <div class="container">
+    <h2 class="text-center text-white">Add New Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="submit()" class="product-form">
+
+      <div class="row g-4">
+
+        <!-- LEFT -->
+        <div class="col-lg-8">
+
+          <div class="card shadow-sm border-0 rounded-4 h-100">
+
+            <div class="card-body p-4">
+
+              <h4 class="mb-4 fw-bold">Product Information</h4>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Brand</label>
+                  <select class="form-select" name="brand" id="brand" formControlName="brand">
+                    @for (brand of brands; track $index) {
+                      <option [value]="brand.name">{{brand.name}}</option>
+                    }
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Category</label>
+                  <select class="form-select" name="category" id="category" formControlName="category">
+                    @for (category of categories; track $index) {
+                      <option [value]="category.name">{{category.name}}</option>
+                    }
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" formControlName="name">
+                </div>
+
+                <!-- MAIN IMAGE -->
+                <div class="col-md-6">
+                  <label class="form-label">Main Image</label>
+
+                  <input
+                    type="file"
+                    class="form-control"
+                    (change)="onMainImageChange($event)"
+                  >
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Price</label>
+                  <input type="number" class="form-control" formControlName="price">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Discount</label>
+                  <input type="number" class="form-control" formControlName="discount">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Stock</label>
+                  <input type="number" class="form-control" formControlName="stock">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Rate</label>
+                  <input type="number" step="0.1" class="form-control" formControlName="rate">
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-lg-4">
+
+          <!-- IMAGES -->
+          <div class="card shadow-sm border-0 rounded-4 mb-4">
+
+            <div class="card-body p-4">
+
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="fw-bold mb-0">Images</h5>
+              </div>
+
+              <input
+                type="file"
+                class="form-control mb-3"
+                multiple
+                (change)="onImagesChange($event)"
+              >
+
+              <ul class="list-group">
+
+                @for (img of imagesFiles; track $index) {
+                  <li class="list-group-item d-flex justify-content-between">
+                    {{ img.name }}
+                    <button class="btn btn-sm btn-danger" (click)="removeImage($index)">
+                      X
+                    </button>
+                  </li>
+                }
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <!-- DETAILS -->
+          <div class="card shadow-sm border-0 rounded-4 mb-4">
+
+            <div class="card-body p-4">
+
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="fw-bold">Details</h5>
+                <button type="button" class="btn btn-dark btn-sm" (click)="addDetail()">Add</button>
+              </div>
+
+              <div formArrayName="details">
+
+                @for (item of details.controls; track $index) {
+
+                  <textarea
+                    class="form-control mb-2"
+                    rows="2"
+                    [formControlName]="$index"
+                  ></textarea>
+
+                }
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- SPECIFICATIONS -->
+          <div class="card shadow-sm border-0 rounded-4">
+
+            <div class="card-body p-4">
+
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="fw-bold">Specifications</h5>
+                <button type="button" class="btn btn-dark btn-sm" (click)="addSpecification()">Add</button>
+              </div>
+
+              <div formArrayName="specifications">
+
+                @for (item of specifications.controls; track $index) {
+
+                  <textarea
+                    class="form-control mb-2"
+                    rows="2"
+                    [formControlName]="$index"
+                  ></textarea>
+
+                }
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- SUBMIT -->
+      <div class="mt-4 text-center">
+        <button type="submit" class="btn main-btn fw-bold" [disabled]="productForm.invalid">
+          Save Product
+        </button>
+      </div>
+
+    </form>
+  </div>
+</section>

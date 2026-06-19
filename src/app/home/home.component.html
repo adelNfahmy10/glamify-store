@@ -1,53 +1,24 @@
 <section class="home overflow-hidden" id="home">
-  <!-- <div class="banners">
-    <div class="row g-0">
-      <div class="col-2">
-        <div class="product-banner h-50">
-          <img loading="lazy" class="w-100 h-100" src="assets/image/home-image/image-1.png" alt="Glamify Store">
-        </div>
 
-        <div class="product-banner h-50">
-          <img loading="lazy" class="w-100 h-100" src="assets/image/home-image/image-2.png" alt="Glamify Store">
-        </div>
-      </div>
-
-      <div class="col-md-8">
-        <div class="banners">
-          <swiper-container
-            dir="rtl"
-            autoplay-delay="2500"
-            autoplay-disable-on-interaction="false"
-            class="mySwiper"
-          >
-            <swiper-slide>
-              <div class="feature-image">
-                <img loading="lazy" src="assets/image/home-image/banner-2.png" alt="Glamify Store">
-              </div>
-            </swiper-slide>
-
-            <swiper-slide>
-              <div class="feature-image">
-                <img loading="lazy" src="assets/image/home-image/banner-1.png" alt="Glamify Store">
-              </div>
-            </swiper-slide>
-          </swiper-container>
-        </div>
-      </div>
-
-      <div class="col-md-2">
-        <div class="product-banner h-50">
-          <img loading="lazy" class="w-100 h-100" src="assets/image/home-image/image-3.png" alt="Glamify Store">
-        </div>
-
-        <div class="product-banner h-50">
-          <img loading="lazy" class="w-100 h-100" src="assets/image/home-image/image-4.png" alt="Glamify Store">
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   @if(isBrowser){
     <div class="container">
+      <div class="banners">
+        <swiper-container class="mySwiper" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide>
+              <img loading="lazy" class="h-100 w-100" src="assets/image/home-image/home-1.png" alt="Glamify Store">
+            </swiper-slide>
+            <swiper-slide>
+              <img loading="lazy" class="h-100 w-100" src="assets/image/home-image/image-1.png" alt="Glamify Store">
+            </swiper-slide>
+            <swiper-slide>
+              <img loading="lazy" class="h-100 w-100" src="assets/image/home-image/image-3.png" alt="Glamify Store">
+            </swiper-slide>
+            <swiper-slide>
+              <img loading="lazy" class="h-100 w-100" src="assets/image/home-image/image-4.png" alt="Glamify Store">
+            </swiper-slide>
+          </swiper-container>
+      </div>
       <!-- <div class="special-offer py-3">
         <h2 >Special Offer</h2>
         <swiper-container
@@ -139,7 +110,7 @@
             '1024': { slidesPerView: 4, spaceBetween: 15 }
           }"
         >
-        @for (item of scenCare; track $index) {
+        @for (item of skincareProducts; track $index) {
           <swiper-slide>
             <div class="product-card">
               <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
@@ -196,7 +167,7 @@
         </swiper-container>
       </div>
 
-      <div class="hairCare py-3">
+      <!-- <div class="hairCare py-3">
         <h2>Haircare</h2>
         <swiper-container
           dir="rtl"
@@ -227,20 +198,16 @@
 
                 @if(item?.rate){
                   <div class="rate-stars mb-2 text-warning d-flex align-items-center gap-1">
-                    <!-- Rate -->
                     <span class="text-muted">{{ item?.rate }}</span>
 
-                    <!-- Full Stars -->
                     @for (i of getStars(item?.rate).fullStars; track $index) {
                       <i class="fa-solid fa-star"></i>
                     }
 
-                    <!-- Half Star -->
                     @if (getStars(item?.rate).halfStar) {
                       <i class="fa-solid fa-star-half-stroke"></i>
                     }
 
-                    <!-- Empty Stars -->
                     @for (i of getStars(item?.rate).emptyStars; track $index) {
                       <i class="fa-regular fa-star text-secondary"></i>
                     }
@@ -266,7 +233,7 @@
           <h5> Not Found Products</h5>
         }
         </swiper-container>
-      </div>
+      </div> -->
 
       <div class="perfume py-3">
         <h2>Perfumes</h2>
@@ -283,7 +250,7 @@
             '1024': { slidesPerView: 4, spaceBetween: 15 }
           }"
         >
-        @for (item of perfume; track $index) {
+        @for (item of perfumesProducts; track $index) {
           <swiper-slide>
             <div class="product-card">
               <div class="image-wrapper cr" [routerLink]="'/product-details/' + item?.id">
@@ -334,9 +301,10 @@
               </div>
             </div>
           </swiper-slide>
-        } @empty {
+        } @empty{
           <h5> Not Found Products</h5>
         }
+
         </swiper-container>
       </div>
 
@@ -408,8 +376,6 @@
         </swiper-container>
       </div> -->
 
-
-
       <!-- <div class="accessories py-3">
         <h2>Accessories</h2>
         <swiper-container
@@ -479,9 +445,6 @@
         }
         </swiper-container>
       </div> -->
-
-
-
 
       <!-- <div class="watch py-3">
         <h2>Watches</h2>

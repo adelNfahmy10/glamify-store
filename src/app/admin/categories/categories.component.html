@@ -1,0 +1,99 @@
+<section>
+  <div class="container">
+
+    <!-- ADD CATEGORY -->
+    <div class="add-categories">
+      <h2 class="text-center text-white">Add Category</h2>
+
+      <form [formGroup]="categoryForm" (ngSubmit)="submit()">
+        <div class="card p-3 rounded-4">
+          <div>
+            <label class="form-label">Category Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              placeholder="Enter category name"
+            />
+
+            <!-- Validation -->
+            @if(categoryForm.get('name')?.touched && categoryForm.get('name')?.invalid){
+              <div class="text-danger mt-1">
+
+                @if(categoryForm.get('name')?.errors?.['required']){
+                  <small>
+                    Category name is required
+                  </small>
+                }
+
+                @if(categoryForm.get('name')?.errors?.['minlength']){
+                  <small>
+                    Minimum 2 characters
+                  </small>
+                }
+
+              </div>
+            }
+          </div>
+
+          <div class="text-center mt-3">
+            <button
+              class="btn main-btn"
+              type="submit"
+              [disabled]="isLoading"
+            >
+              {{ isLoading ? 'Saving...' : 'Add Category' }}
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- VIEW CATEGORIES -->
+    <div class="view-categories mt-4">
+      <h2 class="text-center text-white">All Categories</h2>
+
+      <div class="card p-3 rounded-4">
+        <!-- EMPTY STATE -->
+        @if(categories.length === 0){
+          <div class="text-center text-muted py-4">
+            No categories available
+          </div>
+        }
+
+        <!-- LIST -->
+        @if(categories.length > 0){
+          <ul class="list-group">
+
+            @for (category of categories; track $index) {
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                <span>{{ category.name }}</span>
+
+                <div class="actions d-flex gap-2">
+
+                  <!-- Edit -->
+                  <button class="btn btn-sm btn-secondary"
+                          (click)="updateCategory(category)">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                  </button>
+
+                  <!-- Delete -->
+                  <button class="btn btn-sm btn-danger"
+                          (click)="deleteCategory(category.id)">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>
+
+                </div>
+
+              </li>
+            }
+
+          </ul>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>
