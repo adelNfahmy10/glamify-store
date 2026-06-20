@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import Swal from 'sweetalert2'
+import { OrderService } from '../../services/order/order.service';
+import { serverTimestamp } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-cart',
@@ -14,6 +16,7 @@ import Swal from 'sweetalert2'
 })
 export class CartComponent {
   private readonly _FormBuilder = inject(FormBuilder)
+  private readonly _OrderService = inject(OrderService)
   private readonly _CartService = inject(CartService)
   private readonly _Router = inject(Router)
 
@@ -110,8 +113,58 @@ export class CartComponent {
       }
     });
 
-    // بناء بيانات الطلب
+
     const orderData = {
+      name: this.dataForm.value.name,
+      phone: this.dataForm.value.phone,
+      address: this.dataForm.value.address,
+      products: this.summaryOrder,
+      count: this.summaryOrder.length,
+      subtotal: this.subtotal,
+      total: this.totalWithShipping,
+      date: serverTimestamp(),
+      status: 'Pending',
+    };
+
+    this._OrderService.createOrders(orderData).subscribe({
+      next: (res) => {
+        Swal.close();
+        Swal.fire({
+          title: 'Order Successfully',
+          text: 'Our team will contact you shortly',
+          icon: "success",
+          confirmButtonText: 'Done'
+        }).then(()=>{
+          this._Router.navigate(['/home']).then(() => {
+            window.location.reload();
+          });
+        })
+
+        this.submiteOrderInGoogleSheets();
+
+        this.cartService.clearCart();
+        this.quantities = {};
+        this.summaryOrder = [];
+        this.subtotal = 0;
+        this.totalWithShipping = 0;
+        this.dataForm.reset();
+      },
+      error: (err) => {
+        Swal.close();
+
+        Swal.fire({
+          title: 'Error',
+          text: 'Something went wrong, please try again.',
+          icon: 'error'
+        });
+      }
+    });
+  }
+
+
+  submiteOrderInGoogleSheets():void{
+    // بناء بيانات الطلب
+    const orderDataSheet = {
       orderId: Date.now(), // أو UUID
       name: this.dataForm.value.name,
       phone: this.dataForm.value.phone,
@@ -125,48 +178,23 @@ export class CartComponent {
     };
 
     const formData = new FormData()
-    formData.append('OrderId', String(orderData.orderId)),
-    formData.append('Date', orderData.date),
-    formData.append('Name', orderData.name),
-    formData.append('Phone', orderData.phone),
-    formData.append('Address', orderData.address),
-    formData.append('Products', orderData.products),
-    formData.append('Count', String(orderData.count)),
-    formData.append('SubTotal', String(orderData.subtotal)),
-    formData.append('Total', String(orderData.total)),
-    formData.append('Status',  orderData.status),
+    formData.append('OrderId', String(orderDataSheet.orderId)),
+    formData.append('Date', orderDataSheet.date),
+    formData.append('Name', orderDataSheet.name),
+    formData.append('Phone', orderDataSheet.phone),
+    formData.append('Address', orderDataSheet.address),
+    formData.append('Products', orderDataSheet.products),
+    formData.append('Count', String(orderDataSheet.count)),
+    formData.append('SubTotal', String(orderDataSheet.subtotal)),
+    formData.append('Total', String(orderDataSheet.total)),
+    formData.append('Status',  orderDataSheet.status),
 
     this._CartService.orders(formData).subscribe({
       next:(res)=>{
-        Swal.close();
-        Swal.fire({
-          title: 'Order Successfully',
-          text: 'Our team will contact you shortly',
-          icon: "success",
-          confirmButtonText: 'Done'
-        }).then(()=>{
-          this._Router.navigate(['/home']).then(() => {
-            window.location.reload();
-          });
-          // window.open(`https://wa.me/201559873992?text=My Order: ${orderData.orderId}`)
-        })
-
-        this.cartService.clearCart();
-        this.quantities = {};
-        this.summaryOrder = [];
-        this.subtotal = 0;
-        this.totalWithShipping = 0;
-        this.dataForm.reset();
+        console.log('Done In Google Sheets');
       },
       error:(err)=>{
-        Swal.close();
-
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Something went wrong. Please try again.",
-          confirmButtonText: 'OK'
-        });
+        console.log('Wrong Save In Google Sheets');
       }
     })
   }

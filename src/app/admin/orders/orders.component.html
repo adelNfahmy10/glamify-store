@@ -1,0 +1,87 @@
+<section>
+  <div class="container">
+    <h2 class="text-center text-white">All Products</h2>
+
+    <div class="view-products">
+      <div class="card p-3 rounded-4">
+        <!-- EMPTY STATE -->
+        @if(orders.length === 0){
+          <div class="text-center text-muted py-4">
+            No orders available
+          </div>
+        }
+
+        <!-- LIST -->
+        @if(orders.length > 0){
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Order ID</th>
+                  <th scope="col">Client</th>
+                  <th scope="col">Phoen</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">products</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (order of orders; track $index) {
+                  <tr>
+                    <th>
+                      {{order?.id}}
+                    </th>
+
+                    <td>
+                      {{ order?.name }}
+                    </td>
+
+                    <td>
+                      {{ order?.phone }}
+                    </td>
+
+                    <td>
+                      {{ order?.date?.toDate() | date:'dd/MM/yyyy, hh:mm a' }}
+                    </td>
+
+                    <td>
+                      <span class="main-color fw-bold">{{ order?.total | number }} EGP</span>
+                    </td>
+
+                    <td>
+                      <ul>
+                        @for (product of order?.products; track $index) {
+                          <li>{{product.name}}</li>
+                        }
+                      </ul>
+                    </td>
+
+                    <td>
+                      <span class="fw-bold" [class.text-warning]="order?.status == 'Pending'" [class.text-success]="order?.status == 'Paid'">{{ order?.status}}</span>
+                    </td>
+
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+
+                        <button class="btn btn-sm btn-secondary"  [routerLink]="'/orders-deatils/' + order?.id">
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button>
+
+                        <button class="btn btn-sm btn-outline-success" >
+                          <i class="fa-solid fa-check"></i>
+                        </button>
+
+                      </div>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

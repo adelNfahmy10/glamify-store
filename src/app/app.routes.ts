@@ -8,6 +8,8 @@ import { ViewProductsComponent } from './admin/view-products/view-products.compo
 import { UpdateProductComponent } from './admin/update-product/update-product.component';
 import { BrandsComponent } from './admin/brands/brands.component';
 import { CategoriesComponent } from './admin/categories/categories.component';
+import { OrdersComponent } from './admin/orders/orders.component';
+import { OrderDetailsComponent } from './admin/order-details/order-details.component';
 
 export const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -20,4 +22,6 @@ export const routes: Routes = [
   {path:'view-product', component:ViewProductsComponent, title:'View Products'},
   {path:'brands', component:BrandsComponent, title:'Brands'},
   {path:'categories', component:CategoriesComponent, title:'Categories'},
+  {path:'orders', component:OrdersComponent, title:'Orders'},
+  {path:'orders-deatils/:id', component:OrderDetailsComponent, title:'Order Details'},
 ];
