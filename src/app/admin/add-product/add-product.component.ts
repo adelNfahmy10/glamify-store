@@ -144,14 +144,14 @@ export class AddProductComponent {
         createdAt: new Date()
       };
 
-      console.log(data)
-
       // SAVE TO FIREBASE
       this._ProductService.addProduct(data).subscribe({
         next: (res) => {
           console.log('Product Added:', res);
           this.productForm.reset();
           this.imagesFiles = [];
+          this.productForm.get('details')?.setValue([])
+          this.productForm.get('specifications')?.setValue([])
         },
         error: (err) => {
           console.log('Error:', err);
