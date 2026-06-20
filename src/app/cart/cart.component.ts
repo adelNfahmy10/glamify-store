@@ -18,7 +18,8 @@ export class CartComponent {
   private readonly _Router = inject(Router)
 
   cart = this.cartService.cartSignal;
-  ShippingValue:number = 20
+  ShippingValue:number = 40
+
   // quantity لكل منتج (بداية 1)
   quantities: Record<number, number> = {};
   summaryOrder:any[]  = []
